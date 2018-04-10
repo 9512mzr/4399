@@ -673,7 +673,7 @@ function studysend(num) {
 							<li><span class="tedian">[ <a
 									href="http://www.yitiku.cn/tiku/yuwensj/tedian/6/grade/6"
 									target="_blank">期中</a> ]
-							</span><a class="shijuan" href="http://www.yitiku.cn/shijuan/30467.html"
+							</span><a class="shijuan" href="${ctx }/Choice/list"
 								title="2017届河北省承德实验中学高三上学期期中考试语文试卷（带解析）" target="_blank">2017届河北省承德实验中学高三上学期期中考试语文试卷（带解析）</a><span>2017-01-23</span></li>
 							<li><span class="tedian">[ <a
 									href="http://www.yitiku.cn/tiku/yuwensj/tedian/6/grade/6"

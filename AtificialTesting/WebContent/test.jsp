@@ -1,7 +1,6 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <!-- saved from url=(0045)http://www.zujuan.com/paper/view-782410.shtml -->
@@ -18,8 +17,8 @@
 	content="width=device-width,initial-scale=1,maximum-scale=1">
 <link rel="canonical" href="http://m.zujuan.com/paper/view-782410.shtml">
 <!--移动端访问首页跳转到移动首页-->
-<script src="./static/js/push.js"></script>
-<script src="./static/js/hm1.js"></script>
+<script src="${ctx }/static/js/push.js"></script>
+<script src="${ctx }/static/js/hm1.js"></script>
 <script type="text/javascript">
 	(function(Switch) {
 		var switch_pc = window.location.hash;
@@ -32,20 +31,13 @@
 		}
 	})(window);
 </script>
-<!--百度移动适配META申明-->
-<meta name="mobile-agent"
-	content="format=xhtml;url=http://m.zujuan.com/paper/view-782410.shtml">
-<!--谷歌、雅虎等移动META申明-->
-<link rel="alternate" media="only screen and (max-width: 1000px)"
-	href="http://m.zujuan.com/paper/view-782410.shtml">
 
 <!--<base target="_top">-->
 <base href="." target="_top">
 <meta name="csrf-param" content="_csrf">
 <meta name="csrf-token"
 	content="vPakEbXQWccP6zwqaEuktbZqhB_Xpvn8duqG8naHEKHxldxT3eQDs3m5ZEQhCZT3hwzWVo-Ws88zibSzRLd27A==">
-<title>备考2018年中考生物一轮基础复习：专题五 绿色植物与生物圈的水循环、碳氧平衡、有机物制造者、爱护植被绿化祖国
-	-组卷网</title>
+<title>test</title>
 <script>
 	(function(doc, win) {
 		// 基于 window.screen.width 实现自适应布局
@@ -85,30 +77,31 @@
 <!--[if lt IE 9]>
 <script> OT2.AboveIE9= false;</script>
 <![endif]-->
-<link rel="stylesheet" href="./static/css/base.min1.css">
-<link rel="stylesheet" href="./static/css/spriter-mix.min1.css">
-<link rel="stylesheet" href="./static/css/ui-dialog1.css">
-<link rel="stylesheet" href="./static/css/artDialog-skin-ot2.min1.css">
-<link rel="stylesheet" href="./static/css/main.min1.css">
-<link rel="stylesheet" href="./static/css/popup.min1.css">
-<script src="./static/js/jquery.min1.js"></script>
+<link rel="stylesheet" href="${ctx }/static/css/base.min1.css">
+<link rel="stylesheet" href="${ctx }/static/css/spriter-mix.min1.css">
+<link rel="stylesheet" href="${ctx }/static/css/ui-dialog1.css">
+<link rel="stylesheet"
+	href="${ctx }/static/css/artDialog-skin-ot2.min1.css">
+<link rel="stylesheet" href="${ctx }/static/css/main.min1.css">
+<link rel="stylesheet" href="${ctx }/static/css/popup.min1.css">
+<script src="${ctx }/static/js/jquery.min1.js"></script>
 <script type="text/javascript">
 	$.ajaxSetup({
 		cache : false
 	});
 </script>
-<script src="./static/js/underscore-min1.js"></script>
-<script src="./static/js/cookie.min1.js"></script>
-<script src="./static/js/json3.min1.js"></script>
-<script src="./static/js/dialog-plus1.js"></script>
-<script src="./static/js/util.min1.js"></script>
+<script src="${ctx }/static/js/underscore-min1.js"></script>
+<script src="${ctx }/static/js/cookie.min1.js"></script>
+<script src="${ctx }/static/js/json3.min1.js"></script>
+<script src="${ctx }/static/js/dialog-plus1.js"></script>
+<script src="${ctx }/static/js/util.min1.js"></script>
 </head>
 
 
 
 <body>
 
-	<link rel="stylesheet" href="./static/css/test-preview.min.css">
+	<link rel="stylesheet" href="${ctx }/static/css/test-preview.min.css">
 	<div class="header">
 		<div class="header-inner g-container f-cb">
 
@@ -244,1026 +237,39 @@
 									</div>
 								</div>
 							</li>
-							<li data-qid="4090270" class="uglify-man visible-ake">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">2.
-											（2017•盐城）有些不法分子盗剥名贵植物杜仲的树皮作药材，致使树木死亡．其原因主要是破坏了树皮中的（&nbsp;&nbsp;
-											）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">导管</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">筛管</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">髓</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">形成层</span></span>
-										</div>
-
-									</div>
-
-									<div class="analyticbox-brick analyticbox-brick-normal">
-										<div class="analyticbox">
-											<span class="exam-point">【考点】</span>
-											<div class="analyticbox-body">
-												<img
-													src="./备考2018年中考生物一轮基础复习：专题五 绿色植物与生物圈的水循环、碳氧平衡、有机物制造者、爱护植被绿化祖国 -组卷网_files/2b248ff263078d24e2093ade407a_4090270kn.png"
-													style="vertical-align: middle;">
-											</div>
-										</div>
-
-
-
-									</div>
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-4090270.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 4090270)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(4090270)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="5685131">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">3.
-											1500年前，贾思勰任高阳郡太守时曾因枣树数年不结果而“打”枣树，他用斧背狠敲枣树树干，树皮被打得伤痕累累，到了秋天树上挂满了枣子。这种做法的道理是（
-											）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">可以加速水分的运输从而提高产量</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">有利于有机物的运输，而提高产量</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">减少了有机物的向下运输而提高了产量</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">增加了无机盐的向上运输，而提高产量</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-5685131.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 5685131)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(5685131)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="5779871">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">4.
-											（2017•贺州）南瓜植株生长旺盛时，每天要从根吸收大量的水，其中大部分水的去向时(&nbsp;&nbsp; )</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">组成植物体</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">留在植物体内</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">蒸腾作用散失</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">用于呼吸作用</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-5779871.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 5779871)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(5779871)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="4246812">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">5.
-											（2017•曲靖）水分和无机盐能从植株的根部向上运输，主要动力来自于（&nbsp;&nbsp; ）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">光合作用</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">扩散作用</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">蒸腾作用</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">呼吸作用</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-4246812.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 4246812)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(4246812)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="6829163">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">6.
-											“山上多植物，胜似修水库。有雨它能吞，无雨它能吐。”这句谚语形象地说明了（&nbsp;&nbsp;&nbsp; ）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">植物的光合作用</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">植物的蒸腾作用</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">植物的呼吸作用</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">植物的蒸发作用</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-6829163.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 6829163)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(6829163)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="6575835">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">7. 绿色植物蒸腾作用的意义不包括( )</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">降低叶片的温度</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">促进植物对水分的吸收</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">增加空气湿度，增加降水量</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">促进植物对水和无机盐的运输</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-6575835.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 6575835)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(6575835)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="3806741">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">8. 下列做法不属于运用蒸腾作用原理的是（ ）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">选择阴雨天移栽植物</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">移栽植物时剪去部分叶片</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">对移栽后的植物进行遮阳</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">夏天早上和傍晚给植物浇水</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-3806741.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 3806741)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(3806741)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="3711861">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">9. 绿色植物进行光合作用时，不需要的外界条件是（ ）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">二氧化碳</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">水</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">高温</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">光</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-3711861.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 3711861)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(3711861)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="3557224">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">10.
-											有位同学在夏季晴朗的一天，分别于清晨、正午、傍晚三个时间从同一棵绿色植物上摘取一片绿叶，将它们进行脱色、漂洗、碘液染色，其中染色最深的是（）
-										</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">清晨的叶</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">傍晚的叶</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">正午的叶</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">都一样</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-3557224.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 3557224)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(3557224)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="4208270">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">11.
-											下列有关“绿叶在光下制造有机物（淀粉）”的实验描述，错误的是（&nbsp;&nbsp;&nbsp; ）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">进行实验时，先将天竺葵放到黑暗处一昼夜</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">将摘下的叶片放入盛有酒精的烧杯中直接加热</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">滴加碘液并漂洗后，叶片遮光部分不变蓝，见光部分变蓝</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">该实验说明了淀粉是光合作用的产物，光是光合作用的条件</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-4208270.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 4208270)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(4208270)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="3619172">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">12.
-											夏日中午12时，由于阳光过强，使气孔关闭，造成光合作用速率下降，原因是（&nbsp;&nbsp;&nbsp; ）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">吸收不到氧气</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">吸收不到二氧化碳</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">吸收不到水</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">释放不了氧气</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-3619172.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 3619172)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(3619172)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="2573642">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">13.
-											合理密植能够提高农作物产量，主要是因为这一措施能够让农作物充分利用（ ）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">化肥</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">氧气</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">光能</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">二氧化碳</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-2573642.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 2573642)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(2573642)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="6802585">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">
-											14.
-											一绿色植株在黑暗中放置24小时，选择一片绿叶，把主叶脉剪断(如图所示)，然后将植株放在阳光下照射2～4小时，发现B区不能正常制造淀粉，其中原因是B区叶片缺少（&nbsp;&nbsp;&nbsp;
-											）<br>
-											<img
-												data-cke-saved-src="http://tikupic.21cnjy.com/1d/c8/1dc807136d673e00d79050a0e6175cbe.jpg"
-												src="./备考2018年中考生物一轮基础复习：专题五 绿色植物与生物圈的水循环、碳氧平衡、有机物制造者、爱护植被绿化祖国 -组卷网_files/1dc807136d673e00d79050a0e6175cbe.jpg"
-												alt="" v:shapes="图片_x0020_8" width="168" height="81">
-										</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">叶绿素</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">光</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">二氧化</span></span> <span
-												class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">水</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-6802585.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 6802585)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(6802585)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="5295499">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">15. 养鱼缸里经常要放一些新鲜的水草，这样做的主要目的是（ ）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">水草呼吸作用增加鱼缸内二氧化碳的含量</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">新鲜的水草可以美化养鱼缸</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">水草是鱼的重要饵料</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">水草光合作用增加鱼缸内氧气的含量</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-5295499.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 5295499)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(5295499)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="2915787">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">16.
-											木材燃烧时能放出大量热量，可以将水烧开，把饭煮熟；木材中贮存的能量是（&nbsp; ）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">太阳光能</span></span> <span
-												class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">电灯光能</span></span> <span
-												class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">光合作用把光能转变成贮藏在有机物里的能量</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">呼吸作用分解有机物时释放的能量</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-2915787.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 2915787)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(2915787)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="4087516">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">17. 蔬菜和水果堆放久了，会引起发热的原因是（&nbsp;&nbsp;
-											）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">光合作用放出热量</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">呼吸作用放出热量</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">蒸腾作用放出热量</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">空气不流通引起发热</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-4087516.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 4087516)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(4087516)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="3619375">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">18.
-											粮库中为了将储存的粮食保持更长的时间，可采取以下条件中的哪一项（&nbsp;&nbsp;&nbsp; ）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">低温、干燥、增加氧气浓度</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">高温、干燥、增加氧气浓度</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">低温、干燥、增加二氧化碳浓度</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">低温、潮湿、增加二氧化碳浓度</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-3619375.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 3619375)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(3619375)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="3711730">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">19.
-											“小草依依，踏之何忍”设置这些提示语提醒人们不要践踏小草，因为经常在草坪上行走，会造成土壤板结，从而影响草的生长，土壤板结影响植物生长的主要原因是（
-											）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">植物缺少无机盐，影响生长</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">植物缺少水，影响光合作用</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">土壤缺少氧气，影响根的呼吸</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">气孔关闭，影响蒸腾作用</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-3711730.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 3711730)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(3711730)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="4246612">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">
-											20. （2017•通辽）如图，若甲代表水和二氧化碳，则（&nbsp;&nbsp; ）<br>
-											<img
-												data-cke-saved-src="http://tikupic.21cnjy.com/21/1b/211b0ce0c560ac19f689064bb7fee5cc.png"
-												src="./备考2018年中考生物一轮基础复习：专题五 绿色植物与生物圈的水循环、碳氧平衡、有机物制造者、爱护植被绿化祖国 -组卷网_files/211b0ce0c560ac19f689064bb7fee5cc.png"
-												alt="" v:shapes="_x0000_i1039" width="103" height="101">
-										</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">Ⅱ是呼吸作用，乙是水和二氧化碳，Ⅰ是光合作用</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">Ⅱ是光合作用，乙是有机物和氧气，Ⅰ是呼吸作用</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">Ⅱ是光合作用，乙是水和二氧化碳，Ⅰ是呼吸作用</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">Ⅱ是呼吸作用，乙是有机物和氧气，Ⅰ是光合作用</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-4246612.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 4246612)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(4246612)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="6575831">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">21.
-											小伟是七年级学生，他的爷爷经常早晨到千佛山的树林丛中锻炼，并且说是有利于呼吸新鲜空气，但小伟上完一节生物课后，劝告爷爷早晨的时候最好不要到树木茂盛的地方去，你知道他当时学的哪节课吗？（&nbsp;&nbsp;
-											）。</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">绿色植物的蒸腾作用</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">绿色植物的呼吸作用</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">植物的主要类群</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">生物体的结构层次</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-6575831.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 6575831)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(6575831)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="6778981">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">
-											22.
-											如图是检验植物某种生理活动释放某种气体的装置。下列选项表述正确的是（&nbsp;&nbsp;&nbsp;&nbsp; ）<br>
-											<img width="149" height="97"
-												data-cke-saved-src="http://tikupic.21cnjy.com/bc/c8/bcc8e70d061e93ebc3bc1f66a3a03631.png"
-												src="./备考2018年中考生物一轮基础复习：专题五 绿色植物与生物圈的水循环、碳氧平衡、有机物制造者、爱护植被绿化祖国 -组卷网_files/bcc8e70d061e93ebc3bc1f66a3a03631.png"
-												v:shapes="_x0000_i1035">
-										</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">检验呼吸作用释放二氧化碳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">检验呼吸作用释放氧气</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">检验光合作用释放二氧化碳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
-											<span class="op-item"
-												style="width: 439px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">检验光合作用释放氧气</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-6778981.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 6778981)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(6778981)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="6829165">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">23.
-											大气中的氧和二氧化碳量保持相对稳定是（&nbsp;&nbsp;&nbsp; ）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">光合作用的结果</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">呼吸作用的结果</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">大气中氧含量多的结果</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">氧大量消耗的结果</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-6829165.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 6829165)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(6829165)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="6777349">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">24.
-											2017年6月5日是第46个世界环境日，主题为“森林：大自然为您效劳”。下列不属于森林的作用的是(&nbsp;&nbsp;&nbsp;&nbsp;
-											) &nbsp;</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">&nbsp;
-													侵占人类生存空间</span></span> <span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">保护土壤和涵养水源</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">调节气候和制造氧气</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">净化空气和消除噪声</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-6777349.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 6777349)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(6777349)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="4385828">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">25.
-											我国政府推行了部分教材循环使用的政策，制定这一政策的根本出发点是（ ）</div>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">有利于卫生防疫</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">为造纸厂节约生产成本</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">节约木材，保护森林</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">为每个家庭节约资金</span></span>
-										</div>
-
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-4385828.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 4385828)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(4385828)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
 						</ul>
 					</div>
-					<h3>二、综合题</h3>
+					<table style="margin-left: 500px;">
+						<tr>
+							<td colspan="6" align="center" bgcolor="">共${page.totalRecords}条记录
+								共${page.totalPages}页 当前第${page.pageNo}页
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+								href="<%=request.getContextPath()%>/product/${methodname }?pageNo=${page.topPageNo}&id=${id}&massage=${name}"
+								class="btn_r">首页</a> <c:choose>
+									<c:when test="${page.pageNo!=1}">
+										<a
+											href="<%=request.getContextPath()%>/product/${methodname }?pageNo=${page.previousPageNo }&id=${id}&massage=${name}"
+											class="btn_r">上一页</a>
+									</c:when>
+									<c:otherwise>
+										<a class="btn_r">上一页</a>
+									</c:otherwise>
+								</c:choose> <c:choose>
+									<c:when test="${page.pageNo != page.totalPages}">
+										<a
+											href="<%=request.getContextPath()%>/product/${methodname }?pageNo=${page.nextPageNo }&id=${id}&massage=${name}"
+											class="btn_r">下一页</a>
+									</c:when>
+									<c:otherwise>
+										<a class="btn_r">下一页</a>
+									</c:otherwise>
+								</c:choose> <a
+								href="<%=request.getContextPath()%>/product/${methodname }?pageNo=${page.bottomPageNo}&id=${id}&massage=${name}"
+								class="btn_r">尾页</a>
+							</td>
+						</tr>
+					</table>
+					<!-- <h3>二、综合题</h3>
 					<div class="search-list">
 						<ul>
 							<li data-qid="2681480">
@@ -1481,8 +487,8 @@
 								</div>
 							</li>
 						</ul>
-					</div>
-					<h3>三、实验探究题</h3>
+					</div>-->
+					<!--  <h3>三、实验探究题</h3>
 					<div class="search-list">
 						<ul>
 							<li data-qid="6332503">
@@ -1599,7 +605,7 @@
 								</div>
 							</li>
 						</ul>
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</div>
@@ -1852,20 +858,13 @@
         </div>
     </div>
 </script>
-	<script type="text/javascript"
-		src="./static/get-parameters"></script>
-	<script
-		src="./static/js/highcharts.js"></script>
-	<script
-		src="./static/js/error-report.min.js"></script>
-	<script
-		src="./static/js/question-txt.min.js"></script>
-	<script
-		src="./static/js/question.min.js"></script>
-	<script
-		src="./static/js/element.min1.js"></script>
-	<script
-		src="./static/js/paper.min1.js"></script>
+	<script type="text/javascript" src="./static/get-parameters"></script>
+	<script src="./static/js/highcharts.js"></script>
+	<script src="./static/js/error-report.min.js"></script>
+	<script src="./static/js/question-txt.min.js"></script>
+	<script src="./static/js/question.min.js"></script>
+	<script src="./static/js/element.min1.js"></script>
+	<script src="./static/js/paper.min1.js"></script>
 	<script>
 		var paper = new OT2.Paper({}); // 试卷实例化
 		paper.pid = 782410;
@@ -4334,15 +3333,12 @@
 	<div style="position: absolute; display: none;"></div>
 	<div id="Login_Pal" style="display: none">
 
-		<link rel="stylesheet"
-			href="./static/css/login-pop.css">
+		<link rel="stylesheet" href="./static/css/login-pop.css">
 		<div class="reg-mask"></div>
 		<div class="reg-form">
 			<a class="btn-close J_CloseForm">x</a>
 			<div class="reg__title">
-				<img
-					src="./static/images/logo_zujuan.jpg"
-					alt="组卷网" title="组卷网">
+				<img src="./static/images/logo_zujuan.jpg" alt="组卷网" title="组卷网">
 			</div>
 			<!--pc账号密码登录-->
 			<form id="J_LoginForm" class="reg-form-detail J_LoginTabContent hide"
@@ -4435,12 +3431,9 @@
 			</div>
 		</div>
 	</div>
-	<script
-		src="./static/js/element.min1.js"></script>
-	<script
-		src="./static/js/field.min.js"></script>
-	<script
-		src="./static/js/user.min.js"></script>
+	<script src="./static/js/element.min1.js"></script>
+	<script src="./static/js/field.min.js"></script>
+	<script src="./static/js/user.min.js"></script>
 	<script>
 		$('.J_LoginTab').on('click', '.tab', function(evt) {
 			var _i = $(this).data('type');
@@ -4463,14 +3456,11 @@
 			$('.J_LoginTabContent').eq(1).show();
 		});
 	</script>
-	<script
-		src="./static/js/global.min.js"></script>
+	<script src="./static/js/global.min.js"></script>
 	<a class="return" href="javascript:;"
 		style="right: 89.5px; display: none;"><i class="icona-top"></i></a>
-	<script
-		src="./static/js/yii1.js"></script>
-	<script
-		src="./static/js/sitecount.js"></script>
+	<script src="./static/js/yii1.js"></script>
+	<script src="./static/js/sitecount.js"></script>
 
 </body>
 </html>

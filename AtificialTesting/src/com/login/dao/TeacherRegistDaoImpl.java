@@ -16,7 +16,7 @@ public class TeacherRegistDaoImpl {
 	public void registuser(String email,String passWord,String nickName) {
 		Teacher teacher = new Teacher();
 		
-		teacher.setEmail(email);
+//		teacher.setEmail(email);
 		teacher.setNickName(nickName);
 		teacher.setPassWord(passWord);
 		

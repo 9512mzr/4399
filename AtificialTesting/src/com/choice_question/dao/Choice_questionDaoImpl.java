@@ -22,7 +22,6 @@ public class Choice_questionDaoImpl {
 		AllRowCount0 = allRowCount0;
 	}
 	public List<Choicequestion> queryForPage(int offset,int length){
-		//Query query=(Query)sessionFactory.getCurrentSession().createQuery("from choicequestion");
 		List<Choicequestion> entitylist=null;
 		try {
 			Query query=(Query)sessionFactory.getCurrentSession().createQuery("from Choicequestion");
@@ -30,21 +29,9 @@ public class Choice_questionDaoImpl {
 			query.setFirstResult(offset);
 			query.setMaxResults(length);
 			entitylist=query.list();
-			System.out.println(entitylist.size());
 		}catch(RuntimeException re) {
 			throw re;
 		}
 		return entitylist;
-	}
-	
-	public void showall() {
-			Query query=(Query)sessionFactory.getCurrentSession().createQuery("from Choicequestion");
-			ArrayList<Choicequestion> n=(ArrayList<Choicequestion>) query.list();
-			for(int i=0;i<n.size();i++) {
-				System.out.println(n.get(i).getChoiceQuestionId());
-				System.out.println(n.get(i).getContent());
-			}
-			
-		
 	}
 }

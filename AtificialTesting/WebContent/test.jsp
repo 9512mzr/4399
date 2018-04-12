@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page import="java.io.*,java.util.*" %>
+<%@ page import="com.entity.Choicequestion" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <!-- saved from url=(0045)http://www.zujuan.com/paper/view-782410.shtml -->
@@ -195,6 +197,18 @@
 				<div class="preview-body" id="J_PaperBody">
 					<h3>一、单选题</h3>
 					<!-- 以下为分页内容 -->
+					<%
+						if(request.getAttribute("list")!=null|request.getAttribute("list")!=""){
+							
+							
+						}else{
+							response.sendRedirect("Choice/showAll"); 
+						}
+					ArrayList<Choicequestion> n=(ArrayList<Choicequestion>)request.getAttribute("list");
+					System.out.println("yeshu"+n.size());
+					
+					int i=0;
+					%>
 					<c:forEach items="${list}" var="Choicequestion">
 						<div class="search-list">
 						<ul>
@@ -203,6 +217,26 @@
 									<div class="exam-con">
 										<div class="exam-q">${Choicequestion.content }（&nbsp;&nbsp;&nbsp; ）
 										</div>
+										<%
+											String img0=n.get(i).getImage();
+											if(img0.equals("")){
+												
+											}else{
+												String[] img=img0.split(";");
+												for(int j=0;j<img.length;j++){
+													%>
+													<img alt="???" src="<%=img[j]%>">
+													<%
+												}
+											}
+											
+											
+										%>
+										<%
+											if(n.get(i).getOption1().equals("null")){
+												
+											}else{
+										%>
 										<div class="exam-s">
 											<span class="op-item"
 												style="width: 219px; margin-right: 0px; clear: none;"><span
@@ -217,7 +251,11 @@
 												style="width: 219px; margin-right: 0px;  clear: none;"><span
 												class="op-item-meat" style="margin-top: 0px;">${Choicequestion.option4 }</span></span>
 										</div>
-										<img alt="???" src="">
+										<%
+											}
+											i++;
+										%>
+										
 									</div>
 
 									<div class="exam-foot">

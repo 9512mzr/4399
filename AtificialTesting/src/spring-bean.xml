@@ -37,7 +37,7 @@
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
 		<property name="jdbcUrl" value="${jdbc.url}" />
 		<property name="username" value="root" />
-		<property name="password" value="123456" />
+		<property name="password" value="" />
 		<property name="idleConnectionTestPeriod" value="60" />
 		<property name="idleMaxAge" value="240" />
 		<property name="maxConnectionsPerPartition" value="30" />

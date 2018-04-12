@@ -1,5 +1,7 @@
 package com.entity;
 
+import java.util.ArrayList;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -7,8 +9,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Choicequestion")
 public class Choicequestion {
-	private int choiceQuestionId;
-	private int problemModelId;
+	private Integer choiceQuestionId;
+	private Integer problemModelId;
 	private String content;
 	private String option1;
 	private String option2;
@@ -16,18 +18,17 @@ public class Choicequestion {
 	private String option4;
 	private String answer;
 	private String image;
-	
 	@Id
-	public int getChoiceQuestionId() {
+	public Integer getChoiceQuestionId() {
 		return choiceQuestionId;
 	}
-	public void setChoiceQuestionId(int choiceQuestionId) {
+	public void setChoiceQuestionId(Integer choiceQuestionId) {
 		this.choiceQuestionId = choiceQuestionId;
 	}
-	public int getProblemModelId() {
+	public Integer getProblemModelId() {
 		return problemModelId;
 	}
-	public void setProblemModelId(int problemModelId) {
+	public void setProblemModelId(Integer problemModelId) {
 		this.problemModelId = problemModelId;
 	}
 	public String getContent() {

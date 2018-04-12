@@ -13,7 +13,6 @@
 </head>
 
 <body>
-	<!-- 头部 -->
 	<div class="head">
 		<div class="headL">
 			<img class="headLogo" src="${ctx }/backstage/images/logLOGO.png"/>

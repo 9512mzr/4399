@@ -3,10 +3,10 @@ package com.entity;
 import java.util.List;
 
 public class Page {
-	// 结果集
-    private List<Choicequestion> list;
+	private List<Choicequestion> list;
 
-    // 查询记录总数
+
+	// 查询记录总数
     private int totalRecords;
 
     // 每页多少条记录
@@ -14,14 +14,14 @@ public class Page {
 
     // 第几页
     private int pageNo;
-
+    
     /**
      * @return 总页数
      * */
     public int getTotalPages(){
         return (totalRecords+pageSize-1)/pageSize;
     }
-
+    
     /**
      * 计算当前页开始记录
      * @param pageSize 每页记录数
@@ -32,14 +32,14 @@ public class Page {
         int offset = pageSize*(currentPage-1);
         return offset;
     }
-
+    
     /**
      * @return 首页
      * */
     public int getTopPageNo(){
         return 1;
     }
-
+    
     /**
      * @return 上一页
      * */
@@ -49,7 +49,7 @@ public class Page {
         }
         return pageNo-1;
     }
-
+    
     /**
      * @return 下一页
      * */
@@ -59,15 +59,15 @@ public class Page {
         }
         return pageNo+1;
     }
-
+    
     /**
      * @return 尾页
      * */
     public int getBottomPageNo(){
         return getTotalPages();
     }
-
-	public int getTotalRecords() {
+    
+    public int getTotalRecords() {
         return totalRecords;
     }
 
@@ -98,5 +98,4 @@ public class Page {
 	public void setList(List<Choicequestion> list) {
 		this.list = list;
 	}
-    
 }

@@ -194,32 +194,30 @@
 				</div>
 				<div class="preview-body" id="J_PaperBody">
 					<h3>一、单选题</h3>
-					<div class="search-list">
+					<!-- 以下为分页内容 -->
+					<c:forEach items="${list}" var="Choicequestion">
+						<div class="search-list">
 						<ul>
 							<li data-qid="3755280">
 								<div class="search-exam">
 									<div class="exam-con">
-										<div class="exam-q">1. 导管输送的物质和方向是（&nbsp;&nbsp;&nbsp; ）
+										<div class="exam-q">${Choicequestion.content }（&nbsp;&nbsp;&nbsp; ）
 										</div>
 										<div class="exam-s">
 											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A、</span><span
-												class="op-item-meat" style="margin-top: 0px;">有机物，从根到其他器官</span></span>
+												style="width: 219px; margin-right: 0px; clear: none;"><span
+												class="op-item-meat" style="margin-top: 0px;">${Choicequestion.option1 }</span></span>
 											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B、</span><span
-												class="op-item-meat" style="margin-top: 0px;">有机物，从其他器官到叶根</span></span>
+												style="width: 219px; margin-right: 0px;clear: none;"><span
+												class="op-item-meat" style="margin-top: 0px;">${Choicequestion.option2 }</span></span>
 											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C、</span><span
-												class="op-item-meat" style="margin-top: 0px;">水和无机盐，从根到其他器官</span></span>
+												style="width: 219px; margin-right: 0px;clear: none;"><span
+												class="op-item-meat" style="margin-top: 0px;">${Choicequestion.option3 }</span></span>
 											<span class="op-item"
-												style="width: 219px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D、</span><span
-												class="op-item-meat" style="margin-top: 0px;">水和无机盐，从其他器官到根</span></span>
+												style="width: 219px; margin-right: 0px;  clear: none;"><span
+												class="op-item-meat" style="margin-top: 0px;">${Choicequestion.option4 }</span></span>
 										</div>
-
+										<img alt="???" src="">
 									</div>
 
 									<div class="exam-foot">
@@ -239,16 +237,18 @@
 							</li>
 						</ul>
 					</div>
+					</c:forEach>
+					<!-- 以上为分页内容 -->
 					<table style="margin-left: 500px;">
 						<tr>
 							<td colspan="6" align="center" bgcolor="">共${page.totalRecords}条记录
 								共${page.totalPages}页 当前第${page.pageNo}页
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="<%=request.getContextPath()%>/product/${methodname }?pageNo=${page.topPageNo}&id=${id}&massage=${name}"
+								href="<%=request.getContextPath()%>/Choice/showAll/${methodname }?pageNo=${page.topPageNo}&id=${id}&massage=${name}"
 								class="btn_r">首页</a> <c:choose>
 									<c:when test="${page.pageNo!=1}">
 										<a
-											href="<%=request.getContextPath()%>/product/${methodname }?pageNo=${page.previousPageNo }&id=${id}&massage=${name}"
+											href="<%=request.getContextPath()%>/Choice/showAll/${methodname }?pageNo=${page.previousPageNo }&id=${id}&massage=${name}"
 											class="btn_r">上一页</a>
 									</c:when>
 									<c:otherwise>
@@ -257,14 +257,14 @@
 								</c:choose> <c:choose>
 									<c:when test="${page.pageNo != page.totalPages}">
 										<a
-											href="<%=request.getContextPath()%>/product/${methodname }?pageNo=${page.nextPageNo }&id=${id}&massage=${name}"
+											href="<%=request.getContextPath()%>/Choice/showAll/${methodname }?pageNo=${page.nextPageNo }&id=${id}&massage=${name}"
 											class="btn_r">下一页</a>
 									</c:when>
 									<c:otherwise>
 										<a class="btn_r">下一页</a>
 									</c:otherwise>
 								</c:choose> <a
-								href="<%=request.getContextPath()%>/product/${methodname }?pageNo=${page.bottomPageNo}&id=${id}&massage=${name}"
+								href="<%=request.getContextPath()%>/Choice/showAll/${methodname }?pageNo=${page.bottomPageNo}&id=${id}&massage=${name}"
 								class="btn_r">尾页</a>
 							</td>
 						</tr>

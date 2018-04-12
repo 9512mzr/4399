@@ -1,44 +1,50 @@
 package com.choice_question.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
 
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.stereotype.Repository;
 
 import com.entity.Choicequestion;
-
+@Repository
 public class Choice_questionDaoImpl {
 	@Resource
 	private SessionFactory sessionFactory;
-
-	/**
-	 * 分页查询
-	 * 
-	 * @param hql
-	 *            查询的条件
-	 * @param offset
-	 *            开始记录
-	 * @param length
-	 *            一次查询几条记录
-	 * @return 返回查询记录集合
-	 */
-	@RequestMapping("select")
-	public List<Choicequestion> queryForPage(int offset, int length) {
-		// 查询所有的记录数
-		Query query = (Query) sessionFactory.getCurrentSession().createQuery("from Choicequestion");
-		query.setFirstResult(offset);
-		query.setMaxResults(length);
-		return query.list();
+	private int AllRowCount0;
+	public int getAllRowCount0() {
+		return AllRowCount0;
 	}
-
-
-	// 查询记录总数
-	public int getAllRowCount() {
-		int count = ((Long) sessionFactory.getCurrentSession().createQuery("select count(*) from Choicequestion").iterate()
-				.next()).intValue();
-		return count;
+	public void setAllRowCount0(int allRowCount0) {
+		AllRowCount0 = allRowCount0;
+	}
+	public List<Choicequestion> queryForPage(int offset,int length){
+		//Query query=(Query)sessionFactory.getCurrentSession().createQuery("from choicequestion");
+		List<Choicequestion> entitylist=null;
+		try {
+			Query query=(Query)sessionFactory.getCurrentSession().createQuery("from Choicequestion");
+			this.setAllRowCount0(query.list().size());
+			query.setFirstResult(offset);
+			query.setMaxResults(length);
+			entitylist=query.list();
+			System.out.println(entitylist.size());
+		}catch(RuntimeException re) {
+			throw re;
+		}
+		return entitylist;
+	}
+	
+	public void showall() {
+			Query query=(Query)sessionFactory.getCurrentSession().createQuery("from Choicequestion");
+			ArrayList<Choicequestion> n=(ArrayList<Choicequestion>) query.list();
+			for(int i=0;i<n.size();i++) {
+				System.out.println(n.get(i).getChoiceQuestionId());
+				System.out.println(n.get(i).getContent());
+			}
+			
+		
 	}
 }

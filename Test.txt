@@ -1,0 +1,46 @@
+package hdfstest;
+
+import java.io.IOException;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FSDataInputStream;
+import org.apache.hadoop.fs.FSDataOutputStream;
+import org.apache.hadoop.fs.FileStatus;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IOUtils;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Configuration conf = new Configuration();
+		conf.set("fs.default.name", "hdfs://localhost:9000");
+		conf.set("fs.hdfs.impl", "org.apache.hadoop.hdfs.DistributedFileSystem");
+		
+		try {
+			FileSystem hdfs = FileSystem.get(conf);
+//			hdfs.mkdirs(new Path("/test"));
+			
+//			hdfs.rename(new Path("/test"), new Path("/testa"));
+			
+//			FSDataOutputStream fdos=hdfs.create(new Path("/class1/a.txt"));
+//			fdos.write("a b c d a b c".getBytes());
+//			fdos.close();
+			
+			FSDataInputStream fdis = hdfs.open(new Path("/class1/a.txt"));
+			IOUtils.copyBytes(fdis, System.out, 1024, false);
+			IOUtils.closeStream(fdis);
+			fdis.close();
+			
+//			Path rootPath = new Path("/");
+//			FileStatus [] fs=hdfs.listStatus(rootPath);
+//			for(FileStatus f:fs){
+//				System.out.println(f.getPath());
+//			}
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

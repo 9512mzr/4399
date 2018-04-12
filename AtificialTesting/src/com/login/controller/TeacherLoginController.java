@@ -19,7 +19,7 @@ public class TeacherLoginController {
 	@Resource
 	private TeacherLoginServiceImpl teacherLoginServiceImpl;
 	
-	@RequestMapping("/login")
+	@RequestMapping("teacherlogin")
 	public String login(HttpServletRequest request, Model model) {
 		String id = request.getParameter("userid");
 		String pwd = request.getParameter("pwd");

@@ -1,7 +1,5 @@
 package com.entity;
 
-import java.util.ArrayList;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;

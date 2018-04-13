@@ -28,8 +28,5 @@ public class Choice_questionServiceImpl {
 		page.setList(list);
 		return page;
 	}
-	
-	public void showAll() {
-		this.choice_questionDaoImpl.showall();
-	}
+
 }

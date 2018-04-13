@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page import="java.io.*,java.util.*" %>
-<%@ page import="com.entity.Choicequestion" %>
+<%@ page import="java.io.*,java.util.*"%>
+<%@ page import="com.entity.Choicequestion"%>
+<%@ page import="com.entity.Bigquestion"%>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <!-- saved from url=(0045)http://www.zujuan.com/paper/view-782410.shtml -->
@@ -198,83 +199,83 @@
 					<h3>一、单选题</h3>
 					<!-- 以下为分页内容 -->
 					<%
-						if(request.getAttribute("list")!=null|request.getAttribute("list")!=""){
-							
-							
-						}else{
-							response.sendRedirect("Choice/showAll"); 
+						ArrayList<Choicequestion> choice = (ArrayList<Choicequestion>) request.getSession().getAttribute("courses");
+						ArrayList<Bigquestion> BigQu = (ArrayList<Bigquestion>) request.getSession().getAttribute("Bcourses");
+						if(BigQu==null){
+							response.sendRedirect(request.getContextPath()+"/Big/showAll");
+							return;
+						}else if(choice==null){
+							response.sendRedirect(request.getContextPath()+"/Choice/showAll");
+							return;
 						}
-					ArrayList<Choicequestion> n=(ArrayList<Choicequestion>)request.getAttribute("list");
-					System.out.println("yeshu"+n.size());
-					
-					int i=0;
+						int i = 0;
 					%>
-					<c:forEach items="${list}" var="Choicequestion">
+					<c:forEach items="${sessionScope.courses}" var="Choicequestion">
 						<div class="search-list">
-						<ul>
-							<li data-qid="3755280">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">${Choicequestion.content }（&nbsp;&nbsp;&nbsp; ）
-										</div>
-										<%
-											String img0=n.get(i).getImage();
-											if(img0.equals("")){
-												
-											}else{
-												String[] img=img0.split(";");
-												for(int j=0;j<img.length;j++){
-													%>
-													<img alt="???" src="<%=img[j]%>">
-													<%
-												}
-											}
-											
-											
-										%>
-										<%
-											if(n.get(i).getOption1().equals("null")){
-												
-											}else{
-										%>
-										<div class="exam-s">
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px; clear: none;"><span
-												class="op-item-meat" style="margin-top: 0px;">${Choicequestion.option1 }</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px;clear: none;"><span
-												class="op-item-meat" style="margin-top: 0px;">${Choicequestion.option2 }</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px;clear: none;"><span
-												class="op-item-meat" style="margin-top: 0px;">${Choicequestion.option3 }</span></span>
-											<span class="op-item"
-												style="width: 219px; margin-right: 0px;  clear: none;"><span
-												class="op-item-meat" style="margin-top: 0px;">${Choicequestion.option4 }</span></span>
-										</div>
-										<%
-											}
-											i++;
-										%>
-										
-									</div>
+							<ul>
+								<li data-qid="3755280">
+									<div class="search-exam">
+										<div class="exam-con">
+											<div class="exam-q">${Choicequestion.content }（&nbsp;&nbsp;&nbsp;
+												）</div>
 
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-3755280.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 3755280)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(3755280)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
+											<div class="exam-s">
+												<span class="op-item"
+													style="width: 219px; margin-right: 0px; clear: none;"><span
+													class="op-item-meat" style="margin-top: 0px;">${Choicequestion.option1 }</span></span>
+												<span class="op-item"
+													style="width: 219px; margin-right: 0px; clear: none;"><span
+													class="op-item-meat" style="margin-top: 0px;">${Choicequestion.option2 }</span></span>
+												<span class="op-item"
+													style="width: 219px; margin-right: 0px; clear: none;"><span
+													class="op-item-meat" style="margin-top: 0px;">${Choicequestion.option3 }</span></span>
+												<span class="op-item"
+													style="width: 219px; margin-right: 0px; clear: none;"><span
+													class="op-item-meat" style="margin-top: 0px;">${Choicequestion.option4 }</span></span>
+											</div>
+											<%
+												String[] imgs = choice.get(i).getImage().split(";");
+													for (int j = 0; j < imgs.length; j++) {
+											%>
+											<img alt="" src="<%=imgs[j]%>">
+											<%
+												}
+											%>
+
+										</div>
+
+										<div class="exam-foot">
+											<p class="exam-foot-left">
+											<script>
+												function answer(ans)
+												{
+													alert(ans);
+												}
+											</script>
+												<a
+													href="http://www.zujuan.com/question/detail-3755280.shtml"
+													onclick="answer('${Choicequestion.answer }');return false;"
+													target="_blank">
+												<i class="icona-jiexi">
+												</i>查看解析
+												</a> 
+												<a
+													onclick="OT2.QCollect(this, 3755280)" href="javascript:;"><i
+													class="icona-shoucang"></i>收藏</a> <a
+													onclick="new OT2.ErrorReport(3755280)" href="javascript:;"><i
+													class="icona-jiucuo"></i>纠错</a>
+											</p>
+											<p class="exam-foot-right">
+												<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
+											</p>
+										</div>
 									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
+								</li>
+							</ul>
+						</div>
+						<%
+							i++;
+						%>
 					</c:forEach>
 					<!-- 以上为分页内容 -->
 					<table style="margin-left: 500px;">
@@ -307,343 +308,92 @@
 							</td>
 						</tr>
 					</table>
-					<!-- <h3>二、综合题</h3>
-					<div class="search-list">
-						<ul>
-							<li data-qid="2681480">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">
-											26. 某同学在做“观察叶片的结构”的实验时所看到的菠菜叶片横切面如图，请据图分析回答：<br>
-											<img
-												data-cke-saved-src="http://tikupic.21cnjy.com/2f/eb/2febf4d1978c84e9a78e455450ebb106.png"
-												src="./备考2018年中考生物一轮基础复习：专题五 绿色植物与生物圈的水循环、碳氧平衡、有机物制造者、爱护植被绿化祖国 -组卷网_files/2febf4d1978c84e9a78e455450ebb106.png"
-												alt="" v:shapes="_x0000_i1043" height="158" width="243">
+					<h3>二、综合题</h3>
+					<%
+						
+						i = 0;
+					%>
+					<c:forEach items="${sessionScope.Bcourses}" var="Bigquestion">
+						<div class="search-list">
+							<ul>
+								<li data-qid="6662749">
+									<div class="search-exam">
+										<div class="exam-con">
+											<div class="exam-qlist">
+												<div class="exam-con">
+													<div class="exam-q">
+														<%
+															String[] imgs=BigQu.get(i).getImage().split(";");
+															for(int j=0;j<imgs.length;j++){
+																%>
+																<img alt="" src="<%=imgs[j] %>">
+																<%
+															}
+														%>
+														<p>
+															${Bigquestion.content }
+														</p>
+													</div>
+												</div>
+											</div>
 										</div>
-										<div class="exam-qlist">
-											<div class="exam-con">
-												<div class="exam-q">
-													(1)、图中[①]<span class="q-blank">&nbsp;</span>和[⑤]<span
-														class="q-blank">&nbsp;</span>合称<span class="q-blank">&nbsp;</span>
-													， 属于保护组织，②④应属于<span class="q-blank">&nbsp;</span>组织．
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(2)、叶片正面比背面颜色<span class="q-blank">&nbsp;</span> ．
-													主要原因是接近上表皮的[<span class="q-blank">&nbsp;</span>]的细胞中含叶绿体更多．叶肉细胞含有的叶绿体是进行<span
-														class="q-blank">&nbsp;</span>的场所．
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(3)、光合作用需要的水分、无机盐运输到叶肉细胞是通过[<span class="q-blank">&nbsp;</span>]<span
-														class="q-blank">&nbsp;</span>实现的．
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(4)、图中[⑥]<span class="q-blank">&nbsp;</span> ， 由半月形的<span
-														class="q-blank">&nbsp;</span>组成．
-												</div>
-											</div>
-
-										</div>
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-2681480.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 2681480)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(2681480)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="6662749">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">
-											27. 观察图并回答问题．<br>
-											<img
-												data-cke-saved-src="http://tikupic.21cnjy.com/e5/4d/e54d47281a65accdd1c14cb7de1dd068.png"
-												src="./备考2018年中考生物一轮基础复习：专题五 绿色植物与生物圈的水循环、碳氧平衡、有机物制造者、爱护植被绿化祖国 -组卷网_files/e54d47281a65accdd1c14cb7de1dd068.png"
-												alt="图片_x0020_18" width="347" height="148">
-										</div>
-										<div class="exam-qlist">
-											<div class="exam-con">
-												<div class="exam-q">
-													(1)、其中图A表示气孔<span class="q-blank">&nbsp;</span>；图B表示气孔<span
-														class="q-blank">&nbsp;</span>。
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(2)、图中①是<span class="q-blank">&nbsp;</span> ， 呈半月形；②是<span
-														class="q-blank">&nbsp;</span> ， 无色透明，<span class="q-blank">&nbsp;</span>（选填“有”或“无”）叶绿体。
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(3)、气孔能够张开和闭合主要是由<span class="q-blank">&nbsp;</span>调节的，气孔既是植物<span
-														class="q-blank">&nbsp;</span>的“门户”，又是<span class="q-blank">&nbsp;</span>的“窗口”。
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(4)、通常情况下，白天太阳升起，气孔<span class="q-blank">&nbsp;</span> ，
-													为叶片制造有机物提供<span class="q-blank">&nbsp;</span> ．
-												</div>
-											</div>
-
+	
+										<div class="exam-foot">
+											<p class="exam-foot-left">
+												<a href="http://www.zujuan.com/question/detail-6662749.shtml"
+												onclick="answer('${Bigquestion.answer }');return false;"
+													target="_blank"><i class="icona-jiexi"
+													
+												>
+													</i>查看解析
+												</a> <a
+													onclick="OT2.QCollect(this, 6662749)" href="javascript:;"><i
+													class="icona-shoucang"></i>收藏</a> <a
+													onclick="new OT2.ErrorReport(6662749)" href="javascript:;"><i
+													class="icona-jiucuo"></i>纠错</a>
+											</p>
+											<p class="exam-foot-right">
+												<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
+											</p>
 										</div>
 									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-6662749.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 6662749)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(6662749)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="2971052">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">
-											28. 如图是研究植物散失水分的四个实验装置，将A、B、C、D实验装置在阳光下照射2小时．请分析回答：<br>
-											<img
-												data-cke-saved-src="http://tikupic.21cnjy.com/61/5a/615a08bc68e483c10880d7c69bc1e66d.png"
-												src="./备考2018年中考生物一轮基础复习：专题五 绿色植物与生物圈的水循环、碳氧平衡、有机物制造者、爱护植被绿化祖国 -组卷网_files/615a08bc68e483c10880d7c69bc1e66d.png"
-												alt="" v:shapes="_x0000_i1039" width="443" height="139">
-										</div>
-										<div class="exam-qlist">
-											<div class="exam-con">
-												<div class="exam-q">
-													(1)、A、B两个装置中，能证明塑料袋壁上的水珠是由植物体散失的是<span class="q-blank">&nbsp;</span>装置．
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(2)、C、D两个装置中，塑料袋壁上的水珠较多的是<span class="q-blank">&nbsp;</span>装置
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(3)、通过这组实验可以得出结论：<span class="q-blank">&nbsp;</span>是蒸腾
-													作用的主要器官．植物蒸腾作用散失大量水分，因此大面积植树造林可以<span class="q-blank">&nbsp;</span>（填“提高”或“降低”）大气湿度．
-												</div>
-											</div>
-
-										</div>
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-2971052.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 2971052)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(2971052)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="4460881">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">
-											29. 如图是绿色植物在生物圈二氧化碳和氧气中的作用 <img width="421" height="209"
-												src="./备考2018年中考生物一轮基础复习：专题五 绿色植物与生物圈的水循环、碳氧平衡、有机物制造者、爱护植被绿化祖国 -组卷网_files/6df8485e85a6015aabf0dd3ac20876d3.png"
-												alt="" v:shapes="_x0000_i1029">
-										</div>
-										<div class="exam-qlist">
-											<div class="exam-con">
-												<div class="exam-q">
-													(1)、生物圈中氧气的主要来源是植物的<span class="q-blank">&nbsp;</span>；．
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(2)、生物圈中二氧化碳主要来源是<span class="q-blank">&nbsp;</span> ，
-													植物进行光合作用的原料是<span class="q-blank">&nbsp;</span> ， 产物是<span
-														class="q-blank">&nbsp;</span> ， 条件是<span class="q-blank">&nbsp;</span>
-													．
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(3)、生物通过<span class="q-blank">&nbsp;</span>将有机物分解，细菌等微生物通过<span
-														class="q-blank">&nbsp;</span>作用将动植物尸体及腐烂物质分解，释放出的二氧化碳进入大气．如此生生不息，构成了大气中的<span
-														class="q-blank">&nbsp;</span>的循环，维持了生态系统中的碳氧平衡．
-												</div>
-											</div>
-
-										</div>
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-4460881.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 4460881)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(4460881)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>-->
-					<!--  <h3>三、实验探究题</h3>
-					<div class="search-list">
-						<ul>
-							<li data-qid="6332503">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">
-											30. 将一盆植物和一只小白鼠一起放到一个密闭的玻璃罩中（如下图），做如下实验：<br>
-											<img
-												data-cke-saved-src="http://tikupic.21cnjy.com/2d/b8/2db8e6fff715414e1f7ec31e1e5709f1.jpg"
-												src="./备考2018年中考生物一轮基础复习：专题五 绿色植物与生物圈的水循环、碳氧平衡、有机物制造者、爱护植被绿化祖国 -组卷网_files/2db8e6fff715414e1f7ec31e1e5709f1.jpg"
-												alt="" v:shapes="图片_x0020_41" width="151" height="147">
-										</div>
-										<div class="exam-qlist">
-											<div class="exam-con">
-												<div class="exam-q">
-													(1)、将此装置放在黑暗环境中，小白鼠将<span class="q-blank">&nbsp;</span> ，
-													原因是<span class="q-blank">&nbsp;</span>。
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(2)、将此装置放置在阳光下，小白鼠将<span class="q-blank">&nbsp;</span>。
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(3)、在（2）中，小白鼠为绿色植物进行光合作用提供了<span class="q-blank">&nbsp;</span>
-													， 而绿色植物通过光合作用又为小白鼠进行生命活动提供了<span class="q-blank">&nbsp;</span>。
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(4)、上述装置中，若取出绿色植物，小白鼠将<span class="q-blank">&nbsp;</span> ，
-													由此可见绿色植物在生物圈中的重要性。
-												</div>
-											</div>
-
-										</div>
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-6332503.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 6332503)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(6332503)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li data-qid="6608869">
-								<div class="search-exam">
-									<div class="exam-con">
-										<div class="exam-q">
-											31. 下图是某同学设计验证绿叶光合作用产生淀粉的示意图，据图回答。<br>
-											<img
-												data-cke-saved-src="http://tikupic.21cnjy.com/b2/2a/b22a0d6e8d7a3872dd865a438f5b1ab3.png"
-												src="./备考2018年中考生物一轮基础复习：专题五 绿色植物与生物圈的水循环、碳氧平衡、有机物制造者、爱护植被绿化祖国 -组卷网_files/b22a0d6e8d7a3872dd865a438f5b1ab3.png"
-												v:shapes="图片_x0020_2" width="438" height="280">
-										</div>
-										<div class="exam-qlist">
-											<div class="exam-con">
-												<div class="exam-q">
-													(1)、该过程中正确的操作顺序是：<span class="q-blank">&nbsp;</span>
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(2)、在B操作中的目的是设置<span class="q-blank">&nbsp;</span>,实验变量是 <span
-														class="q-blank">&nbsp;</span>。&nbsp;&nbsp;&nbsp;
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(3)、在A操作的目的是<span class="q-blank">&nbsp;</span>,图F中滴加的液体是<span
-														class="q-blank">&nbsp;</span>。 图G小烧杯中的液体是<span
-														class="q-blank">&nbsp;</span>,其作用是<span class="q-blank">&nbsp;</span>.
-												</div>
-											</div>
-
-											<div class="exam-con">
-												<div class="exam-q">
-													(4)、在实验中E看到的现象是<span class="q-blank">&nbsp;</span>,这说明<span
-														class="q-blank">&nbsp;</span>是光合作用的产物。
-												</div>
-											</div>
-
-										</div>
-									</div>
-
-									<div class="exam-foot">
-										<p class="exam-foot-left">
-											<a href="http://www.zujuan.com/question/detail-6608869.shtml"
-												target="_blank"><i class="icona-jiexi"></i>查看解析</a> <a
-												onclick="OT2.QCollect(this, 6608869)" href="javascript:;"><i
-												class="icona-shoucang"></i>收藏</a> <a
-												onclick="new OT2.ErrorReport(6608869)" href="javascript:;"><i
-												class="icona-jiucuo"></i>纠错</a>
-										</p>
-										<p class="exam-foot-right">
-											<a class="J_AddQuestion addbtn"><b>+</b>选题</a>
-										</p>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>-->
+								</li>
+							</ul>
+						</div>
+						<%
+						i++;
+						%>
+					</c:forEach>
+					<table style="margin-left: 500px;">
+						<tr>
+							<td colspan="6" align="center" bgcolor="">共${Bpage.totalRecords}条记录
+								共${Bpage.totalPages}页 当前第${Bpage.pageNo}页
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+								href="<%=request.getContextPath()%>/Big/showAll/${methodname }?pageNo=${Bpage.topPageNo}"
+								class="btn_r">首页</a> <c:choose>
+									<c:when test="${page.pageNo!=1}">
+										<a
+											href="<%=request.getContextPath()%>/Big/showAll/${methodname }?pageNo=${Bpage.previousPageNo }"
+											class="btn_r">上一页</a>
+									</c:when>
+									<c:otherwise>
+										<a class="btn_r">上一页</a>
+									</c:otherwise>
+								</c:choose> <c:choose>
+									<c:when test="${Bpage.pageNo != Bpage.totalPages}">
+										<a
+											href="<%=request.getContextPath()%>/Big/showAll/${methodname }?pageNo=${Bpage.nextPageNo }"
+											class="btn_r">下一页</a>
+									</c:when>
+									<c:otherwise>
+										<a class="btn_r">下一页</a>
+									</c:otherwise>
+								</c:choose> <a
+								href="<%=request.getContextPath()%>/Big/showAll/${methodname }?pageNo=${Bpage.bottomPageNo}"
+								class="btn_r">尾页</a>
+							</td>
+						</tr>
+					</table>
 				</div>
 			</div>
 		</div>

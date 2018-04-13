@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.choice_question.service.Choice_questionServiceImpl;
@@ -24,7 +23,7 @@ public class Choice_questionCotroller {
 	
 	@RequestMapping(value = "/showAll")
     public String findAllCourse(HttpServletRequest request,
-            HttpServletResponse response,ModelMap modelMap) {
+            HttpServletResponse response) {
         try {
             String pageNo = request.getParameter("pageNo");
             if (pageNo == null|pageNo=="") {
@@ -35,8 +34,7 @@ public class Choice_questionCotroller {
             request.setAttribute("page", page);
             
             List<Choicequestion> course = page.getList();
-            request.setAttribute("courses", course);
-            modelMap.put("list", course);
+            request.getSession().setAttribute("courses", course);
         } catch (Exception e) {
             e.printStackTrace();
         }

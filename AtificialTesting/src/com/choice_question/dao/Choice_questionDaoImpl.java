@@ -1,6 +1,5 @@
 package com.choice_question.dao;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;

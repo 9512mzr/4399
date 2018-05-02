@@ -249,7 +249,7 @@
 			<div class="fr">
 				<!--div class="sinaCout"><wb:follow-button uid="3621865884" type="red_2" width="136" height="24" ></wb:follow-button></div-->
 				<div class="loginAfter">
-					<span>欢迎您，</span><a href="http://www.yitiku.cn/Tiku/User/index">布莱克</a><b
+					<span>欢迎您，</span><a href="http://www.yitiku.cn/Tiku/User/index">${list.nickName}</a><b
 						id="loginAfterbtn"></b>
 					<div id="loginAfterContent">
 						<ul>
@@ -276,7 +276,7 @@
 			<div class="logonew" style="position: relative; top: 8px;">
 				<div class="logo fl">
 					<a href="http://www.yitiku.cn/"><img
-						src="${ctx }/static/images/admin_logo.png" id="logo_src" alt="易题库"
+						src="${ctx }/static/images/admin_logo1.png" id="logo_src" alt="易题库"
 						width="536"></a>
 				</div>
 				<div class="logo call">
@@ -610,13 +610,14 @@ function studysend(num) {
 </script>
 		<div class="userLoginBox loginTxt" style="display: block;">
 			<h4>
-				欢迎您，<a target="_blank" href="http://www.yitiku.cn/Tiku/User/index">布莱克</a>&nbsp;老师
+				欢迎您，<a target="_blank" href="http://www.yitiku.cn/Tiku/User/index">${list.nickName}</a>&nbsp;老师
+				
 			</h4>
 			<ul>
 				<li><a class="btn btn2" target="_blank"
 					href="${ctx }/selfcenter.jsp">进入我的主页</a></li>
-				<li class="col333"><a target="_blank"
-					href="http://www.yitiku.cn/Tiku/User/userInfo">修改密码</a>
+				<li class="col333">
+				<a href="${ctx }/changepage?name=${list.teacherid}">修改密码</a>
 				<!--?php if($_SESSION["type"]==3):?-->
 					<a target="_blank"
 					href="http://www.yitiku.cn/Tiku/User/myStudyCard" class="join"

@@ -8,6 +8,9 @@ import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
+
+import com.entity.Teacher;
+
 @Repository
 public class TeacherLoginDaoImpl{
 	@Resource
@@ -18,4 +21,16 @@ public class TeacherLoginDaoImpl{
 		List<Object[]> list = q.list();
 		return list;
 	}
+	public Teacher findUser(int id) {
+        System.out.println(id);
+        
+		Teacher q=(Teacher)sessionFactory.getCurrentSession().get(Teacher.class,id);
+		
+		return q;
+	}
 }
+
+
+
+
+	

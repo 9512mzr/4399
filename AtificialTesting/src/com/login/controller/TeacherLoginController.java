@@ -4,12 +4,15 @@ import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.entity.Teacher;
 import com.login.service.TeacherLoginServiceImpl;
 
 @Controller
@@ -18,7 +21,7 @@ public class TeacherLoginController {
 	private TeacherLoginServiceImpl teacherLoginServiceImpl;
 	
 	@RequestMapping("teacherlogin")
-	public String login(HttpServletRequest request, Model model) {
+	public String login(HttpServletRequest request,HttpServletResponse response,ModelMap modelMap) {
 		String id = request.getParameter("userid");
 		String pwd = request.getParameter("pwd");
 		List<Object[]> list = this.teacherLoginServiceImpl.listAll();
@@ -33,9 +36,13 @@ public class TeacherLoginController {
 //				String name = journalServiceImpl.userName(user_id).get(0);
 //				journalServiceImpl.insert(user_id, name, time1);
 				session.setAttribute("userid", id);
+				int name1 = Integer.valueOf(id);
+				Teacher list1 = teacherLoginServiceImpl.getname(name1);
+				modelMap.put("list", list1);
 				return "hello";
 			}
 		}
+		
 		return "login";
 	}
 }

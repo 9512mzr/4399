@@ -6,7 +6,6 @@ import javax.annotation.Resource;
 
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 
 import com.entity.Choicequestion;
@@ -14,7 +13,6 @@ import com.entity.Choicequestion;
 public class Choice_questionDaoImpl {
 	@Resource
 	private SessionFactory sessionFactory;
-	Transaction tx = sessionFactory.openSession().beginTransaction();
 	private int AllRowCount0;
 	public int getAllRowCount0() {
 		return AllRowCount0;
@@ -34,20 +32,5 @@ public class Choice_questionDaoImpl {
 			throw re;
 		}
 		return entitylist;
-	}
-	public void addChoice_question(Choicequestion question) {
-		 try{
-			 tx.begin();
-				
-				Choicequestion Choice_question = question;
-				sessionFactory.openSession().save(Choice_question);
-				tx.commit();
-				
-		 }catch(Exception e){
-			 e.printStackTrace();  
-             tx.rollback();
-		 }
-		 
-		
 	}
 }

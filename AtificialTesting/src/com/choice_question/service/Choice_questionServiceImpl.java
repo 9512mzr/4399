@@ -20,7 +20,6 @@ public class Choice_questionServiceImpl {
 	public Page queryForPage(int currentPage,int pageSize) {
 		Page page=new Page();
 		int allRow = choice_questionDaoImpl.getAllRowCount0();
-		System.out.println("111111111111111111");
 		int offset=page.countOffset(currentPage, pageSize);
 		List<Choicequestion> list=choice_questionDaoImpl.queryForPage(offset,pageSize);
 		page.setPageNo(currentPage);
@@ -28,9 +27,6 @@ public class Choice_questionServiceImpl {
 		page.setTotalRecords(allRow);
 		page.setList(list);
 		return page;
-	}
-	public void  addChoice_question(Choicequestion question) {
-		choice_questionDaoImpl.addChoice_question(question);
 	}
 
 }

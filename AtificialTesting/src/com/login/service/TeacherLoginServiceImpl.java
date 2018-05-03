@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.entity.Teacher;
 import com.login.dao.TeacherLoginDaoImpl;
 
 @Service
@@ -17,5 +18,10 @@ public class TeacherLoginServiceImpl {
 	
 	public List<Object[]>  listAll(){
 		return this.teacherLoginDaoImpl.findAll();
+	}
+	public Teacher getname(int id) {
+		return this.teacherLoginDaoImpl.findUser(id);
+		
+		
 	}
 }

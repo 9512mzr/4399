@@ -20,9 +20,13 @@
 <link href="${ctx }/static/css/ytkindexgb.css" rel="stylesheet"
 	type="text/css">
 <link href="${ctx }/static/css/indexLogin.css" rel="stylesheet">
+
 <script src="${ctx }/static/js/jquery-1.7.1.js"></script>
 <title>智能题库</title>
 <style type="text/css">
+#div2{
+position:absolute;
+}
 .guideSwitch a {
 	color: #333;
 }
@@ -65,6 +69,10 @@
 
 .wrap_in {
 	background: #fff;
+}
+.superdou{
+   margin-left:12%;
+   margin-top:40px;
 }
 
 .wrap_bar {
@@ -229,6 +237,14 @@
 }
 </style>
 <link rel="stylesheet" href="static/css/slide_share.css">
+
+
+
+
+
+
+
+
 </head>
 <body>
 	<div class="full fullChrome" style="display: none;">
@@ -249,13 +265,13 @@
 			<div class="fr">
 				<!--div class="sinaCout"><wb:follow-button uid="3621865884" type="red_2" width="136" height="24" ></wb:follow-button></div-->
 				<div class="loginAfter">
-					<span>欢迎您，</span><a href="http://www.yitiku.cn/Tiku/User/index">${list.nickName}</a><b
+					<span>欢迎您，</span><a href="#">${list.nickName}</a><b
 						id="loginAfterbtn"></b>
 					<div id="loginAfterContent">
 						<ul>
 							<li><a href="http://www.yitiku.cn/Tiku/User/index">我的主页</a></li>
-							<li><a href="http://www.yitiku.cn/Tiku/User/userInfo">账号设置</a></li>
-							<li><a href="http://www.yitiku.cn/Tiku/User/logout">退出登录</a></li>
+							<li><a href="">账号设置</a></li>
+							<li><a href="login.jsp">退出登录</a></li>
 						</ul>
 					</div>
 				</div>
@@ -461,39 +477,15 @@ function sgfagfds(){
 
 </script>
 	<div id="banner" class="banner">
-		<ul>
-			<li style="z-index: 1; opacity: 0.00108773;"><div class="bg"
-					style="background: url(&amp;#39;/uploads/advertisement/lunbo/57e36dd535c80.jpg&amp;#39;) no-repeat scroll center top;">
-					<a
-						href="http://www.yitiku.cn/Tiku/About/huodong/huodong/jslm?from=indexslide"
-						target="_blank" title="教师联盟"></a>
-				</div></li>
-			<li style="z-index: 0; opacity: 0;"><div class="bg"
-					style="background: url(&amp;#39;/uploads/advertisement/lunbo/5767c00cc2c58.jpg&amp;#39;) no-repeat scroll center top;">
-					<a href="http://www.yitiku.cn/zhuanti/2016zkzt?from=indexslide"
-						target="_blank" title="2016中考"></a>
-				</div></li>
-			<li style="z-index: 0; opacity: 0;"><div class="bg"
-					style="background: url(&amp;#39;/uploads/advertisement/lunbo/5763d79686cdc.jpg&amp;#39;) no-repeat scroll center top;">
-					<a href="http://www.yitiku.cn/zhuanti/2016gkzt?from=indexslide"
-						target="_blank" title="2016高考"></a>
-				</div></li>
-			<li style="z-index: 0; opacity: 0;"><div class="bg"
-					style="background: url(&amp;#39;/uploads/advertisement/lunbo/559ba7ac797e5.jpg&amp;#39;) no-repeat scroll center top;">
-					<a href="http://www.yitiku.cn/zhuanti/commonweal?from=indexslide"
-						target="_blank" title="易题库公益助学情"></a>
-				</div></li>
-			<li style="z-index: 0; opacity: 0.998912;"><div class="bg"
-					style="background: url(&amp;#39;/uploads/advertisement/lunbo/559ba7d4977e6.jpg&amp;#39;) no-repeat scroll center top;">
-					<a href="http://www.yitiku.cn/zhuanti/investment?from=indexslide"
-						target="_blank" title="易题库招商代理"></a>
-				</div></li>
-		</ul>
-		<div class="number">
-			<a class="this"></a><a class=""></a><a class=""></a><a class=""></a><a
-				class=""></a>
+	<div id="div1" class="superdou">
+	    <div id='div2'>
+	    <li><a href=""><img src="${ctx }/static/images/superdou.png" /></a></li>
+	
+
 		</div>
-		<div class="clear"></div>
+		
+	</div>
+
 		<script type="text/javascript">$(function(){
     //导航主题背景
     //$(".index_navBg").css('background','url(/images/questionBank/index/navBg_20160219yushuijie.png) center 0 no-repeat');
@@ -615,7 +607,7 @@ function studysend(num) {
 			</h4>
 			<ul>
 				<li><a class="btn btn2" target="_blank"
-					href="${ctx }/selfcenter.jsp">进入我的主页</a></li>
+					href="${ctx }/topersonal?name=${list.teacherid}">进入我的主页</a></li>
 				<li class="col333">
 				<a href="${ctx }/changepage?name=${list.teacherid}">修改密码</a>
 				<!--?php if($_SESSION["type"]==3):?-->

@@ -10,7 +10,7 @@
     <meta name="force-rendering" content="webkit"><!--用在其它-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    <title>21教育</title>
+    <title>4399更改密码</title>
     <meta name="keyword" content="">
     <meta name="description" content="">
     <link rel="dns-prefetch" href="https://www.21cnjy.com/">
@@ -19,6 +19,11 @@
     <link rel="dns-prefetch" href="https://tikupic.21cnjy.com/">
     <link rel="dns-prefetch" href="https://www.kt5u.com/">
     <link rel="icon" href="https://www.21cnjy.com/favicon.ico" mce_href="//www.21cnjy.com/favicon.ico" type="image/x-icon">
+    <script type="text/javascript">
+var phone='玩狗一百下，是兄弟就来砍我！';
+var dh=phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2');
+alert (phone);
+</script>
     <script>
     // 全局空间
         var ns = {};
@@ -88,12 +93,12 @@
         <div class="w">
             <div class="user-info">
                 <div class="info-img">
-                    <img src="${ctx }/static/images/7.png" alt="picture" id="user-site-photo">
+                    <img src="${ctx }/static/images/${list1.picture}" alt="picture" id="user-site-photo">
                     <div class="info-cnt">
                         <p>用户名：<span>${list1.nickName}</span>[ID：${list1.teacherid}]
                                                                                 </p>
                         <p>身份：<span>教师</span></p>
-                        <p>真实姓名：<span>183****3255</span></p>
+                        <p>用户等级：<span>${list1.level}</span></p>
                     </div>
                 </div>
             </div>
@@ -101,9 +106,9 @@
         <div class="qrcode">
             <img src="${ctx }/static/images/code.png">
             <div class="qrcode-msg">
-                <h3>4399教育微信公众号</h3>
+                <h3>4399教育qq群，打开手机qq扫码添加</h3>
                 <p>每天实时推送最新资讯；</p>
-                <p>定期发放福利，稳如老狗；</p>
+                <p>定期发放红包，稳如老狗；</p>
             </div>
         </div>	
     </div>    <div class="user-sd">

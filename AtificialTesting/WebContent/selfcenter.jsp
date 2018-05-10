@@ -231,71 +231,71 @@
 			</script>
 			<div class="header-logo">
 				<a href="https://zujuan.21cnjy.com/"> <img
-					src="${ctx }/static/images/app_logo.png" alt="" title="">
+					src="${ctx }/static/images/logo1.png" alt="" title="">
 				</a>
 			</div>
 			<div class="header-logo-sd f-fr">
 
 				<div class="user f-fr f-pr topbar-dropmap">
-					<a href="https://zujuan.21cnjy.com/ucenter" target="_blank">21jy_569002710<i
+					<a href="https://zujuan.21cnjy.com/ucenter" target="_blank">${list1.nickName}<i
 						class="icona-tri ml"></i></a>
 					<div class="drop-bd">
 						<ul>
-							<li><a href="https://zujuan.21cnjy.com/ucenter/u-download"
-								target="_blank">下载记录</a></li>
-							<li><a href="https://zujuan.21cnjy.com/ucenter/u-zujuan"
-								target="_blank">组卷记录</a></li>
-							<li><a href="https://zujuan.21cnjy.com/ucenter/u-ceshi"
-								target="_blank">测试记录</a></li>
-							<li><a href="https://zujuan.21cnjy.com/ucenter/u-shiti"
-								target="_blank">我的收藏</a></li>
+							<li><a href="#"
+								target="_self">下载记录</a></li>
+							<li><a href="#"
+								target="_self">组卷记录</a></li>
+							<li><a href="#"
+								target="_self">测试记录</a></li>
+							<li><a href="#"
+								target="_self">我的收藏</a></li>
 							<li><a
-								href="https://zujuan.21cnjy.com/ucenter/u-question-wrong"
-								target="_blank">错题本</a></li>
-							<li><a href="https://zujuan.21cnjy.com/ucenter/index"
-								target="_blank">个人信息</a></li>
+								href="#"
+								target="_self">错题本</a></li>
+							<li><a href="#"
+								target="_self">个人信息</a></li>
 							<li class="split-line"></li>
 							<li><a data-method="post"
-								href="https://zujuan.21cnjy.com/logout">退出</a></li>
+								href="login.jsp">退出</a></li>
 						</ul>
 						<span class="icona-dia-tri"></span>
 					</div>
 				</div>
 				<div class="user f-fr">
-					<a href="https://zujuan.21cnjy.com/ucenter/u-msg?from=top"><i
+					<a href="#"><i
 						class="icona-xinxi"></i>消息<span>(0)</span></a>
 				</div>
 				<div class="header-nav">
 					<!--<a href="http://oldzujuan.21cnjy.com/" target="_blank">【返回旧版】</a>-->
 					<!--<span class="split"></span>-->
-					<a href="https://zujuan.21cnjy.com/" class="help"><i
+					<a href="#" class="help"><i
 						class="icona-home"></i>网站首页</a> <span class="split"></span> <a
-						href="https://zujuan.21cnjy.com/help" class="help" target="_blank"><i
+						href="#" class="help" target="_self"><i
 						class="icona-help"></i>帮助中心</a> <span class="split"></span> <a
-						href="https://zujuan.21cnjy.com/payment/vip" target="_blank"><i
+						href="#" target="_blank"><i
 						class="icona-buy"></i>购买VIP</a> <span class="split"></span> <a
-						href="https://zujuan.21cnjy.com/help/request" target="_blank"><i
+						href="#" target="_blank"><i
 						class="icona-buy"></i>申请试用</a> <span class="split"></span> <a
-						href="https://zujuan.21cnjy.com/payment/vip-card" target="_blank"><i
+						href="#" target="_blank"><i
 						class="icona-buy"></i>激活VIP</a> <span class="split"></span> <span
 						class="topbar-dropmap"> <a
-						href="https://zujuan.21cnjy.com/ucenter/u-download#"><i
+						href="#"><i
 							class="icona-qixia"></i>旗下站点</a>
 						<div class="drop-bd">
 							<ul>
 								<li><a target="_blank"
-									href="http://www.21cnjy.com/zhitongche/">校网通</a></li>
+									href="#">校网通</a></li>
 								<li><a target="_blank" href="http://zujuan.21cnjy.com/">在线组卷</a></li>
 								<li><a target="_blank" href="http://www.jbzyk.com/">校本资源库</a></li>
 								<li><a target="_blank" href="http://tiku.21cnjy.com/">在线题库</a></li>
 								<li><a target="_blank"
-									href="http://www.21cnjy.com/video.php">名师课堂</a></li>
+									href="#">名师课堂</a></li>
 								<li><a target="_blank"
-									href="http://www.21cnjy.com/productshow/index.php?prod=school">数字化校园</a></li>
+									href="#">数字化校园</a></li>
 								<li><a target="_blank"
-									href="http://www.21cnjy.com/productshow/index.php?prod=yun">区域云平台</a></li>
+									href="#">区域云平台</a></li>
 								<li><a target="_blank"
-									href="http://www.21cnjy.com/productshow/app/">二一教育APP</a></li>
+									href="#">二一教育APP</a></li>
 							</ul>
 							<span class="icona-dia-tri"></span>
 						</div>
@@ -333,14 +333,14 @@
 				<div class="msg-box">
 					<div class="user-pic">
 						<div class="pic-border">
-							<img src="${ctx }/static/images/avatar.php">
+							<img src="${ctx }/static/images/${list1.picture}">
 						</div>
 					</div>
 
 					<div class="user-id">
-						<p class="user-idname">21jy_569002710</p>
+						<p class="user-idname">${list1.nickName}</p>
 						<p class="user-level">
-							<i class="icona-lv-gold"></i>普通用户
+							<i class="icona-lv-gold"></i>${list1.level}
 						</p>
 					</div>
 
@@ -357,11 +357,11 @@
 				</div>
 				<div class="user-using">
 					<ul>
-						<li><a href="https://zujuan.21cnjy.com/ucenter/u-download"
+						<li><a href="#"
 							class="using-active"><i class="icona-download3"></i>下载记录</a></li>
-						<li><a href="https://zujuan.21cnjy.com/ucenter/u-zujuan"><i
+						<li><a href="#"><i
 								class="icona-zjjl"></i>组卷记录</a></li>
-						<li><a href="https://zujuan.21cnjy.com/ucenter/u-ceshi"><i
+						<li><a href=#><i
 								class="icona-csjl"></i>测试记录</a></li>
 						<li>
 							<div class="mt">
@@ -370,30 +370,30 @@
 							</div>
 							<div class="mc">
 								<p>
-									<a href="https://zujuan.21cnjy.com/ucenter/u-shiti"><i
+									<a href="#"><i
 										class="icona-ellipsesm"></i>试题收藏</a>
 								</p>
 								<p>
-									<a href="https://zujuan.21cnjy.com/ucenter/u-shijuan"><i
+									<a href="#"><i
 										class="icona-ellipsesm"></i>试卷收藏</a>
 								</p>
 								<p>
-									<a href="https://zujuan.21cnjy.com/ucenter/u-zhuanti"><i
+									<a href="#"><i
 										class="icona-ellipsesm"></i>专题收藏</a>
 								</p>
 							</div>
 						</li>
 						<li><a
-							href="https://zujuan.21cnjy.com/ucenter/u-question-wrong"><i
+							href="#"><i
 								class="icona-ctb"></i>错题本</a></li>
-						<li><a href="https://zujuan.21cnjy.com/ucenter/u-error"><i
+						<li><a href="#"><i
 								class="dj-error"></i>纠错记录</a></li>
-						<li><a href="https://zujuan.21cnjy.com/ucenter/index"><i
+						<li><a href="#"><i
 								class="icona-set"></i>个人信息</a></li>
 
-						<li><a href="https://zujuan.21cnjy.com/ucenter/u-menu"><i
+						<li><a href="#"><i
 								class="dj-menu"></i>订单管理</a></li>
-						<li><a href="https://zujuan.21cnjy.com/ucenter/u-msg"><i
+						<li><a href="#"><i
 								class="icona-msg"></i>我的信息</a></li>
 					</ul>
 				</div>
@@ -442,7 +442,7 @@
 					<div class="userzj-list userzj-list1">
 						<div class="null-page"
 							style="width: 100%; text-align: center; color: #333; font-size: 14px; margin-top: 80px;">
-							<img src="./下载记录_files/blank.png"><br>
+							<img src="${ctx }/static/images/7.png"><br>
 							<br> <span
 								style="font-size: 16px; color: #666666; font-family: Microsoft YaHei">未搜索到相关数据!</span>
 						</div>
@@ -467,15 +467,15 @@
 					<p>Company Introduction</p>
 					<ul>
 						<li><i class="icona-ellipse"></i><a
-							href="http://www.21cnjy.com/about/about_about.php"
+							href="#"
 							target="_blank">公司简介</a></li>
 						<li><i class="icona-ellipse"></i><a
-							href="https://zujuan.21cnjy.com/help/copyright" target="_blank">版权声明</a></li>
+							href="#" target="_blank">版权声明</a></li>
 						<li><i class="icona-ellipse"></i><a
-							href="http://www.21cnjy.com/about/about_company-news.php"
+							href="#"
 							target="_blank">公司动态</a></li>
 						<li><i class="icona-ellipse"></i><a
-							href="https://zujuan.21cnjy.com/help/feedback" target="_blank">意见反馈</a></li>
+							href="#" target="_blank">意见反馈</a></li>
 					</ul>
 				</div>
 				<div class="con-fw">
@@ -483,11 +483,11 @@
 					<p>Service Introduction</p>
 					<ul class="fw-list">
 						<li><i class="icona-ellipse"></i><a
-							href="https://zujuan.21cnjy.com/help/zujuan" target="_blank">组卷通服务</a></li>
+							href="#" target="_blank">组卷通服务</a></li>
 						<li><i class="icona-ellipse"></i><a
-							href="https://zujuan.21cnjy.com/help/vip" target="_blank">VIP会员服务</a></li>
+							href="#" target="_blank">VIP会员服务</a></li>
 						<li><i class="icona-ellipse"></i><a
-							href="https://zujuan.21cnjy.com/help/diy" target="_blank">学校定制化服务</a></li>
+							href="#" target="_blank">学校定制化服务</a></li>
 					</ul>
 				</div>
 				<div class="con-bz">
@@ -495,18 +495,18 @@
 					<p>Help center</p>
 					<ul>
 						<li><i class="icona-ellipse"></i><a
-							href="https://zujuan.21cnjy.com/help/demo" target="_blank">视频帮助</a></li>
+							href="#" target="_blank">视频帮助</a></li>
 						<li><i class="icona-ellipse"></i><a
-							href="https://zujuan.21cnjy.com/help/faq" target="_blank">常见问题</a></li>
+							href="#" target="_blank">常见问题</a></li>
 						<li><i class="icona-ellipse"></i><a
-							href="https://zujuan.21cnjy.com/help/makepaper" target="_blank">如何组卷</a></li>
+							href="#" target="_blank">如何组卷</a></li>
 						<li><i class="icona-ellipse"></i><a
-							href="https://zujuan.21cnjy.com/help/download" target="_blank">下载试卷</a></li>
+							href="#" target="_blank">下载试卷</a></li>
 						<li><i class="icona-ellipse"></i><a
-							href="https://zujuan.21cnjy.com/help/test" target="_blank">在线测试</a></li>
+							href="#" target="_blank">在线测试</a></li>
 
 						<li><i class="icona-ellipse"></i><a
-							href="https://zujuan.21cnjy.com/new" target="_blank">最新试题</a></li>
+							href="#" target="_blank">最新试题</a></li>
 					</ul>
 				</div>
 				<div class="con-ewm">

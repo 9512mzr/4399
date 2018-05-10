@@ -19,6 +19,7 @@ public class TeacherRegistDaoImpl {
 //		teacher.setEmail(email);
 		teacher.setNickName(nickName);
 		teacher.setPassWord(passWord);
+		teacher.setLevel("∆’Õ®”√ªß");
 		
 		Session s=this.sessionFactory.openSession();
 		Transaction t=s.beginTransaction();

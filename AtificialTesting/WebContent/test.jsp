@@ -264,7 +264,7 @@
 						%>
 					</c:forEach>
 					<!-- 以上为分页内容 -->
-					<table style="margin-left: 500px;">
+					<table style="margin-left: 500px;"> 
 						<tr>
 							<td colspan="6" align="center" bgcolor="">共${page.totalRecords}条记录
 								共${page.totalPages}页 当前第${page.pageNo}页

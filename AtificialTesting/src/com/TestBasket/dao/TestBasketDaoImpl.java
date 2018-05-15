@@ -14,9 +14,10 @@ public class TestBasketDaoImpl {
 	@Resource
 	private SessionFactory sessionFactory;
 	
-	public void save(int id) {
+	public void save(int id,String name) {
 		TestBasket basket = new TestBasket();
 		basket.setChoiceQuestionId(id);
+		basket.setName(name);
 		Session s=this.sessionFactory.openSession();
 		Transaction tr=s.beginTransaction();
 		s.save(basket);

@@ -18,7 +18,8 @@ public class TestBasket {
 		private int testBasketId;
 		private int choiceQuestionId;
 		private Choicequestion choicequestion;
-		
+		private String name;
+			
 		@Id
 		@GenericGenerator(name="loginid", strategy="assigned")
 		@GeneratedValue(generator="loginid")
@@ -45,6 +46,12 @@ public class TestBasket {
 		}
 		public void setChoicequestion(Choicequestion choicequestion) {
 			this.choicequestion = choicequestion;
+		}
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
 		}
 	
 }

@@ -8,17 +8,17 @@ import javax.persistence.Table;
 @Table(name="bigquestion")
 public class Bigquestion {
 
-	private Integer BigQuestionId;
+	private Integer bigQuestionId;
 	private Integer ProblemModelId;
 	private String Image;
 	private String Answer;
 	private String content;
 	@Id
 	public Integer getBigQuestionId() {
-		return BigQuestionId;
+		return bigQuestionId;
 	}
-	public void setBigQuestionId(Integer bigQuestionId) {
-		BigQuestionId = bigQuestionId;
+	public void setbigQuestionId(Integer bigQuestionId) {
+		this.bigQuestionId = bigQuestionId;
 	}
 	public Integer getProblemModelId() {
 		return ProblemModelId;

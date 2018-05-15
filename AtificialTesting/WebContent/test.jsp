@@ -252,7 +252,7 @@
 													class="icona-jiucuo"></i>纠错</a>
 											</p>
 											<p class="exam-foot-right">
-												<a class="J_AddQuestion addbtn" href="<%=request.getContextPath()%>/add?id=${Choicequestion.choiceQuestionId }"><b>+</b>选题</a>
+												<a class="J_AddQuestion addbtn" href="<%=request.getContextPath()%>/add?id=${Choicequestion.choiceQuestionId}&name=选择"><b>+</b>选题</a>
 											</p>
 										</div>
 									</div>
@@ -339,7 +339,7 @@
 													class="icona-jiucuo"></i>纠错</a>
 											</p>
 											<p class="exam-foot-right">
-												<a class="J_AddQuestion addbtn" href="<%=request.getContextPath()%>/add?id=${Bigquestion.BigQuestionId }"><b>+</b>选题</a>
+												<a class="J_AddQuestion addbtn" href="<%=request.getContextPath()%>/add?id=${Bigquestion.bigQuestionId }&name=大题"><b>+</b>选题</a>
 											</p>
 										</div>
 									</div>
@@ -395,7 +395,6 @@
 					class="icona-fenxi2"></i>分析试卷</a> <a href="javascript:;"
 					onclick="collect(782410,this)"><i class="icona-shoucang"></i><span>
 						收藏试卷 </span></a>
-
 			</div>
 			<div class="dj-detail">
 				<h1>

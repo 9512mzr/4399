@@ -54,15 +54,15 @@
         </div>
         <div class="r-wrap">
             <ul class="heading-nav">
-                <li class="item"><a href="https://www.21cnjy.com/" target="_blank">4399世纪教育网</a></li>
+                <li class="item"><a href="" target="_blank">4399世纪教育网</a></li>
                 <li class="sep">|</li>
-                <li class="item"><a href="https://zujuan.21cnjy.com/" target="_blank">4399组卷平台</a></li>
+                <li class="item"><a href="" target="_blank">4399组卷平台</a></li>
                 <li class="sep">|</li>
-                <li class="item"><a href="https://www.kt5u.com/" target="_blank">课堂无忧</a></li>
+                <li class="item"><a href="" target="_blank">课堂无忧</a></li>
                 <li class="sep">|</li>
-                <li class="item"><a href="https://tiku.21cnjy.com/" target="_blank">在线题库</a></li>
+                <li class="item"><a href="" target="_blank">在线题库</a></li>
                 <li class="sep">|</li>
-                <li class="item"><a href="https://www.21cnjy.com/video.php" target="_blank">名师课堂</a></li>
+                <li class="item"><a href="" target="_blank">名师课堂</a></li>
             </ul>
             <div class="heading-exit">
                 <!--<img src="/static/images/register/s-user.png" alt="logo">-->

@@ -338,22 +338,12 @@
 					</div>
 
 					<div class="user-id">
-						<p class="user-idname">21jy_569002710</p>
+						<p class="user-idname">欢迎：${sessionScope.nickName }</p>
 						<p class="user-level">
 							<i class="icona-lv-gold"></i>普通用户
 						</p>
 					</div>
 
-				</div>
-				<div class="points">
-					<ul>
-						<li><p>
-								<span>0</span>积分
-							</p></li>
-						<li><p class="line-border">
-								<span>0</span>学币
-							</p></li>
-					</ul>
 				</div>
 				<div class="user-using">
 					<ul>
@@ -388,7 +378,7 @@
 								class="icona-ctb"></i>错题本</a></li>
 						<li><a href=""><i
 								class="dj-error"></i>纠错记录</a></li>
-						<li><a href=""><i
+						<li><a href="${ctx }/changepage?name=${sessionScope.userid }"><i
 								class="icona-set"></i>个人信息</a></li>
 
 						<li><a href=""><i

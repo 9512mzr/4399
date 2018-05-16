@@ -456,27 +456,27 @@ function sgfagfds(){
 			<li style="z-index: 1; opacity: 0.00108773;"><div class="bg"
 					style="background: url(&amp;#39;/uploads/advertisement/lunbo/57e36dd535c80.jpg&amp;#39;) no-repeat scroll center top;">
 					<a
-						href="http://www.yitiku.cn/Tiku/About/huodong/huodong/jslm?from=indexslide"
+						href=""
 						target="_blank" title="教师联盟"></a>
 				</div></li>
 			<li style="z-index: 0; opacity: 0;"><div class="bg"
 					style="background: url(&amp;#39;/uploads/advertisement/lunbo/5767c00cc2c58.jpg&amp;#39;) no-repeat scroll center top;">
-					<a href="http://www.yitiku.cn/zhuanti/2016zkzt?from=indexslide"
+					<a href=""
 						target="_blank" title="2016中考"></a>
 				</div></li>
 			<li style="z-index: 0; opacity: 0;"><div class="bg"
 					style="background: url(&amp;#39;/uploads/advertisement/lunbo/5763d79686cdc.jpg&amp;#39;) no-repeat scroll center top;">
-					<a href="http://www.yitiku.cn/zhuanti/2016gkzt?from=indexslide"
+					<a href=""
 						target="_blank" title="2016高考"></a>
 				</div></li>
 			<li style="z-index: 0; opacity: 0;"><div class="bg"
 					style="background: url(&amp;#39;/uploads/advertisement/lunbo/559ba7ac797e5.jpg&amp;#39;) no-repeat scroll center top;">
-					<a href="http://www.yitiku.cn/zhuanti/commonweal?from=indexslide"
+					<a href=""
 						target="_blank" title="易题库公益助学情"></a>
 				</div></li>
 			<li style="z-index: 0; opacity: 0.998912;"><div class="bg"
 					style="background: url(&amp;#39;/uploads/advertisement/lunbo/559ba7d4977e6.jpg&amp;#39;) no-repeat scroll center top;">
-					<a href="http://www.yitiku.cn/zhuanti/investment?from=indexslide"
+					<a href=""
 						target="_blank" title="易题库招商代理"></a>
 				</div></li>
 		</ul>
@@ -520,62 +520,7 @@ function sgfagfds(){
             }
         });
     });
-    //发送验证码
-    $(".studycode").live('click',function(){
-        if($("#code_flg").val() == "true"){
-          var cardnum = $("[name='cadrnum']").val();
-          var cardphone = $("[name='cardphone']").val();
-          if(!/^1[3578]{1}\d{9}$/.test(cardphone)){
-            $(".cardphone").addClass("loginShow");
-            beidong();
-            shangbianju();
-            return;
-          }else{
-            $(".cardphone").removeClass("loginShow");
-          }
-          var url = "/Tiku/User/studycardyzm/cardphone/"+cardphone + "/cadrnum/" + cardnum;
-          $.get(url,function(data){
-            if(data.result == 2){  //学习卡账号错误
-              $(".cardnum").addClass("loginShow"); 
-            }else{
-              studysend(60);
-            }
-          });        
-        }
-    });
 
-    //激活按钮
-    $(".loginSubmit").live('click',function(){
-        var cardnum = $("[name='cadrnum']").val();
-        var cardpwd = $("[name='cardpwd']").val();
-        var yam     = $("[name='studycardyzm']").val();
-        if(cardnum == "请输入学习卡卡号"){
-          $(".cardnumformat").addClass("loginShow"); 
-          return;
-        }else{
-          $(".cardnumformat").removeClass("loginShow");
-        }
-        if(cardpwd == "请输入学习卡密码"){
-          $(".cardpwdformat").addClass("loginShow");
-          $(".cardpwd").removeClass("loginShow");
-          beidong();
-          shangbianju();
-          return;
-        }else{
-          $(".cardpwdformat").removeClass("loginShow"); 
-        }
-        if($.trim(yam) == ""){
-          $('.yzm').addClass("loginShow"); 
-          beidong();
-          shangbianju();
-            return;
-        }else{
-          $('.yzm').removeClass("loginShow"); 
-        }
-        cardfrm.submit();
-    });
-  }
-);
   // 60秒
 function studysend(num) {
   $("#code_flg").val("false");
@@ -601,24 +546,25 @@ function studysend(num) {
 </script>
 		<div class="userLoginBox loginTxt" style="display: block;">
 			<h4>
-				欢迎您，<a target="_blank" href="http://www.yitiku.cn/Tiku/User/index">${list.nickName}</a>&nbsp;老师
-				
+				欢迎您，<a href="">${list.nickName}</a>&nbsp;老师
+				<c:set var="nickName" scope="session" value="${list.nickName}" />
 			</h4>
 			<ul>
 				<li><a class="btn btn2" target="_blank"
 					href="${ctx }/selfcenter.jsp">进入我的主页</a></li>
 				<li class="col333">
-				<a href="${ctx }/changepage?name=${list.teacherid}">修改密码</a>
+				<a href="${ctx }/changepage?name=${sessionScope.userid }">修改密码</a>
+				
 				<!--?php if($_SESSION["type"]==3):?-->
 					<a target="_blank"
-					href="http://www.yitiku.cn/Tiku/User/myStudyCard" class="join"
+					href="" class="join"
 					style="margin-left: 112px;">激活学习卡</a>
 				<!--?php endif;?--></li>
 				<li class="col333"><a target="_blank"
-					href="http://www.yitiku.cn/help/">使用帮助</a></li>
+					href="">使用帮助</a></li>
 				<li class="col333"><a target="_blank"
-					href="http://www.yitiku.cn/solution/">校园解决方案</a>／<a target="_blank"
-					href="http://www.yitiku.cn/feedback/" rel="nofollow">留言反馈</a></li>
+					href="">校园解决方案</a>／<a target="_blank"
+					href="" rel="nofollow">留言反馈</a></li>
 			</ul>
 			<div class="clear"></div>
 		</div>

@@ -26,7 +26,6 @@ public class TeacherLoginController {
 		String pwd = request.getParameter("pwd");
 		List<Object[]> list = this.teacherLoginServiceImpl.listAll();
 		int user_id = Integer.parseInt(id);
-		System.out.println(id);
 //		Date time = new Date();
 //		SimpleDateFormat ft = new SimpleDateFormat("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
 //		String time1 = ft.format(time);

@@ -1,14 +1,8 @@
 package com.entity;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
-import org.hibernate.annotations.Parameter;
-import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="Choicequestion")

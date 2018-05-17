@@ -19,14 +19,14 @@ public class Choice_questionServiceImpl {
 	
 	public Page queryForPage(int currentPage,int pageSize) {
 		Page page=new Page();
-		int allRow = choice_questionDaoImpl.getAllRowCount0();
+		
 		int offset=page.countOffset(currentPage, pageSize);
 		List<Choicequestion> list=choice_questionDaoImpl.queryForPage(offset,pageSize);
+		int allRow = choice_questionDaoImpl.getAllRowCount0();
 		page.setPageNo(currentPage);
 		page.setPageSize(pageSize);
 		page.setTotalRecords(allRow);
-		page.setList(list);
+		page.setC_list(list);
 		return page;
 	}
-
 }

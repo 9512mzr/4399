@@ -3,7 +3,9 @@ package com.entity;
 import java.util.List;
 
 public class Page {
-	private List<Choicequestion> list;
+	private List<Bigquestion> b_list;
+	private List<Choicequestion> c_list;
+	
 
 
 	// 查询记录总数
@@ -14,14 +16,14 @@ public class Page {
 
     // 第几页
     private int pageNo;
-    
+
     /**
      * @return 总页数
      * */
     public int getTotalPages(){
         return (totalRecords+pageSize-1)/pageSize;
     }
-    
+
     /**
      * 计算当前页开始记录
      * @param pageSize 每页记录数
@@ -32,14 +34,14 @@ public class Page {
         int offset = pageSize*(currentPage-1);
         return offset;
     }
-    
+
     /**
      * @return 首页
      * */
     public int getTopPageNo(){
         return 1;
     }
-    
+
     /**
      * @return 上一页
      * */
@@ -49,7 +51,7 @@ public class Page {
         }
         return pageNo-1;
     }
-    
+
     /**
      * @return 下一页
      * */
@@ -59,15 +61,15 @@ public class Page {
         }
         return pageNo+1;
     }
-    
+
     /**
      * @return 尾页
      * */
     public int getBottomPageNo(){
         return getTotalPages();
     }
-    
-    public int getTotalRecords() {
+
+	public int getTotalRecords() {
         return totalRecords;
     }
 
@@ -90,12 +92,21 @@ public class Page {
     public void setPageNo(int pageNo) {
         this.pageNo = pageNo;
     }
+    
 
-	public List<Choicequestion> getList() {
-		return list;
+    public List<Bigquestion> getB_list() {
+		return b_list;
 	}
 
-	public void setList(List<Choicequestion> list) {
-		this.list = list;
+	public void setB_list(List<Bigquestion> b_list) {
+		this.b_list = b_list;
+	}
+
+	public List<Choicequestion> getC_list() {
+		return c_list;
+	}
+
+	public void setC_list(List<Choicequestion> c_list) {
+		this.c_list = c_list;
 	}
 }

@@ -186,27 +186,15 @@
 				<div class="preview-body" id="J_PaperBody">
 					<h3>一、单选题</h3>
 					<!-- 以下为分页内容 -->
-					<%
-						ArrayList<Choicequestion> choice = (ArrayList<Choicequestion>) request.getSession().getAttribute("courses");
-						ArrayList<Bigquestion> BigQu = (ArrayList<Bigquestion>) request.getSession().getAttribute("Bcourses");
-						if(BigQu==null){
-							response.sendRedirect(request.getContextPath()+"/Big/showAll");
-							return;
-						}else if(choice==null){
-							response.sendRedirect(request.getContextPath()+"/Choice/showAll");
-							return;
-						}	
-						int i = 0;
-					%>
-					<c:forEach items="${sessionScope.courses}" var="Choicequestion">
+					<c:forEach items="${c_page.c_list}" var="Choicequestion">
 						<div class="search-list">
 							<ul>
 								<li data-qid="3755280">
 									<div class="search-exam">
 										<div class="exam-con">
 											<div class="exam-q">${Choicequestion.content }（&nbsp;&nbsp;&nbsp;
-												）</div>
-
+											</div>
+											<img alt="" src="${Choicequestion.image }">
 											<div class="exam-s">
 												<span class="op-item"
 													style="width: 219px; margin-right: 0px; clear: none;"><span
@@ -221,85 +209,68 @@
 													style="width: 219px; margin-right: 0px; clear: none;"><span
 													class="op-item-meat" style="margin-top: 0px;">${Choicequestion.option4 }</span></span>
 											</div>
-											<%
-												String[] imgs = choice.get(i).getImage().split(";");
-													for (int j = 0; j < imgs.length; j++) {
-											%>
-											<img alt="" src="<%=imgs[j]%>">
-											<%
-												}
-											%>
+
 										</div>
 										<div class="exam-foot">
 											<p class="exam-foot-left">
-											<script>
-												function answer(ans)
-												{
-													alert(ans);
-												}
-											</script>
+												<script>
+													function answer(ans) {
+														alert(ans);
+													}
+												</script>
 												<a
 													href="http://www.zujuan.com/question/detail-3755280.shtml"
 													onclick="answer('${Choicequestion.answer }');return false;"
-													target="_blank">
-												<i class="icona-jiexi">
-												</i>查看解析
-												</a> 
-												<a
-													onclick="OT2.QCollect(this, 3755280)" href="javascript:;"><i
-													class="icona-shoucang"></i>收藏</a> <a
+													target="_blank"> <i class="icona-jiexi"> </i>查看解析
+												</a> <a onclick="OT2.QCollect(this, 3755280)"
+													href="javascript:;"><i class="icona-shoucang"></i>收藏</a> <a
 													onclick="new OT2.ErrorReport(3755280)" href="javascript:;"><i
 													class="icona-jiucuo"></i>纠错</a>
 											</p>
 											<p class="exam-foot-right">
-												<a class="J_AddQuestion addbtn" href="<%=request.getContextPath()%>/add?id=${Choicequestion.choiceQuestionId}&name=选择"><b>+</b>选题</a>
+												<a class="J_AddQuestion addbtn"
+													href="<%=request.getContextPath()%>/add?id=${Choicequestion.choiceQuestionId}&name=选择"><b>+</b>选题</a>
 											</p>
 										</div>
 									</div>
 								</li>
 							</ul>
 						</div>
-						<%
-							i++;
-						%>
+
 					</c:forEach>
 					<!-- 以上为分页内容 -->
-					<table style="margin-left: 500px;"> 
+					<table style="margin-left: 500px;">
 						<tr>
-							<td colspan="6" align="center" bgcolor="">共${page.totalRecords}条记录
-								共${page.totalPages}页 当前第${page.pageNo}页
+							<td colspan="6" align="center" bgcolor="">共${c_page.totalRecords}条记录
+								共${c_page.totalPages}页 当前第${c_page.pageNo}页
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="<%=request.getContextPath()%>/Choice/showAll/${methodname }?pageNo=${page.topPageNo}&id=${id}&massage=${name}"
+								href="${ctx }/Choice/${c_metodname }?pageNo=${c_page.topPageNo}"
 								class="btn_r">首页</a> <c:choose>
-									<c:when test="${page.pageNo!=1}">
+									<c:when test="${c_page.pageNo!=1}">
 										<a
-											href="<%=request.getContextPath()%>/Choice/showAll/${methodname }?pageNo=${page.previousPageNo }&id=${id}&massage=${name}"
+											href="${ctx }/Choice/${c_metodname }?pageNo=${c_page.previousPageNo }"
 											class="btn_r">上一页</a>
 									</c:when>
 									<c:otherwise>
 										<a class="btn_r">上一页</a>
 									</c:otherwise>
 								</c:choose> <c:choose>
-									<c:when test="${page.pageNo != page.totalPages}">
+									<c:when test="${c_page.pageNo != page.totalPages}">
 										<a
-											href="<%=request.getContextPath()%>/Choice/showAll/${methodname }?pageNo=${page.nextPageNo }&id=${id}&massage=${name}"
+											href="${ctx }/Choice/${c_metodname }?pageNo=${c_page.nextPageNo }"
 											class="btn_r">下一页</a>
 									</c:when>
 									<c:otherwise>
 										<a class="btn_r">下一页</a>
 									</c:otherwise>
 								</c:choose> <a
-								href="<%=request.getContextPath()%>/Choice/showAll/${methodname }?pageNo=${page.bottomPageNo}&id=${id}&massage=${name}"
+								href="${ctx }/Choice/${c_metodname }?pageNo=${c_page.bottomPageNo}"
 								class="btn_r">尾页</a>
 							</td>
 						</tr>
 					</table>
 					<h3>二、综合题</h3>
-					<%
-						
-						i = 0;
-					%>
-					<c:forEach items="${sessionScope.Bcourses}" var="Bigquestion">
+					<c:forEach items="${b_page.b_list}" var="Bigquestion">
 						<div class="search-list">
 							<ul>
 								<li data-qid="6662749">
@@ -308,74 +279,60 @@
 											<div class="exam-qlist">
 												<div class="exam-con">
 													<div class="exam-q">
-														<%
-															String[] imgs=BigQu.get(i).getImage().split(";");
-															for(int j=0;j<imgs.length;j++){
-																%>
-																<img alt="" src="<%=imgs[j] %>">
-																<%
-															}
-														%>
-														<p>
-															${Bigquestion.content }
-														</p>
+														<p>${Bigquestion.content }</p>
 													</div>
 												</div>
 											</div>
 										</div>
-	
+										<img alt="" src="${Bigquestion.image }">
 										<div class="exam-foot">
 											<p class="exam-foot-left">
-												<a href="http://www.zujuan.com/question/detail-6662749.shtml"
-												onclick="answer('${Bigquestion.answer }');return false;"
-													target="_blank"><i class="icona-jiexi"
-													
-												>
-													</i>查看解析
-												</a> <a
+												<a
+													href="http://www.zujuan.com/question/detail-6662749.shtml"
+													onclick="answer('${Bigquestion.answer }');return false;"
+													target="_blank"><i class="icona-jiexi"> </i>查看解析 </a> <a
 													onclick="OT2.QCollect(this, 6662749)" href="javascript:;"><i
 													class="icona-shoucang"></i>收藏</a> <a
 													onclick="new OT2.ErrorReport(6662749)" href="javascript:;"><i
 													class="icona-jiucuo"></i>纠错</a>
 											</p>
 											<p class="exam-foot-right">
-												<a class="J_AddQuestion addbtn" href="<%=request.getContextPath()%>/add?id=${Bigquestion.bigQuestionId }&name=大题"><b>+</b>选题</a>
+												<a class="J_AddQuestion addbtn"
+													href="<%=request.getContextPath()%>/add?id=${Bigquestion.bigQuestionId }&name=大题"><b>+</b>选题</a>
 											</p>
 										</div>
 									</div>
 								</li>
 							</ul>
 						</div>
-						<%
-						i++;
-						%>
+
 					</c:forEach>
 					<table style="margin-left: 500px;">
 						<tr>
-							<td colspan="6" align="center" bgcolor="">共${Bpage.totalRecords}条记录
-								共${Bpage.totalPages}页 当前第${Bpage.pageNo}页
+							<td colspan="6" align="center" bgcolor="">共${b_page.totalRecords}条记录
+								共${b_page.totalPages}页 当前第${b_page.pageNo}页
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="<%=request.getContextPath()%>/Big/showAll/${methodname }?pageNo=${Bpage.topPageNo}"
+								href="${ctx }/Big/${b_metodname }?pageNo=${b_page.topPageNo}"
 								class="btn_r">首页</a> <c:choose>
-									<c:when test="${page.pageNo!=1}">
+									<c:when test="${b_page.pageNo!=1}">
 										<a
-											href="<%=request.getContextPath()%>/Big/showAll/${methodname }?pageNo=${Bpage.previousPageNo }"
+											href="${ctx }/Big/${b_metodname }?pageNo=${b_page.previousPageNo }"
 											class="btn_r">上一页</a>
 									</c:when>
 									<c:otherwise>
 										<a class="btn_r">上一页</a>
 									</c:otherwise>
 								</c:choose> <c:choose>
-									<c:when test="${Bpage.pageNo != Bpage.totalPages}">
+									<c:when test="${b_page.pageNo != b_page.totalPages}">
 										<a
-											href="<%=request.getContextPath()%>/Big/showAll/${methodname }?pageNo=${Bpage.nextPageNo }"
+											href="${ctx }/Big/${b_metodname }?pageNo=${b_page.nextPageNo }"
 											class="btn_r">下一页</a>
 									</c:when>
 									<c:otherwise>
 										<a class="btn_r">下一页</a>
 									</c:otherwise>
 								</c:choose> <a
-								href="<%=request.getContextPath()%>/Big/showAll/${methodname }?pageNo=${Bpage.bottomPageNo}"
+								href="${ctx }/Big/${b_metodname }?pageNo=${b_page.bottomPageNo}"
 								class="btn_r">尾页</a>
 							</td>
 						</tr>
@@ -385,9 +342,10 @@
 		</div>
 		<div class="dj-about">
 			<div class="view-toolbars f-cb">
-				<a href="<%=request.getContextPath()%>/show" onclick="paper.download(782410)"
-					class="download-btn"><i class="icona-download1"></i>下载试卷</a> <a
-					target="_blank" style="display: none" data-method="post"
+				<a href="<%=request.getContextPath()%>/show"
+					onclick="paper.download(782410)" class="download-btn"><i
+					class="icona-download1"></i>下载试卷</a> <a target="_blank"
+					style="display: none" data-method="post"
 					href="http://www.zujuan.com/paper/admin-edit?pid=782410&amp;xd=2&amp;chid=11"><i
 					class="icona-bianji"></i>编辑</a> <a href="javascript:;"
 					onclick="paper.setAnswerSheet(782410,0)"><i class="icona-dtk2"></i>答题卡下载</a>

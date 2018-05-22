@@ -17,16 +17,14 @@ public class TeacherLoginDaoImpl{
 	private SessionFactory sessionFactory;
 	
 	public List<Object[]> findAll(){
-		Query q=this.sessionFactory.getCurrentSession().createSQLQuery("select teacherid,passWord from teacher");
+		Query q=this.sessionFactory.getCurrentSession().createSQLQuery("select accountNumber,passWord from teacher");
 		List<Object[]> list = q.list();
 		return list;
 	}
-	public Teacher findUser(int id) {
-        System.out.println(id);
-        
-		Teacher q=(Teacher)sessionFactory.getCurrentSession().get(Teacher.class,id);
-		
-		return q;
+	public List findUser(int id) {
+		Query q=this.sessionFactory.getCurrentSession().createSQLQuery("select nickName from teacher where accountNumber = ?");
+		q.setParameter(0, id);
+		return q.list();
 	}
 }
 

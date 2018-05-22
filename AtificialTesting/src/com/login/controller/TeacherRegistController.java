@@ -18,15 +18,14 @@ public class TeacherRegistController {
 		
 		String nickName = request.getParameter("nickName");
 		String passWord = request.getParameter("passWord");
-		String email = request.getParameter("email");
-		System.out.println(email);
-		System.out.println(nickName);
+		String idd = request.getParameter("id");
+		int id = Integer.parseInt(idd);
 		
 //		Date time = new Date( );
 //		SimpleDateFormat ft = new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
 //		String time1 = ft.format(time);
 //		int teacherid = Integer.parseInt(id);
-		this.teacherRegistServiceImpl.save(email, passWord, nickName);
+		this.teacherRegistServiceImpl.save(id, passWord, nickName);
 		return "login";
 	}
 }

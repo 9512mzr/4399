@@ -240,7 +240,7 @@
 			<div class="fr">
 				<!--div class="sinaCout"><wb:follow-button uid="3621865884" type="red_2" width="136" height="24" ></wb:follow-button></div-->
 				<div class="loginAfter">
-					<span>欢迎您，</span><a href="">${list.nickName}</a><b
+					<span>欢迎您，</span><a href="">${list[0]}</a><b
 						id="loginAfterbtn"></b>
 					<div id="loginAfterContent">
 						<ul>
@@ -546,8 +546,8 @@ function studysend(num) {
 </script>
 		<div class="userLoginBox loginTxt" style="display: block;">
 			<h4>
-				欢迎您，<a href="">${list.nickName}</a>&nbsp;老师
-				<c:set var="nickName" scope="session" value="${list.nickName}" />
+				欢迎您，<a href="">${list[0]}</a>&nbsp;老师
+				<c:set var="nickName" scope="session" value="${list[0]}" />
 			</h4>
 			<ul>
 				<li><a class="btn btn2" target="_blank"

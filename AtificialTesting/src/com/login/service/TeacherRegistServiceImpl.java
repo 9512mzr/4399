@@ -11,7 +11,7 @@ import com.login.dao.TeacherRegistDaoImpl;
 public class TeacherRegistServiceImpl {
 	@Resource
 	private TeacherRegistDaoImpl teacherRegistDaoImpl;
-	public void save(String email,String passWord,String nickName) {
-		this.teacherRegistDaoImpl.registuser(email, passWord, nickName);
+	public void save(int id,String passWord,String nickName) {
+		this.teacherRegistDaoImpl.registuser(id, passWord, nickName);
 	}
 }

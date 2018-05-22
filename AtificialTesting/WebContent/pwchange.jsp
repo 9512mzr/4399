@@ -90,8 +90,7 @@
                 <div class="info-img">
                     <img src="${ctx }/static/images/7.png" alt="picture" id="user-site-photo">
                     <div class="info-cnt">
-                        <p>用户名：<span>${list1.nickName}</span>[ID：${list1.teacherid}]
-                                                                                </p>
+                        <p>用户名：<span>${nickName}</span>[ID：${sessionScope.userid}]</p>
                         <p>身份：<span>教师</span></p>
                         <p>真实姓名：<span>183****3255</span></p>
                     </div>

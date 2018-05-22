@@ -18,7 +18,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport"
 	content="width=device-width,initial-scale=1,maximum-scale=1">
-<link rel="canonical" href="http://m.zujuan.com/paper/view-782410.shtml">
+<link rel="canonical" href="">
 <!--移动端访问首页跳转到移动首页-->
 <script src="${ctx }/static/js/push.js"></script>
 <script src="${ctx }/static/js/hm1.js"></script>
@@ -29,17 +29,16 @@
 			if (/iphone|ipod|ipad|Android|nokia|blackberry|webos|webmate|bada|lg|ucweb|skyfire|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|mobile/i
 					.test(navigator.userAgent.toLowerCase())) {
 
-				Switch.location.href = 'http://m.zujuan.com/paper/view-782410.shtml';
+				Switch.location.href = 'http://m..com/paper/view-782410.shtml';
 			}
 		}
 	})(window);
 </script>
-
 <!--<base target="_top">-->
 <base href="." target="_top">
 <meta name="csrf-param" content="_csrf">
 <meta name="csrf-token"
-	content="vPakEbXQWccP6zwqaEuktbZqhB_Xpvn8duqG8naHEKHxldxT3eQDs3m5ZEQhCZT3hwzWVo-Ws88zibSzRLd27A==">
+	content="">
 <title>test</title>
 <script>
 	(function(doc, win) {
@@ -98,10 +97,20 @@
 <script src="${ctx }/static/js/json3.min1.js"></script>
 <script src="${ctx }/static/js/dialog-plus1.js"></script>
 <script src="${ctx }/static/js/util.min1.js"></script>
+<style>
+	.button {
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 6px 29px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 13px;
+}
+</style>
 </head>
-
-
-
 <body>
 
 	<link rel="stylesheet" href="${ctx }/static/css/test-preview.min.css">
@@ -219,7 +228,7 @@
 													}
 												</script>
 												<a
-													href="http://www.zujuan.com/question/detail-3755280.shtml"
+													href=""
 													onclick="answer('${Choicequestion.answer }');return false;"
 													target="_blank"> <i class="icona-jiexi"> </i>查看解析
 												</a> <a onclick="OT2.QCollect(this, 3755280)"
@@ -228,8 +237,24 @@
 													class="icona-jiucuo"></i>纠错</a>
 											</p>
 											<p class="exam-foot-right">
-												<a class="J_AddQuestion addbtn"
-													href="<%=request.getContextPath()%>/add?id=${Choicequestion.choiceQuestionId}&name=选择"><b>+</b>选题</a>
+												<script>
+													var txt ="";
+													function myFunction(a)
+													{
+														txt = txt + a + "|";
+														alert(txt);
+													}
+													function validateForm2() {
+													    var x=txt;
+													    document.getElementById("test").value=x;
+													    alert(document.getElementById("test").value);
+													    document.form[0].submit();
+													}
+												</script>
+												<c:set var="txt1" scope="session" value="${sessionScope.txt}" />
+												<c:out value="${sessionScope.txt}" />
+												<a href="${ctx }/Choice/qwe?id=${Choicequestion.choiceQuestionId}&t=${sessionScope.txt1}" class="J_AddQuestion addbtn"><b>+</b>选题</a>
+												<a onclick="$({})"></a>
 											</p>
 										</div>
 									</div>
@@ -412,12 +437,11 @@
 				<div class="baskrt-list"></div>
 			</div>
 			<div class="basket-foot">
-				<a id="to-paper-admin-edit" data-method="post" class="basket-btn"
-					href="http://www.zujuan.com/paper/admin-edit" style="display: none">编辑</a>
-				<a id="to-paper-edit" data-method="post" class="basket-btn"
-					href="http://www.zujuan.com/paper/edit" style="">生成试卷</a> <a
-					id="to-paper-admin-cancel" class="basket-btn"
-					href="http://www.zujuan.com/question" style="display: none">取消</a>
+				<form name="myForm" action="${ctx }/Choice/jschuan" onsubmit="return validateForm2()" >
+					<input type="hidden" id="test" name="test"/>
+					<c:set var="txt" scope="session" value="test"/>
+					<input type="submit" value="生成试卷" class="button"><br>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -454,11 +478,11 @@
 			$('.J_LoginTabContent').eq(1).show();
 		});
 	</script>
-	<script src="./static/js/global.min.js"></script>
+	<script src="${ctx }/static/js/global.min.js"></script>
 	<a class="return" href="javascript:;"
 		style="right: 89.5px; display: none;"><i class="icona-top"></i></a>
-	<script src="./static/js/yii1.js"></script>
-	<script src="./static/js/sitecount.js"></script>
+	<script src="${ctx }/static/js/yii1.js"></script>
+	<script src="${ctx }/static/js/sitecount.js"></script>
 
 </body>
 </html>

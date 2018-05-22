@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.hibernate.Query;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -25,7 +26,7 @@ public class TeacherLoginController {
 		String id = request.getParameter("userid");
 		String pwd = request.getParameter("pwd");
 		List<Object[]> list = this.teacherLoginServiceImpl.listAll();
-		int user_id = Integer.parseInt(id);
+		System.out.println(id);
 //		Date time = new Date();
 //		SimpleDateFormat ft = new SimpleDateFormat("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
 //		String time1 = ft.format(time);
@@ -36,7 +37,8 @@ public class TeacherLoginController {
 //				journalServiceImpl.insert(user_id, name, time1);
 				session.setAttribute("userid", id);
 				int name1 = Integer.valueOf(id);
-				Teacher list1 = teacherLoginServiceImpl.getname(name1);
+				List list1 = teacherLoginServiceImpl.getname(name1);
+				System.out.println(list1);
 				modelMap.put("list", list1);
 				return "hello";
 			}

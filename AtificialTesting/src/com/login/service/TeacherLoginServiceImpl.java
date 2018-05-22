@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.hibernate.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,9 +20,7 @@ public class TeacherLoginServiceImpl {
 	public List<Object[]>  listAll(){
 		return this.teacherLoginDaoImpl.findAll();
 	}
-	public Teacher getname(int id) {
-		return this.teacherLoginDaoImpl.findUser(id);
-		
-		
+	public List getname(int id) {
+		return this.teacherLoginDaoImpl.findUser(id);	
 	}
 }

@@ -13,10 +13,10 @@ import com.entity.Teacher;
 public class TeacherRegistDaoImpl {
 	@Resource
 	private SessionFactory sessionFactory;
-	public void registuser(String email,String passWord,String nickName) {
+	public void registuser(int id,String passWord,String nickName) {
 		Teacher teacher = new Teacher();
 		
-//		teacher.setEmail(email);
+		teacher.setAccountNumber(id);
 		teacher.setNickName(nickName);
 		teacher.setPassWord(passWord);
 		

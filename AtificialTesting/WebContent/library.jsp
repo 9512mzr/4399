@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
@@ -54,7 +54,7 @@
 		}
 		return container;
 	};
-	var HostInfo = "https://zujuan.21cnjy.com/";
+	var HostInfo = "#";
 	USER = {};//通知js用户的信息
 	OT2.CSRF = {
 		"_csrf" : "qk_x2YgtB9hT7vvVEfyC193onG5qYhhSveKn-q5zflrvG56hykcwqBaAg-RglOSP5I2xW1M0Lj7OuP_L7D1GNQ=="
@@ -256,8 +256,6 @@ width: 100%;}
 					class="icona-buy"></i>申请试用</a> <span class="split"></span> <a
 					onclick="return OT2.Global.initLogin();"><i class="icona-buy"></i>欢迎您：${sessionScope.name}</a>
 
-
-
 				<div class="drop-bd">
 					<ul>
 						<li><a target="_blank"
@@ -282,10 +280,7 @@ width: 100%;}
 				</div>
 				<span class="split"></span>
 			</div>
-
-
-
-		</div>
+	</div>
 	</div>
 	<!--顶部导航结束-->
 	<!--头部搜索部分开始-->
@@ -330,7 +325,7 @@ width: 100%;}
 				</div>
 			</div>
 			<div class="contactbox">
-				<a class="link-into" href="https://zujuan.21cnjy.com/payment/vip"
+				<a class="link-into" href="#"
 					target="_blank"><img src="${ctx }/static/library/VIP.gif"><strong>购买VIP</strong></a>
 				<a class="link-into" href="https://zujuan.21cnjy.com/help/request"
 					target="_blank"><img src="${ctx }/static/library/xwt.gif"><strong>开通学校服务</strong></a>
@@ -440,11 +435,11 @@ width: 100%;}
 					<li class="complex-nav-item"><a class="" href="javascript:;"
 						onclick=" return true;">试卷库</a>
 						<div class="dd-list">
-							<a href="https://zujuan.21cnjy.com/paper/new-index"><i>同步试卷</i></a>
+							<a href="#"><i>同步试卷</i></a>
 							<a
-								href="https://zujuan.21cnjy.com/paper/new-index?tree_type=sync"><i>测试试卷</i></a>
+								href="#"><i>测试试卷</i></a>
 							<a
-								href="https://zujuan.21cnjy.com/paper/new-index?tree_type=exam"><i>真卷&amp;模拟卷</i></a>
+								href="#"><i>真卷&amp;模拟卷</i></a>
 						</div></li>
 					<li><a class="" href="https://zujuan.21cnjy.com/subject"
 						onclick=" return true;">专题特供</a></li>
@@ -467,8 +462,8 @@ width: 100%;}
 	<!--头部结束-->
 	<div class="breadcrumb g-container">
 		<i class="icona-dingwei"></i>当前位置： <a
-			href="https://zujuan.21cnjy.com/">首页</a> <b>&gt;</b> <a
-			href="https://zujuan.21cnjy.com/question?chid=11&amp;xd=3">高中生物</a>
+			href="3">首页</a> <b>&gt;</b> <a
+			href="#">高中生物</a>
 	</div>
 	<div class="search-type d-search-type g-container">
 		<div class="type-items">
@@ -1158,11 +1153,11 @@ width: 100%;}
 							"C" : "着丝点分裂与纺锤丝的牵引无关",
 							"D" : "此时细胞中染色体数目一定是该生物体细胞的两倍"
 						},
-						"answer" : "http://webshot.21cnjy.com/q/f8/b0/af61aa15f394a21689a83dff978d_7058037an.png?hash=a256606eaabe7740e6c1c861276f7208&sign=48473b6bdea39744dfd01c01e69d5c65",
-						"explanation" : "http://webshot.21cnjy.com/q/f8/b0/af61aa15f394a21689a83dff978d_7058037ex.png?hash=e3a4a96f17bb182d82fd2ee32a062125&sign=482750cd06becfbeb80a5bb1f7556c9b",
+						"answer" : "#",
+						"explanation" : "#",
 						"pic_answer" : "0",
 						"pic_explanation" : "0",
-						"knowledge" : "http://webshot.21cnjy.com/q/f8/b0/af61aa15f394a21689a83dff978d_7058037kn.png?hash=9c7c7814e0b85fd904ca64a3338c816b&sign=94a96701c59aeb87beca95f4963a132b",
+						"knowledge" : "#",
 						"category" : null,
 						"is_collect" : false,
 						"done" : false,
@@ -1264,7 +1259,7 @@ width: 100%;}
 									"extra_file" : "",
 									"question_text" : "本实验中，四组实验选择的植株要“生长健壮、状态基本相同”，其目的是<input type=\"text\" placeholder=\"1\" ms-duplex-string =\"child.myanswer[1]\" class=\"cke_questions_blankInput\" />。试再举出两种影响本实验结果的环境因子：<input type=\"text\" placeholder=\"2\" ms-duplex-string =\"child.myanswer[2]\" class=\"cke_questions_blankInput\" />。",
 									"options" : "",
-									"answer" : "http://webshot.21cnjy.com/q/0d/1c/21c032916fd7fd085e7a2e4f4184_7087417an.png?hash=3871caf071970da0b2282bfbc987c34a&sign=248d3a5f0953643d34824938c633fb54",
+									"answer" : "#",
 									"explanation" : "",
 									"pic_answer" : "0",
 									"pic_explanation" : "0",
@@ -1322,7 +1317,7 @@ width: 100%;}
 									"extra_file" : "",
 									"question_text" : "图1实验中，光处理产生的产物被用于图2中的<input type=\"text\" placeholder=\"1\" ms-duplex-string =\"child.myanswer[1]\" class=\"cke_questions_blankInput\" />过程（填序号）。图2中能产生〔H〕的过程有<input type=\"text\" placeholder=\"2\" ms-duplex-string =\"child.myanswer[2]\" class=\"cke_questions_blankInput\" />（填序号）。",
 									"options" : "",
-									"answer" : "http://webshot.21cnjy.com/q/9d/70/d0da76df8ac2b65d29878fe3428e_7087419an.png?hash=02a40b249e5807338f27f0284c7a11f3&sign=e2e89123ed70b8af318becb563d54b8a",
+									"answer" : "#",
 									"explanation" : "",
 									"pic_answer" : "0",
 									"pic_explanation" : "0",
@@ -1380,7 +1375,7 @@ width: 100%;}
 									"extra_file" : "",
 									"question_text" : "预期A、B、C组结果的M<sub>1</sub>、M<sub>2</sub>、M<sub>3</sub>数值大小关系为M<sub>1</sub>&lt;M<sub>2</sub>&lt;M<sub>3</sub>。综合四组实验结果，试解释该植物积累有机物的相对含量随光暗交替频率变化的原因是<input type=\"text\" placeholder=\"1\" ms-duplex-string =\"child.myanswer[1]\" class=\"cke_questions_blankInput\" />。",
 									"options" : "",
-									"answer" : "http://webshot.21cnjy.com/q/f5/a7/795bf56386d0b5c4c722c47c7c46_7087421an.png?hash=b9847ed0e480cd993b8e5aabde87d633&sign=ab7c3a5b68ef8b712937528821cbc439",
+									"answer" : "#",
 									"explanation" : "",
 									"pic_answer" : "0",
 									"pic_explanation" : "0",
@@ -1393,14 +1388,14 @@ width: 100%;}
 									"sort2" : 3
 								} ],
 						"extra_file" : "",
-						"question_text" : "为探究不同光暗交替频率对某植物光合作用的影响，科学家以生长健壮、状态基本相同的某植物为材料，设计了如下图1所示的A、B、C、D四组实验。其中A组先光照4min后黑暗处理4min；B组先光照lmin后黑暗处理lmin，交替四个周期；C组先光照30s后黑暗处理30s，交替8个周期；D连续光照8min。实验结果是A组植物积累有机物的相对含量为M<sub>1</sub>%， B组为M<sub>2</sub>%，C组为M<sub>3</sub>%，D组为100%。图2为该植物某生命活动的过程示意图。据图回答下列有关问题：<br/><img data-cke-saved-src=\"http://tikupic.21cnjy.com/c1/d3/c1d314c32fb429df0ef5660284677b97.png\" src=\"http://tikupic.21cnjy.com/c1/d3/c1d314c32fb429df0ef5660284677b97.png\" v:shapes=\"图片_x0020_100016\" height=\"112\" width=\"513\">",
+						"question_text" : "为探究不同光暗交替频率对某植物光合作用的影响，科学家以生长健壮、状态基本相同的某植物为材料，设计了如下图1所示的A、B、C、D四组实验。其中A组先光照4min后黑暗处理4min；B组先光照lmin后黑暗处理lmin，交替四个周期；C组先光照30s后黑暗处理30s，交替8个周期；D连续光照8min。实验结果是A组植物积累有机物的相对含量为M<sub>1</sub>%， B组为M<sub>2</sub>%，C组为M<sub>3</sub>%，D组为100%。图2为该植物某生命活动的过程示意图。据图回答下列有关问题：<br/><img data-cke-saved-src=\"#" src=\"http://tikupic.21cnjy.com/c1/d3/c1d314c32fb429df0ef5660284677b97.png\" v:shapes=\"图片_x0020_100016\" height=\"112\" width=\"513\">",
 						"options" : "[]",
 						"answer" : "",
 						"answer_json" : [ "" ],
-						"explanation" : "http://webshot.21cnjy.com/q/63/06/9b5cc440edc82db1f89e4bb61600_7058049ex.png?hash=c52d7626eca3fc03f3ea5f256a699b64&sign=ace16de0992c94e637eb69056d2134a4",
+						"explanation" : "#",
 						"pic_answer" : "0",
 						"pic_explanation" : "0",
-						"knowledge" : "http://webshot.21cnjy.com/q/63/06/9b5cc440edc82db1f89e4bb61600_7058049kn.png?hash=31fbeef64372dbbd16326b915cb4f73a&sign=1157504f03af07a530ebeda319ac0bb1",
+						"knowledge" : "#",
 						"category" : null,
 						"is_collect" : false,
 						"done" : false,
@@ -1533,11 +1528,11 @@ width: 100%;}
 							"C" : "a线粒体的内膜面积、b线粒体的外膜面积、c线粒体膜面积",
 							"D" : "a叶肉细胞的自由水、b叶肉细胞的结合水、c叶肉细胞总含水量"
 						},
-						"answer" : "http://webshot.21cnjy.com/q/02/87/e267416a5bd5bdd7336eb033ed1d_7058045an.png?hash=2141f7a5d7e92900d0d8df22e753d021&sign=12b50c86ddc56ce80765656e2a5f1251",
-						"explanation" : "http://webshot.21cnjy.com/q/02/87/e267416a5bd5bdd7336eb033ed1d_7058045ex.png?hash=7f13aebbfd81426e2fbe658672fa2368&sign=bb5aa9960f1e8d696d889dbe02e4bbaa",
+						"answer" : "#",
+						"explanation" : "#",
 						"pic_answer" : "0",
 						"pic_explanation" : "0",
-						"knowledge" : "http://webshot.21cnjy.com/q/02/87/e267416a5bd5bdd7336eb033ed1d_7058045kn.png?hash=441bd062c4492e3616f0178d5e37750d&sign=24db540c4c79f029a8c2e96d10d2415f",
+						"knowledge" : "#",
 						"category" : null,
 						"is_collect" : false,
 						"done" : false,
@@ -1601,11 +1596,11 @@ width: 100%;}
 							"C" : "C",
 							"D" : "D"
 						},
-						"answer" : "http://webshot.21cnjy.com/q/7d/80/24a476960378194d2c31fbba539d_7057993an.png?hash=94848f84b8a30f0ad4a2cf1962ca3379&sign=a7a93397471120414667aaefbf2d40d3",
-						"explanation" : "http://webshot.21cnjy.com/q/7d/80/24a476960378194d2c31fbba539d_7057993ex.png?hash=03fb3612b07512e9cb40cedee10b8c78&sign=da22f732d5aa2367eccdb5df3ee2f1d6",
+						"answer" : "#,
+						"explanation" : "#",
 						"pic_answer" : "0",
 						"pic_explanation" : "0",
-						"knowledge" : "http://webshot.21cnjy.com/q/7d/80/24a476960378194d2c31fbba539d_7057993kn.png?hash=f2b155268c33c0eb97e709046d005a09&sign=173c7fcb1f2b7942642a0b10643e6d4e",
+						"knowledge" : "#",
 						"category" : null,
 						"is_collect" : false,
 						"done" : false,
@@ -1669,11 +1664,11 @@ width: 100%;}
 							"C" : "细胞在吸收Mg<sup>2+</sup>时，能荷较低",
 							"D" : "能荷及其调节是生物界的共性"
 						},
-						"answer" : "http://webshot.21cnjy.com/q/1b/40/220f45255d821734d35a6177f134_7058021an.png?hash=31cc9a88ceb528ec612b386612e4eaf7&sign=65d795ff9298eff06c5d836790b3757d",
-						"explanation" : "http://webshot.21cnjy.com/q/1b/40/220f45255d821734d35a6177f134_7058021ex.png?hash=85bd59f0616f4279ab535f619ba21b17&sign=f3973bea3eb9868d12c936c5ae63624c",
+						"answer" : "#",
+						"explanation" : "#",
 						"pic_answer" : "0",
 						"pic_explanation" : "0",
-						"knowledge" : "http://webshot.21cnjy.com/q/1b/40/220f45255d821734d35a6177f134_7058021kn.png?hash=e89256dfa9525af80a64b9facd28f421&sign=4f2ec486199d2207d79d62fa5b7a11fe",
+						"knowledge" : "#",
 						"category" : null,
 						"is_collect" : false,
 						"done" : false,
@@ -1737,11 +1732,11 @@ width: 100%;}
 							"C" : "细胞凋亡的根本原因是凋亡基因的表达",
 							"D" : "原癌基因和抑癌基因在正常细胞中不能表达"
 						},
-						"answer" : "http://webshot.21cnjy.com/q/b7/fc/75c10524b6d5464b9d9488936688_7057997an.png?hash=a425db00deef6938fafaed2a4f14bde2&sign=e93a4e06fd0fb85aae27efb091142252",
-						"explanation" : "http://webshot.21cnjy.com/q/b7/fc/75c10524b6d5464b9d9488936688_7057997ex.png?hash=4263237a7a240d59783e0bd159745164&sign=93088b33bd4264ddf316c5fedc305348",
+						"answer" : "#",
+						"explanation" : "#",
 						"pic_answer" : "0",
 						"pic_explanation" : "0",
-						"knowledge" : "http://webshot.21cnjy.com/q/b7/fc/75c10524b6d5464b9d9488936688_7057997kn.png?hash=6c1203d0fb407cf4364dedbb8660d749&sign=9b4ab351d5f1ba952e593f1ac9d9ec42",
+						"knowledge" : "#",
 						"category" : null,
 						"is_collect" : false,
 						"done" : false,
@@ -1805,11 +1800,11 @@ width: 100%;}
 							"C" : "上述过程中能量转化过程是:有机物中稳定化学能→电能→ATP中活跃化学能",
 							"D" : "好氧细菌不可能发生上述过程"
 						},
-						"answer" : "http://webshot.21cnjy.com/q/d1/8a/cf60f0c20858166a4ac9d555a64d_7058019an.png?hash=9dfe7efc04e4d8a55bfae7e6b8dfaeae&sign=76c4d26e1fd57f2823e724fb07fc9131",
-						"explanation" : "http://webshot.21cnjy.com/q/d1/8a/cf60f0c20858166a4ac9d555a64d_7058019ex.png?hash=559c840739f7d02d0fbe978245942e62&sign=d037dcff98288edb500f65c03adeadee",
+						"answer" : "#",
+						"explanation" : "#",
 						"pic_answer" : "0",
 						"pic_explanation" : "0",
-						"knowledge" : "http://webshot.21cnjy.com/q/d1/8a/cf60f0c20858166a4ac9d555a64d_7058019kn.png?hash=662be55beec44edb4079c729b1b84325&sign=999febb06ef240afd2f87c3029cd6e24",
+						"knowledge" : "#",
 						"category" : null,
 						"is_collect" : false,
 						"done" : false,
@@ -2084,32 +2079,32 @@ width: 100%;}
                 <h3>公司介绍</h3>
                 <p>Company Introduction</p>
                 <ul>
-                    <li><i class="icona-ellipse"></i><a href="http://www.21cnjy.com/about/about_about.php" target="_blank">公司简介</a></li>
-                    <li><i class="icona-ellipse"></i><a href="https://zujuan.21cnjy.com/help/copyright" target="_blank">版权声明</a></li>
-                    <li><i class="icona-ellipse"></i><a href="http://www.21cnjy.com/about/about_company-news.php" target="_blank">公司动态</a></li>
-                    <li><i class="icona-ellipse"></i><a href="https://zujuan.21cnjy.com/help/feedback" target="_blank">意见反馈</a></li>
+                    <li><i class="icona-ellipse"></i><a href="#" target="_blank">公司简介</a></li>
+                    <li><i class="icona-ellipse"></i><a href="#" target="_blank">版权声明</a></li>
+                    <li><i class="icona-ellipse"></i><a href="#" target="_blank">公司动态</a></li>
+                    <li><i class="icona-ellipse"></i><a href="#" target="_blank">意见反馈</a></li>
                 </ul>
             </div>
             <div class="con-fw">
                 <h3>服务介绍</h3>
                 <p>Service Introduction</p>
                 <ul class="fw-list">
-                    <li><i class="icona-ellipse"></i><a href="https://zujuan.21cnjy.com/help/zujuan" target="_blank">组卷通服务</a></li>
-                    <li><i class="icona-ellipse"></i><a href="https://zujuan.21cnjy.com/help/vip" target="_blank">VIP会员服务</a></li>
-                    <li><i class="icona-ellipse"></i><a href="https://zujuan.21cnjy.com/help/diy" target="_blank">学校定制化服务</a></li>
+                    <li><i class="icona-ellipse"></i><a href="#" target="_blank">组卷通服务</a></li>
+                    <li><i class="icona-ellipse"></i><a href="#" target="_blank">VIP会员服务</a></li>
+                    <li><i class="icona-ellipse"></i><a href="#" target="_blank">学校定制化服务</a></li>
                 </ul>
             </div>
             <div class="con-bz">
                 <h3>帮助中心</h3>
                 <p>Help center</p>
                 <ul>
-                    <li><i class="icona-ellipse"></i><a href="https://zujuan.21cnjy.com/help/demo" target="_blank">视频帮助</a></li>
-                    <li><i class="icona-ellipse"></i><a href="https://zujuan.21cnjy.com/help/faq" target="_blank">常见问题</a></li>
-                    <li><i class="icona-ellipse"></i><a href="https://zujuan.21cnjy.com/help/makepaper" target="_blank">如何组卷</a></li>					
-                    <li><i class="icona-ellipse"></i><a href="https://zujuan.21cnjy.com/help/download" target="_blank">下载试卷</a></li>
-                    <li><i class="icona-ellipse"></i><a href="https://zujuan.21cnjy.com/help/test" target="_blank">在线测试</a></li>
+                    <li><i class="icona-ellipse"></i><a href="#" target="_blank">视频帮助</a></li>
+                    <li><i class="icona-ellipse"></i><a href="#" target="_blank">常见问题</a></li>
+                    <li><i class="icona-ellipse"></i><a href="#" target="_blank">如何组卷</a></li>					
+                    <li><i class="icona-ellipse"></i><a href="#" target="_blank">下载试卷</a></li>
+                    <li><i class="icona-ellipse"></i><a href="#" target="_blank">在线测试</a></li>
 
-<li><i class="icona-ellipse"></i><a href="https://zujuan.21cnjy.com/new" target="_blank">最新试题</a></li>
+<li><i class="icona-ellipse"></i><a href="#" target="_blank">最新试题</a></li>
                 </ul>
             </div>
             <div class="con-ewm">
@@ -2212,7 +2207,7 @@ width: 100%;}
 					</div>
 					<div class="login-pwd">
 						<a
-							href="http://passport.21cnjy.com/site/password-find?jump_url=http://zujuan.21cnjy.com/question?chid=11&amp;xd=3&amp;tree_type=category"
+							href="#"
 							target="_blank">忘记密码</a>
 					</div>
 				</div>
@@ -2223,14 +2218,14 @@ width: 100%;}
 			<div class="login-others">
 				<div class="login-others-method">
 					其它登录方式： <a
-						href="http://passport.21cnjy.com/site/show-qr-code?jump_url=http://zujuan.21cnjy.com/question?chid=11&amp;xd=3&amp;tree_type=category"><i
+						href="#"><i
 						class="icona-wxloginbtn"> </i></a> <a
-						href="http://21cnjy.com/qqconnect?jump_url=http://zujuan.21cnjy.com/question?chid=11&amp;xd=3&amp;tree_type=category"><i
+						href="#"><i
 						class="icona-qqloginbtn"> </i></a>
 				</div>
 				<div class="login-reg">
 					<a target="_blank"
-						href="http://passport.21cnjy.com/site/register?jump_url=http://zujuan.21cnjy.com/question?chid=11&amp;xd=3&amp;tree_type=category">免费注册<i
+						href="#">免费注册<i
 						class="icona-right-arrow"></i></a>
 				</div>
 

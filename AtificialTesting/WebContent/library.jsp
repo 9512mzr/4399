@@ -792,11 +792,11 @@ width: 100%;}
 								<td colspan="6" align="center" bgcolor="">共&nbsp;&nbsp;&nbsp;${c_page.totalRecords}&nbsp;&nbsp;&nbsp;条记录;
 									共&nbsp;&nbsp;&nbsp;${c_page.totalPages}&nbsp;&nbsp;&nbsp;页
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
-									href="${ctx }/Choice1/showsome?pageNo=${c_page.topPageNo}"
+									href="${ctx }/${wocaonima}?pageNo=${c_page.topPageNo}"
 									class="btn_r">首页</a> <c:choose>
 										<c:when test="${c_page.pageNo!=1}">
 											<a
-												href="${ctx }/Choice1/showsome?pageNo=${c_page.previousPageNo }"
+												href="${ctx }/${wocaonima}?pageNo=${c_page.previousPageNo }&number=${number}"
 												class="btn_r">上一页</a>
 										</c:when>
 										<c:otherwise>
@@ -805,14 +805,14 @@ width: 100%;}
 									</c:choose> <c:choose>
 										<c:when test="${c_page.pageNo != page.totalPages}">
 											<a
-												href="${ctx }/Choice1/showsome?pageNo=${c_page.nextPageNo }"
+												href="${ctx }/${wocaonima}?pageNo=${c_page.nextPageNo }&number=${number}"
 												class="btn_r">下一页</a>
 										</c:when>
 										<c:otherwise>
 											<a class="btn_r">下一页</a>
 										</c:otherwise>
 									</c:choose> <a
-									href="${ctx }/Choice1/showsome?pageNo=${c_page.bottomPageNo}"
+									href="${ctx }/${wocaonima}?pageNo=${c_page.bottomPageNo}&number=${number}"
 									class="btn_r">尾页</a>
 
 								</td>

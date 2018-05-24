@@ -30,7 +30,8 @@ public class CheckController {
 		}
 		Page page = this.checkServiceImpl.queryForPage(Integer.valueOf(pageNo), 6,number1);
 		request.setAttribute("c_page", page);
-		modelMap.put("c_metodname1", "showsome");
+		modelMap.put("number", number1);
+		modelMap.put("wocaonima", "tochapter");
 		
 		
 		

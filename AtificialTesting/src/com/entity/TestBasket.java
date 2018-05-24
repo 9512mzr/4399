@@ -16,8 +16,8 @@ public class TestBasket {
 		private int testBasketId;
 		private int choiceQuestionId;
 		private Choicequestion choicequestion;
-		private String name;
-			
+		private int bigQuestionId;
+		private Bigquestion bigQuestion;
 		@Id
 		@GenericGenerator(name="loginid", strategy="assigned")
 		@GeneratedValue(generator="loginid")
@@ -45,11 +45,19 @@ public class TestBasket {
 		public void setChoicequestion(Choicequestion choicequestion) {
 			this.choicequestion = choicequestion;
 		}
-		public String getName() {
-			return name;
+		@OneToOne(cascade=CascadeType.ALL)
+		@PrimaryKeyJoinColumn(name="bigQuestionId")
+		public Bigquestion getBigQuestion() {
+			return bigQuestion;
 		}
-		public void setName(String name) {
-			this.name = name;
+		public void setBigQuestion(Bigquestion bigQuestion) {
+			this.bigQuestion = bigQuestion;
+		}
+		public int getBigQuestionId() {
+			return bigQuestionId;
+		}
+		public void setBigQuestionId(int bigQuestionId) {
+			this.bigQuestionId = bigQuestionId;
 		}
 	
 }

@@ -5,7 +5,7 @@ import java.util.List;
 public class Page {
 	private List<Bigquestion> b_list;
 	private List<Choicequestion> c_list;
-	
+	private List<Judge_question_show> j_list;
 
 
 	// 查询记录总数
@@ -108,5 +108,13 @@ public class Page {
 
 	public void setC_list(List<Choicequestion> c_list) {
 		this.c_list = c_list;
+	}
+
+	public List<Judge_question_show> getJ_list() {
+		return j_list;
+	}
+
+	public void setJ_list(List<Judge_question_show> j_list) {
+		this.j_list = j_list;
 	}
 }

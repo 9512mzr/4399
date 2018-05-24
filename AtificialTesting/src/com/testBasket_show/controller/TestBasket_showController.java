@@ -22,8 +22,10 @@ public class TestBasket_showController {
 	private TestBasket_showServiceImpl testBasket_showServiceImpl;
 	@RequestMapping("/show")
 	public String show(HttpServletRequest request, HttpServletResponse response,Model model) throws IOException {
-		List<TestBasket> basket = this.testBasket_showServiceImpl.findAll();
+		List<TestBasket> basket = this.testBasket_showServiceImpl.findChoice();
 		model.addAttribute("Basket", basket);
+		List<TestBasket> basket1 = this.testBasket_showServiceImpl.findBigQuestion();
+		model.addAttribute("Basket1", basket1);	
 //		 try {
 //	            String pageNo = request.getParameter("pageNo");
 //	            if (pageNo == null|pageNo=="") {

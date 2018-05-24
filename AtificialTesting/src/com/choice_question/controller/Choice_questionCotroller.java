@@ -28,9 +28,9 @@ public class Choice_questionCotroller {
 			pageNo = "1";
 		}
 		Page page = this.choice_questionServiceImpl.queryForPage(Integer.valueOf(pageNo), 10);
-		request.setAttribute("c_page", page);
+		request.getSession().setAttribute("c_page", page);
 		modelMap.put("c_metodname", "showAll");
-        return "test";
+        return "library";
     }
 	@RequestMapping(value = "/jschuan")
     public String findAllCourse2(HttpServletRequest request,

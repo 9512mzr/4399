@@ -195,7 +195,7 @@
 				<div class="preview-body" id="J_PaperBody">
 					<h3>一、单选题</h3>
 					<!-- 以下为分页内容 -->
-					<c:forEach items="${c_page.c_list}" var="Choicequestion">
+					<c:forEach items="${sessionScope.c_page.c_list}" var="Choicequestion">
 						<div class="search-list">
 							<ul>
 								<li data-qid="3755280">
@@ -266,36 +266,36 @@
 					<!-- 以上为分页内容 -->
 					<table style="margin-left: 500px;">
 						<tr>
-							<td colspan="6" align="center" bgcolor="">共${c_page.totalRecords}条记录
-								共${c_page.totalPages}页 当前第${c_page.pageNo}页
+							<td colspan="6" align="center" bgcolor="">共${sessionScope.c_page.totalRecords}条记录
+								共${sessionScope.c_page.totalPages}页 当前第${sessionScope.c_page.pageNo}页
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="${ctx }/Choice/${c_metodname }?pageNo=${c_page.topPageNo}"
+								href="${ctx }/Choice/showAll??pageNo=${sessionScope.c_page.topPageNo}"
 								class="btn_r">首页</a> <c:choose>
-									<c:when test="${c_page.pageNo!=1}">
+									<c:when test="${sessionScope.c_page.pageNo!=1}">
 										<a
-											href="${ctx }/Choice/${c_metodname }?pageNo=${c_page.previousPageNo }"
+											href="${ctx }/Choice/showAll??pageNo=${sessionScope.c_page.previousPageNo }"
 											class="btn_r">上一页</a>
 									</c:when>
 									<c:otherwise>
 										<a class="btn_r">上一页</a>
 									</c:otherwise>
 								</c:choose> <c:choose>
-									<c:when test="${c_page.pageNo != page.totalPages}">
+									<c:when test="${sessionScope.c_page.pageNo != page.totalPages}">
 										<a
-											href="${ctx }/Choice/${c_metodname }?pageNo=${c_page.nextPageNo }"
+											href="${ctx }/Choice/showAll??pageNo=${sessionScope.c_page.nextPageNo }"
 											class="btn_r">下一页</a>
 									</c:when>
 									<c:otherwise>
 										<a class="btn_r">下一页</a>
 									</c:otherwise>
 								</c:choose> <a
-								href="${ctx }/Choice/${c_metodname }?pageNo=${c_page.bottomPageNo}"
+								href="${ctx }/Choice/showAll??pageNo=${sessionScope.c_page.bottomPageNo}"
 								class="btn_r">尾页</a>
 							</td>
 						</tr>
 					</table>
 					<h3>二、综合题</h3>
-					<c:forEach items="${b_page.b_list}" var="Bigquestion">
+					<c:forEach items="${sessionScope.b_page.b_list}" var="Bigquestion">
 						<div class="search-list">
 							<ul>
 								<li data-qid="6662749">
@@ -334,30 +334,30 @@
 					</c:forEach>
 					<table style="margin-left: 500px;">
 						<tr>
-							<td colspan="6" align="center" bgcolor="">共${b_page.totalRecords}条记录
-								共${b_page.totalPages}页 当前第${b_page.pageNo}页
+							<td colspan="6" align="center" bgcolor="">共${sessionScope.b_page.totalRecords}条记录
+								共${sessionScope.b_page.totalPages}页 当前第${sessionScope.b_page.pageNo}页
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="${ctx }/Big/${b_metodname }?pageNo=${b_page.topPageNo}"
+								href="${ctx }/Big/showAll??pageNo=${sessionScope.b_page.topPageNo}"
 								class="btn_r">首页</a> <c:choose>
-									<c:when test="${b_page.pageNo!=1}">
+									<c:when test="${sessionScope.b_page.pageNo!=1}">
 										<a
-											href="${ctx }/Big/${b_metodname }?pageNo=${b_page.previousPageNo }"
+											href="${ctx }/Big/$showAll??pageNo=${sessionScope.b_page.previousPageNo }"
 											class="btn_r">上一页</a>
 									</c:when>
 									<c:otherwise>
 										<a class="btn_r">上一页</a>
 									</c:otherwise>
 								</c:choose> <c:choose>
-									<c:when test="${b_page.pageNo != b_page.totalPages}">
+									<c:when test="${sessionScope.b_page.pageNo != sessionScope.b_page.totalPages}">
 										<a
-											href="${ctx }/Big/${b_metodname }?pageNo=${b_page.nextPageNo }"
+											href="${ctx }/Big/showAll??pageNo=${sessionScope.b_page.nextPageNo }"
 											class="btn_r">下一页</a>
 									</c:when>
 									<c:otherwise>
 										<a class="btn_r">下一页</a>
 									</c:otherwise>
 								</c:choose> <a
-								href="${ctx }/Big/${b_metodname }?pageNo=${b_page.bottomPageNo}"
+								href="${ctx }/Big/showAll?pageNo=${sessionScope.b_page.bottomPageNo}"
 								class="btn_r">尾页</a>
 							</td>
 						</tr>

@@ -107,4 +107,50 @@ public class judge_questionController {
 		}
 		return "judge";
 	}
+	
+	@RequestMapping(value = "/submit2")
+	public String submit22(HttpServletRequest request,
+            HttpServletResponse response) throws IOException {
+		String orders=request.getParameter("submit");
+		
+		String score0=request.getParameter("score");
+		int score = Integer.parseInt(score0);
+		
+		ArrayList<Judge_question_show> m=(ArrayList<Judge_question_show>) request.getSession().getAttribute("Judges");
+		
+		String n0=request.getSession().getAttribute("JudgePage").toString();
+		int pageNo = Integer.parseInt(n0);
+		
+		int i=pageNo-1;
+		
+		Judge_question_show ju=m.get(i);
+		ju.setScore(score);
+		ju.setState("1");
+		m.set(i, ju);
+		
+		if(orders.equals("上一页")) {
+			if(1==pageNo) {
+				request.getSession().setAttribute("JudgePage", pageNo);
+				request.setAttribute("Judge", m.get(i));
+				return "judge";
+			}
+			request.getSession().setAttribute("JudgePage", --pageNo);
+			request.setAttribute("Judge", m.get(--i));
+			return "judge";
+		}else if(orders.equals("下一页")) {
+			if(m.size()==pageNo) {
+				this.service.saveJudges(m);
+				return "forward://Judge/getDates";
+			}
+			request.getSession().setAttribute("JudgePage", ++pageNo);
+			request.setAttribute("Judge", m.get(++i));
+			return "judge";
+		}else if(orders.equals("保存")) {
+			this.service.saveJudges(m);
+			return "forward://Judge/getDates";
+		}else {
+			this.service.saveJudges(m);
+			return "forward://Judge/getDates";
+		}
+	}
 }

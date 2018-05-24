@@ -27,8 +27,8 @@ public class big_questionController {
 			pageNo = "1";
 		}
 		Page page = this.big_questionServiceImpl.queryForPage(Integer.valueOf(pageNo), 10);
-		request.setAttribute("b_page", page);
+		request.getSession().setAttribute("b_page", page);
 		modelMap.put("b_metodname", "showAll");
-        return "test";
+        return "library";
     }
 }

@@ -20,6 +20,7 @@ public class Judge_question {
 	private Integer score;
 	private Integer fullmark;
 	private String state;
+	private String choicejudge;
 	@Id
 	@GeneratedValue(generator="my_gen")
     @GenericGenerator(name = "my_gen", strategy = "increment")
@@ -76,5 +77,11 @@ public class Judge_question {
 	}
 	public void setState(String state) {
 		this.state = state;
+	}
+	public String getChoicejudge() {
+		return choicejudge;
+	}
+	public void setChoicejudge(String choicejudge) {
+		this.choicejudge = choicejudge;
 	}
 }

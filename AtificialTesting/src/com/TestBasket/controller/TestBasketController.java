@@ -21,8 +21,11 @@ public class TestBasketController {
 	@RequestMapping("/add")
 	public String add(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
-		String name = request.getParameter("name");
-		testBasketServiceImpl.save(id,name);
+		int bigId = Integer.parseInt(request.getParameter("bigId"));
+		testBasketServiceImpl.saveChoice(id,bigId);
+
+//		System.out.println(bigId);
+//		testBasketServiceImpl.saveBig(bigId);
 		return "redirect:Choice/showAll";
 	}
 }

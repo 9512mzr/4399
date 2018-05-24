@@ -118,26 +118,30 @@
 		</div>
 	</div>
 	<div class="judge2">
-		<form action="${ctx }/Judge/submit">
+		<form action="${ctx }/Judge/submit2">
 		<input type="hidden" name="id" value="${Judge.id }" />
 		<div class="judge2-1">
 			<div class="judge2-1-1">
-				<a href="${ctx }/Judge/ChangePage?ChangeJudgePage=up">上一题</a>
+				<input type="submit" value="上一页" name="submit" type="up">
+				<!--  <a href="${ctx }/Judge/ChangePage?ChangeJudgePage=up">上一题</a>-->
 			</div>
 			<div class="judge2-1-1">
-				<a href="${ctx }/Judge/ChangePage?ChangeJudgePage=down">下一题</a>
+				<input type="submit" value="下一页" name="submit" type="down">
+				<!--  <a href="${ctx }/Judge/ChangePage?ChangeJudgePage=down">下一题</a>-->
 			</div>
 			<div class="judge2-1-1" >
 				输入分数：<input type="text" id="field0" name="score" value="${Judge.score }">
 			</div>
 			<div class="judge2-1-1">
-				<input type="submit" value="提交" />
+				<input type="submit" value="保存" name="submit" type="submit"/>
 			</div>
 			<div class="judge2-1-1">
 				<input type="button" value="满分" onclick="fullmark(${Judge.fullmark })">
 			</div>
+			<div class="judge2-1-1">
+				<input type="submit" value="提交" name="submit" type="save"/>
+			</div>
 			</form>
-			<a href="">存储</a>
 		</div>
 		<script>
 			function fullmark(str)

@@ -22,8 +22,12 @@ public class TestBasket_showDaoImpl {
 	public void setAllRowCount0(int allRowCount0) {
 		AllRowCount0 = allRowCount0;
 	}
-	public List<TestBasket> findAll(){
-		Query q=this.sessionFactory.getCurrentSession().createQuery("from TestBasket");
+	public List<TestBasket> findChoice(){
+		Query q=this.sessionFactory.getCurrentSession().createQuery("from TestBasket where bigQuestionId=1");
+		return q.list();
+	}
+	public List<TestBasket> findBigQuestion(){
+		Query q=this.sessionFactory.getCurrentSession().createQuery("from TestBasket where ChoiceQuestionId=1");
 		return q.list();
 	}
 //	public List<TestBasket> queryForPage(int offset,int length){

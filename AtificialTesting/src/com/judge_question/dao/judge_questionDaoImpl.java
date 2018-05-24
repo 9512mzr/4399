@@ -22,7 +22,7 @@ public class judge_questionDaoImpl {
 	
 	public ArrayList<String> getDates(){
 		List<Judge_question> qu0=null;
-		Query query=(Query)sessionFactory.getCurrentSession().createQuery("from Judge_question where state='0' and teacher_id=1");
+		Query query=(Query)sessionFactory.getCurrentSession().createQuery("from Judge_question where state='0' and teacher_id=1 and choicejudge='0'");
 		qu0=query.list();
 		ArrayList<String> date0=new ArrayList<String>();
 		for(int i=0;i<qu0.size();i++) {
@@ -35,20 +35,22 @@ public class judge_questionDaoImpl {
 	}
 	
 	public ArrayList<Judge_question_show> getJudges(String date){
-		List<Judge_question> qu0=(List<Judge_question>)sessionFactory.getCurrentSession().createQuery("from Judge_question where state='0' and teacher_id=1 and date='"+date+"'").list();
+		List<Judge_question> qu0=(List<Judge_question>)sessionFactory.getCurrentSession().createQuery("from Judge_question where state='0' and teacher_id=1 and choicejudge='0' and date='"+date+"'").list();
 		ArrayList<Judge_question_show> m=new ArrayList<Judge_question_show>();
 		for(int i=0;i<qu0.size();i++) {
-			Judge_question_show n=new Judge_question_show();
-			n.setId(qu0.get(i).getId());
-			n.setAnswer(this.getAnswer(qu0.get(i).getQuestion_id()));
-			n.setFullmark(qu0.get(i).getFullmark().toString());
-			n.setScore(qu0.get(i).getScore());
-			n.setState(qu0.get(i).getState());
-			n.setStudent_name(this.getStudentName(qu0.get(i).getStudent_id()));
-			n.setImg(qu0.get(i).getRequest());
-			n.setDate(qu0.get(i).getDate());
-			n.setClasses(this.getStudentclass(qu0.get(i).getStudent_id()));
-			m.add(n);
+			
+				Judge_question_show n=new Judge_question_show();
+				n.setId(qu0.get(i).getId());
+				n.setAnswer(this.getAnswer(qu0.get(i).getQuestion_id()));
+				n.setFullmark(qu0.get(i).getFullmark().toString());
+				n.setScore(qu0.get(i).getScore());
+				n.setState(qu0.get(i).getState());
+				n.setStudent_name(this.getStudentName(qu0.get(i).getStudent_id()));
+				n.setImg(qu0.get(i).getRequest());
+				n.setDate(qu0.get(i).getDate());
+				n.setClasses(this.getStudentclass(qu0.get(i).getStudent_id()));
+				m.add(n);
+			
 		}
 		return m;
 	}

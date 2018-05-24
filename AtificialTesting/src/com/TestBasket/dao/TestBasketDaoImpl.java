@@ -14,14 +14,23 @@ public class TestBasketDaoImpl {
 	@Resource
 	private SessionFactory sessionFactory;
 	
-	public void save(int id,String name) {
+	public void saveChoice(int id,int bigId) {
 		TestBasket basket = new TestBasket();
 		basket.setChoiceQuestionId(id);
-		basket.setName(name);
+		basket.setBigQuestionId(bigId);
 		Session s=this.sessionFactory.openSession();
 		Transaction tr=s.beginTransaction();
 		s.save(basket);
 		tr.commit();
 		s.close();
 	}
+//	public void saveBig(int id) {
+//		TestBasket basket = new TestBasket();
+//		basket.setBigQuestionId(id);
+//		Session s=this.sessionFactory.openSession();
+//		Transaction tr=s.beginTransaction();
+//		s.save(basket);
+//		tr.commit();
+//		s.close();
+//	}
 }

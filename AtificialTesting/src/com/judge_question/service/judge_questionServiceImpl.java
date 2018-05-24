@@ -25,18 +25,13 @@ public class judge_questionServiceImpl {
 		return this.judge_questionDaoImpl.getJudges(date);
 	}
 	
-	public void saveJudge(String id,String score0) {
-		int score= Integer.parseInt(score0);
-		this.judge_questionDaoImpl.submit(id, score);
-	}
-	
 	public void saveJudges(ArrayList<Judge_question_show> n) {
 		ArrayList<Judge_question_show> m=new ArrayList<Judge_question_show>();
 		for(int i=0;i<n.size();i++) {
 			if(n.get(i).equals("")&n.get(i).equals(null)) {
 				continue;
 			}
-			if(n.get(i).getState().equals(null)&n.get(i).getState().equals("")) {
+			if(n.get(i).getState().equals("0")) {
 			}else {
 				m.add(n.get(i));
 			}

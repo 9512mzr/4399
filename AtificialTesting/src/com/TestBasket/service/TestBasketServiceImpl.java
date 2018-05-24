@@ -12,7 +12,10 @@ import com.TestBasket.dao.TestBasketDaoImpl;
 public class TestBasketServiceImpl {
 	@Resource
 	private TestBasketDaoImpl testBasketDaoImpl;
-	public void save(int id,String name) {
-		testBasketDaoImpl.save(id,name);
+	public void saveChoice(int id,int bigId) {
+		testBasketDaoImpl.saveChoice(id,bigId);
 	}
+//	public void saveBig(int id) {
+//		testBasketDaoImpl.saveBig(id);
+//	}
 }

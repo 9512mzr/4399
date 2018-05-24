@@ -17,8 +17,11 @@ import com.testBasket_show.dao.TestBasket_showDaoImpl;
 public class TestBasket_showServiceImpl {
 	@Resource
 	private TestBasket_showDaoImpl testBasket_showDaoImpl;
-	public List<TestBasket> findAll(){
-		return this.testBasket_showDaoImpl.findAll();
+	public List<TestBasket> findChoice(){
+		return this.testBasket_showDaoImpl.findChoice();
+	}
+	public List<TestBasket> findBigQuestion(){
+		return this.testBasket_showDaoImpl.findBigQuestion();
 	}
 //	public Basket_Show queryForPage(int currentPage,int pageSize) {
 //		Basket_Show page=new Basket_Show();

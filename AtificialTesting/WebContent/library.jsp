@@ -817,10 +817,12 @@ width: 100%;}
 
 								</td>
 								<td>
-									<form action="${ctx }/Choice1/tobank1" method="post">
+									<form action="${ctx }/${wocaonima}" method="get">
+									    <input type="hidden" name="number" value="${number}"/>
+									     
 										<input
 											style="border: 1px solid #dcdcdc; color: #333; display: inline-block; font-size: 12px; height: 32px; width: 30px; line-height: 32px; margin: 0 5px; padding: 0 5px; text-align: center; white-space: nowrap;"
-											name="page" type="text" value="${c_page.pageNo}">
+											name="pageNo" type="text" value="${c_page.pageNo}">
 										<button type="submit">跳转</button>
 									</form>
 

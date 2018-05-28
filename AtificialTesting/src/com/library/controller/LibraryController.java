@@ -34,7 +34,7 @@ public class LibraryController {
 	private LibraryServiceImpl libraryServiceImpl;
 	@RequestMapping("showsome")
 	public String turn(HttpServletRequest request,HttpServletResponse response,ModelMap modelMap) {
-		
+		String number2=request.getParameter("number");
 		String pageNo=request.getParameter("pageNo");
 		if(pageNo==null) {
 			pageNo = "1";

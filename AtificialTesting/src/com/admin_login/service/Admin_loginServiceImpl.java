@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.admin_login.dao.Admin_loginDaoImpl;
-
+ 
 @Service
 @Transactional(readOnly=true)
 public class Admin_loginServiceImpl {

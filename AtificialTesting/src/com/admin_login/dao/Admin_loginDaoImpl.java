@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class Admin_loginDaoImpl {
-
+ 
 	@Resource
 	private SessionFactory sessionFactory;
 	

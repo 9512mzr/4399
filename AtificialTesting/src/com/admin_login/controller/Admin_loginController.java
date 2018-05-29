@@ -14,7 +14,7 @@ import com.admin_login.service.Admin_loginServiceImpl;
 
 @Controller
 public class Admin_loginController {
-
+ 
 	@Resource
 	private Admin_loginServiceImpl admin_loginServiceImpl;
 	

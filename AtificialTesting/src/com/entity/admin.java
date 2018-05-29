@@ -9,7 +9,7 @@ import javax.persistence.Table;
 public class admin {
 	private String adminID;
 	private String adminPass;
-	
+	 
 	@Id
 	public String getAdminID() {
 		return adminID;

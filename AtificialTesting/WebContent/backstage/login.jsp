@@ -16,6 +16,7 @@
 	<!-- 登录body -->
 	<div class="logDiv">
 		<img class="logBanner" src="${ctx }/backstage/images/logBanner.png" />
+		<form  action="../adminlogin" method="post">
 		<div class="logGet">
 			<!-- 头部提示信息 -->
 			<div class="logD logDtip">
@@ -23,17 +24,18 @@
 			</div>
 			<!-- 输入框 -->
 			<div class="lgD">
-				<img class="img1" src="${ctx }/backstage/images/logName.png" /><input type="text"
-					placeholder="输入用户名" />
+				<img class="img1" src="${ctx }/backstage/images/logName.png" />
+				<input id="adminid" name="aid" type="text" placeholder="输入用户名" />
 			</div>
 			<div class="lgD">
-				<img class="img1" src="${ctx }/backstage/images/logPwd.png" /><input type="text"
+				<img class="img1" src="${ctx }/backstage/images/logPwd.png" /><input id="adminpass" name="apass" type="text"
 					placeholder="输入用户密码" />
 			</div>
 			<div class="logC">
-				<a href="index.jsp" target="_self"><button>登 录</button></a>
+				 <button type="submit">登 录</button>
 			</div>
 		</div>
+		</form>
 	</div>
 	<!-- 登录body  end -->
 

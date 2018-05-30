@@ -31,7 +31,8 @@ public class judge_questionDaoImpl {
 		HashSet s=new HashSet(date0);
 		date0.clear();
 		date0.addAll(s);
-		return date0;
+		
+		return this.maopaopai(date0);
 	}
 	
 	public ArrayList<Judge_question_show> getJudges(String date){
@@ -77,5 +78,41 @@ public class judge_questionDaoImpl {
 		qu.setState("1");
 		qu.setScore(score);
 		this.sessionFactory.getCurrentSession().update(qu);
+	}
+	
+	public ArrayList<String> maopaopai(ArrayList<String> date1){
+		int[] date2 = new int[date1.size()];
+		for (int i = 0; i < date1.size(); i++) {
+			String date = date1.get(i);
+			if (date.length() == 9) {
+				date = date.substring(0, 8) + "0" + date.substring(8, date.length());
+				date1.set(i, date);
+			}
+			date1.set(i, date1.get(i).replace("-", ""));
+			date2[i] = Integer.parseInt(date1.get(i));
+		}
+
+		for (int i = 0; i < date2.length - 1; i++) {
+			for (int j = 0; j < date2.length - i - 1; j++) {// -1为了防止溢出
+				if (date2[j] > date2[j + 1]) {
+					int temp = date2[j];
+
+					date2[j] = date2[j + 1];
+
+					date2[j + 1] = temp;
+				}
+			}
+		}
+		date1.clear();
+		for(int i=0;i<date2.length;i++) {
+			String date=""+date2[i];
+			String pan=date.charAt(6)+"";
+			if(pan.equals("0")) {
+				date=date.substring(0, 6)+date.charAt(7);
+			}
+			date=date.substring(0, 4)+"-"+date.substring(4, 6)+"-"+date.substring(6, date.length());
+			date1.add(date);
+		}
+		return date1;
 	}
 }

@@ -283,7 +283,7 @@
 			<div class="nav">
 				<ul>
 					<li><a href="" rel="nofollow">首页</a></li>
-					<li class="subjectNav subjectNav02"><a href="${ctx }/Choice1/tobank"
+					<li class="subjectNav subjectNav02"><a href="${ctx }/showsome"
 						style="cursor: default;">试题库</a>
 					<div>
 							<ul class="leibie bbot cf">

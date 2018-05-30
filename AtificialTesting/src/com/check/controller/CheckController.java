@@ -24,13 +24,17 @@ public class CheckController {
 	public String chapter(HttpServletRequest request,HttpServletResponse response,ModelMap modelMap) {
 		String number2=request.getParameter("number");
 		String pageNo=request.getParameter("pageNo");
-		int number1 = Integer.parseInt(number2);
+		System.out.println(number2+"lll");
+		
+
 		if(pageNo==null) {
 			pageNo = "1";
 		}
+		int number1 = Integer.parseInt(number2);
 		Page page = this.checkServiceImpl.queryForPage(Integer.valueOf(pageNo), 6,number1);
 		request.setAttribute("c_page", page);
-		modelMap.put("c_metodname1", "showsome");
+		modelMap.put("number", number1);
+		modelMap.put("wocaonima", "tochapter");
 		
 		
 		

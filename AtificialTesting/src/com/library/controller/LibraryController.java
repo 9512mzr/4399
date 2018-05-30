@@ -27,55 +27,26 @@ import com.library.service.LibraryServiceImpl;
 
 
 @Controller
-@RequestMapping("Choice1")
+
 public class LibraryController {
 	@Resource
 	@Autowired
 	private LibraryServiceImpl libraryServiceImpl;
 	@RequestMapping("showsome")
 	public String turn(HttpServletRequest request,HttpServletResponse response,ModelMap modelMap) {
-		
+		String number2=request.getParameter("number");
 		String pageNo=request.getParameter("pageNo");
 		if(pageNo==null) {
 			pageNo = "1";
 		}
 		Page page = this.libraryServiceImpl.queryForPage(Integer.valueOf(pageNo), 6);
 		request.setAttribute("c_page", page);
-		modelMap.put("c_metodname1", "showsome");
-		
-		
-	
+		modelMap.put("wocaonima", "showsome");
+
 		return "library";
 
 	}
-	@RequestMapping("tobank")
-	public String Tobank(HttpServletRequest request,HttpServletResponse response,ModelMap modelMap) {
-		String pageNo=request.getParameter("pageNo");
-		
-		if(pageNo==null) {
-			pageNo = "1";
-		}
-		Page page = this.libraryServiceImpl.queryForPage(Integer.valueOf(pageNo), 6);
-		request.setAttribute("c_page", page);
-		modelMap.put("c_metodname1", "showsome");
-		
-		
-		
-		
-		return "library";
-	}
-	@RequestMapping("tobank1")
-	public String Tobank1(HttpServletRequest request,HttpServletResponse response,ModelMap modelMap) {
-		String pageNo = request.getParameter("page");
-		if(pageNo==null) {
-			pageNo = "1";
-		}
-		Page page = this.libraryServiceImpl.queryForPage(Integer.valueOf(pageNo), 6);
-		request.setAttribute("c_page", page);
-		modelMap.put("c_metodname1", "showsome");
-		return "library";
-		
-	}
+	
 	
 
 }

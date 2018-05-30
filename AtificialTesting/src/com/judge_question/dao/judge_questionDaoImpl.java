@@ -116,3 +116,4 @@ public class judge_questionDaoImpl {
 		return date1;
 	}
 }
+ 

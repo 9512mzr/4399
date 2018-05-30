@@ -112,6 +112,7 @@ public class judge_questionDaoImpl {
 			}
 			date=date.substring(0, 4)+"-"+date.substring(4, 6)+"-"+date.substring(6, date.length());
 			date1.add(date);
+			
 		}
 		return date1;
 	}

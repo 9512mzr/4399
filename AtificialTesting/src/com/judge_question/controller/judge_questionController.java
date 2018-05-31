@@ -7,12 +7,16 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.entity.Judge_question;
 import com.entity.Judge_question_show;
+import com.entity.Page;
 import com.judge_question.service.judge_questionServiceImpl;
 
 @Controller
@@ -22,10 +26,20 @@ public class judge_questionController {
 	@Autowired
 	private judge_questionServiceImpl service;
 	
+//	public judge_questionController() {}
+//	protected final transient Log log = LogserviceFactory.getLog(judge_questionController.class);
+	
 	@RequestMapping(value = "/getDates")
-	public String getDates(HttpServletRequest request,
-            HttpServletResponse response) {
+	public String getDates(HttpServletRequest request,HttpServletResponse response,ModelMap modelMap) {
 		request.getSession().setAttribute("dates", this.service.getDates());
+		
+//		String pageNo = request.getParameter("pageNo");
+//		if (pageNo == null) {
+//			pageNo = "1";
+//		}
+//		Page page = service.queryForPage(Integer.valueOf(pageNo), 5);
+//		request.setAttribute("page", page);
+//		modelMap.put("methodname", "list");
 		return "Judge0";
 	}
 	

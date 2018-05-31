@@ -10,10 +10,10 @@
 <head></head>
 
 <body id="bg">
-	<link rel="stylesheet" href="/AtificialTesting/static/css/inner-user.min.css">
+	<link rel="stylesheet" href="${ctx }/static/css/inner-user.min.css">
 	<!-- 左边节点 -->
 	<div class="container">
-			<dl class="system_log">
+			<!--<dl class="system_log">
 			 <div class="msg-box">
 			 
 			 		<div class="user-pic">
@@ -23,39 +23,20 @@
 					</div>
 
 					<div class="user-id">
-						<p class="user-idname">欢迎：${sessionScope.nickName }</p>
+						<p class="user-idname">欢迎：${nickName }</p>
 						<p class="user-level">
 							<i class="icona-lv-gold"></i>普通用户
 						</p>
 					</div>
-			 		
-			 
-			 		<!--
-			 		<div class="user-pic">
-						<div class="pic-border">
-							<img src="${ctx }/static/images/avatar.php">
-						</div>
-					</div>
-
-					<div class="user-id">
-						<p class="user-idname">21jy_569002710</p>
-						<p class="user-level">
-							<i class="icona-lv-gold"></i>普通用户
-						</p>
-					</div>
-					-->
-				</div>	
-				
-				
-			</dl>
+				</div>
+			</dl>-->
 			<div class="user-using">
 					<ul>
-						<li><a href="${ctx }/login.jsp" target="main"
-							class="using-active"><i class="icona-download3"></i>下载记录</a></li>
-						<li><a href="${ctx }/addQuestion.jsp" target="main"><i
-								class="icona-zjjl"></i>组卷记录</a></li>
-						<li><a href="${ctx }/addQuestion.jsp" target="main"><i
-								class="icona-csjl"></i>测试记录</a></li>
+						
+						<li><a href="${ctx }/Judge/getDates" target="main"><i
+								class="icona-zjjl"></i>待判题目</a></li>
+						<li><a href="${ctx }/selfcenter/change.jsp" target="main"><i
+								class="icona-csjl"></i>修改密码</a></li>
 						<li>
 							<a href="${ctx }/addQuestion.jsp" target="main"><i
 								class="icona-csjl"></i>测试记录</a></li>

@@ -388,15 +388,15 @@ body {
   background-color: #fff;
 }
 .user-mn {
-  margin-left: 290px;
-  min-height: 690px;
+  margin-left: 30px;
+  min-height: 420px;
   background-color: #fff;
   border: 1px solid #ededed;
   padding: 20px;
 }
 .heading {
   height: 60px;
-  background-color: #fff;
+  background-color: #c0c0c0;
   border-bottom: 1px solid #ececec;
   box-shadow: 1px 0 3px #ddd;
 }
@@ -405,6 +405,7 @@ body {
   margin: 0 auto;
   zoom: 1;
   height: 100%;
+  background-color: #c0c0c0;
 }
 .heading-main:after {
   display: block;
@@ -414,6 +415,7 @@ body {
   height: 0;
   font-size: 0;
   line-height: 0;
+  background-color: #00ff00;
 }
 .heading-logo {
   float: left;
@@ -587,11 +589,12 @@ body {
   height: 4px;
 }
 .g-top {
-  margin: 40px 0 10px;
-  padding: 28px;
+  margin: 0px 0 0px;
+  padding:8px;
   background: #fff;
   border: 1px solid #ddd;
   zoom: 1;
+  height:85px;
 }
 .g-top:after {
   display: block;
@@ -608,7 +611,7 @@ body {
   position: relative;
   width: 390px;
   margin-left: -390px;
-  margin-top: 20px;
+  margin-top: 1px;
 }
 .user-info {
   margin-right: 420px;
@@ -617,18 +620,18 @@ body {
   float: left;
   display: inline;
   margin-right: 30px;
-  width: 150px;
-  height: 150px;
+  width: 90px;
+  height: 90px;
 }
 .info-cnt {
   float: left;
   display: inline;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 .info-cnt p {
   font-size: 14px;
   color: #999;
-  margin-bottom: 23px;
+  margin-bottom: 10px;
 }
 .info-cnt p > span {
   color: #333;
@@ -647,9 +650,9 @@ body {
   display: none;
   position: absolute;
   width: 100px;
-  height: 30px;
-  line-height: 30px;
-  top: 30px;
+  height: 10px;
+  line-height: 10px;
+  top: 15px;
   left: -12px;
   background-color: #dcdcdc;
   font-size: 14px;
@@ -672,6 +675,8 @@ body {
 }
 .qrcode img {
   float: left;
+  width:90px;
+  height:90px;
   display: inline;
   margin-right: 20px;
 }
@@ -679,11 +684,11 @@ body {
   float: left;
   display: inline;
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .qrcode-msg > h3 {
   font-weight: normal;
-  margin-bottom: 28px;
+  margin-bottom: 15px;
 }
 .qrcode-msg > p {
   color: #666;

@@ -34,6 +34,24 @@ public class judge_questionDaoImpl {
 		
 		return this.maopaopai(date0);
 	}
+//	/*
+//	 * 未判题目分页查询
+//	 * 
+//	*/
+//	public List<Judge_question> queryForPage(int offset, int length) {
+//		// 查询所有的记录数
+//		Query query = (Query) sessionFactory.getCurrentSession().createQuery("from Judge_question");
+//		query.setFirstResult(offset);
+//		query.setMaxResults(length);
+//		return query.list();
+//	}
+//
+//	// 查询记录总数
+//	public int getAllRowCount() {
+//		int count = ((Long) sessionFactory.getCurrentSession().createQuery("select count(*) from Judge_question").iterate()
+//				.next()).intValue();
+//		return count;
+//	}
 	
 	public ArrayList<Judge_question_show> getJudges(String date){
 		List<Judge_question> qu0=(List<Judge_question>)sessionFactory.getCurrentSession().createQuery("from Judge_question where state='0' and teacher_id=1 and choicejudge='0' and date='"+date+"'").list();

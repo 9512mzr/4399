@@ -6,7 +6,7 @@ public class Page {
 	private List<Bigquestion> b_list;
 	private List<Choicequestion> c_list;
 	private List<Judge_question_show> j_list;
-
+	private List<Judge_question> Judge_questionlist;
 
 	// 查询记录总数
     private int totalRecords;
@@ -117,4 +117,14 @@ public class Page {
 	public void setJ_list(List<Judge_question_show> j_list) {
 		this.j_list = j_list;
 	}
+
+	public List<Judge_question> getJudge_questionlist() {
+		return Judge_questionlist;
+	}
+
+	public void setJudge_questionlist(List<Judge_question> judge_questionlist) {
+		Judge_questionlist = judge_questionlist;
+	}
+	
+	
 }

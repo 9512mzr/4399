@@ -285,34 +285,6 @@
 					<li><a href="" rel="nofollow">首页</a></li>
 					<li class="subjectNav subjectNav02"><a href="${ctx }/showsome"
 						style="cursor: default;">试题库</a>
-					<div>
-							<ul class="leibie bbot cf">
-								<p class="gz">高中</p>
-								<li><a href="javascript:abx(&#39;/tiku/yuwen&#39;,4);">语文</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/shuxue&#39;,5);">数学</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/yingyu&#39;,6);">英语</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/huaxue&#39;,7);">化学</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/wuli&#39;,8);">物理</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/shengwu&#39;,9);">生物</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/lishi&#39;,10);">历史</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/dili&#39;,11);">地理</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/zhengzhi&#39;,12);">政治</a></li>
-							</ul>
-							<ul class="leibie cf">
-								<p class="cz">初中</p>
-								<li><a href="javascript:abx(&#39;/tiku/yw&#39;,13);">语文</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/sx&#39;,14);">数学</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/yy&#39;,15);">英语</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/hx&#39;,16);">化学</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/wl&#39;,17);">物理</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/tbsw&#39;,18);">生物</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/tbls&#39;,19);">历史</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/tbdl&#39;,20);">地理</a></li>
-								<li><a href="javascript:abx(&#39;/tiku/tbzz&#39;,21);">政治</a></li>
-							</ul>
-							<!--
-                    <a href='/tiku/yuwen/'>高中语文</a><a href='/tiku/shuxue/'>高中数学</a><a href='/tiku/yingyu/'>高中英语</a><a href='/tiku/huaxue/'>高中化学</a><a href='/tiku/wuli/'>高中物理</a><a href='/tiku/shengwu/'>高中生物</a><a href='/tiku/lishi/'>高中历史</a><a href='/tiku/dili/'>高中地理</a><a href='/tiku/zhengzhi/'>高中政治</a><a href='/tiku/yw/'>初中语文</a><a href='/tiku/sx/'>初中数学</a><a href='/tiku/yy/'>初中英语</a><a href='/tiku/hx/'>初中化学</a><a href='/tiku/wl/'>初中物理</a><a href='/tiku/sw/'>初中生物</a><a href='/tiku/ls/'>初中历史</a><a href='/tiku/dl/'>初中地理</a><a href='/tiku/zz/'>初中政治</a>                   -->
-						</div></li>
 					<li class="subjectNav subjectNav01"><a href="javascript:;"
 						style="cursor: default;">组卷</a>
 					<div>
@@ -486,64 +458,8 @@ function sgfagfds(){
 				class=""></a>
 		</div>
 		<div class="clear"></div>
-		<script type="text/javascript">$(function(){
+		<script type="text/javascript">
     //导航主题背景
-    //$(".index_navBg").css('background','url(/images/questionBank/index/navBg_20160219yushuijie.png) center 0 no-repeat');
-
-    //学习卡号
-    $("[name='cadrnum']").live('blur',function(){
-        var cardnum = this.value;
-        var url = "/Tiku/User/studyCardCheck/cadrnum/"+cardnum;
-        $.get(url,function(data){
-            if(data.state == "1"){
-                $(".cardnum").removeClass("loginShow");
-            }else{
-                $(".cardnum").addClass("loginShow");
-                beidong();
-                shangbianju();
-            }
-        });
-    });
-    //学习卡密码
-    $("[name='cardpwd']").live('blur',function(){
-        var cardnum = $("[name='cadrnum']").val();
-        var pwd     = this.value;
-        if($.trim(pwd) == "" || $.trim(pwd) == "请输入密码") return;
-        var url = "/Tiku/User/studyCardCheck/cadrnum/"+cardnum+"/cardpwd/"+pwd;
-        $.get(url,function(data){
-            if(data.state == "1"){
-              $(".cardpwd").removeClass("loginShow");
-            }else{
-              $(".cardpwd").addClass("loginShow");
-              $(".cardnumformat").removeClass("loginShow");
-              beidong();
-              shangbianju();
-            }
-        });
-    });
-
-  // 60秒
-function studysend(num) {
-  $("#code_flg").val("false");
-  var clearTimer = setInterval(changeTime, 1000);
-  $(".studycode").html( 60 + "秒");
-  function changeTime() {
-    if (num > 0) {
-      num = num - 1;
-      curnum = num;
-      $(".studycode").html(curnum + "秒");
-    } else {
-      if (num == 0) {
-        $(".studycode").html("重新获取");
-        $("#code_flg").val("true");
-        clearInterval(clearTimer);
-        num = 60;
-      }
-      num = num - 1;
-    }
-  }
-  clearTimer;
-}
 </script>
 		<div class="userLoginBox loginTxt" style="display: block;">
 			<h4>
@@ -552,7 +468,7 @@ function studysend(num) {
 			</h4>
 			<ul>
 				<li><a class="btn btn2" target="_blank"
-					href="${ctx }/selfcenter.jsp">进入我的主页</a></li>
+					href="${ctx }/selfcenter/mytest.jsp">进入我的主页</a></li>
 				<li class="col333">
 				<a href="${ctx }/changepage?name=${sessionScope.userid }">修改密码</a>
 				

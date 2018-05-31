@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="${ctx }/static/css/base.min1.css">
 <link rel="stylesheet" href="${ctx }/static/css/artDialog-skin-ot2.min1.css">
 <link rel="stylesheet" href="${ctx }/static/css/main.min1.css">
+<link rel="stylesheet" href="${ctx }/static/css/u-center.min.css"><link rel="stylesheet" href="${ctx }/static/css/layer1.css" id="layuicss-skinlayercss"></head>
 <style type="text/css">
 	.ans{
 	width:300px;
@@ -67,33 +68,32 @@
 </head>
 <body>
 <link rel="stylesheet" href="${ctx }/static/css/test-preview.min.css">
-	<div class="header">
-		<div class="header-inner g-container f-cb">
-			<div class="header-logo">
-				<a href=""><img
-					src="${ctx }/static/images/app_logo_zujuan.png" alt="组卷网"></a>
-			</div>
-			<div class="header-nav">
-				<span class="split"></span>
-				<a href="" class="help">
-					<i class="icona-home"></i>网站首页
-				</a> 
-				<span class="split"></span>
-				<a>购买VIP</a>
-				<span class="split"></span>
-				<a>激活VIP卡</a>
-				<span class="split"></span>
-				<a>团体购买</a> 
-				<span class="split"></span> 
-				<a href="">淘宝店</a> 
-				<span class="split"></span>
-				<div class="loginbox">
-				<a shref="/login" class="login">
-					<span>注册&amp;登录</span>
-				</a>
-			</div>
-		</div>
-	</div>
+	<div class="heading">
+    <div class="heading-main">
+        <div class="heading-logo">
+            <img src="${ctx }/static/images/logo1.png" alt="logo">
+            <span>账户中心</span>
+        </div>
+        <div class="r-wrap">
+            <ul class="heading-nav">
+                <li class="item"><a href="#">4399世纪教育网</a></li>
+                <li class="sep">|</li>
+                <li class="item"><a href="#">4399组卷平台</a></li>
+                <li class="sep">|</li>
+                <li class="item"><a href="#">课堂无忧</a></li>
+                <li class="sep">|</li>
+                <li class="item"><a href="#">在线题库</a></li>
+                <li class="sep">|</li>
+                <li class="item"><a href="#" >名师课堂</a></li>
+            </ul>
+            <div class="heading-exit">
+                <!--<img src="/static/images/register/s-user.png" alt="logo">-->
+                <span>${list1.nickName}</span>
+                <a href="${ctx}/login.jsp" >【退出】</a>      
+            </div>
+        </div>
+    </div>
+</div>
 	<div class="breadcrumb g-container">
 		<i class="icona-dingwei"></i>位置： <a href="">首页</a>
 	</div>

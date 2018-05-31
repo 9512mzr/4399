@@ -28,7 +28,7 @@ public class TeacherPwController {
 		if(teacher.getPassWord().equals(pw)&&pw1.equals(pw2)) {
 			this.teachermessageImpl.updataPW(teacher,pw1);
 			System.out.println("123");
-			return "login";
+			return "forward://login";
 			
 			
 		}

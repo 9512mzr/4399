@@ -42,6 +42,21 @@ public class LibraryController {
 		Page page = this.libraryServiceImpl.queryForPage(Integer.valueOf(pageNo), 6);
 		request.setAttribute("c_page", page);
 		modelMap.put("wocaonima", "showsome");
+		modelMap.put("classall", "type-active");
+		return "library";
+
+	}
+	
+	@RequestMapping("showso2222me")
+	public String turn1(HttpServletRequest request,HttpServletResponse response,ModelMap modelMap) {
+		String number2=request.getParameter("number");
+		String pageNo=request.getParameter("pageNo");
+		if(pageNo==null) {
+			pageNo = "1";
+		}
+		Page page = this.libraryServiceImpl.queryForPage(Integer.valueOf(pageNo), 6);
+		request.setAttribute("c_page", page);
+		modelMap.put("wocaonima", "showsome");
 
 		return "library";
 

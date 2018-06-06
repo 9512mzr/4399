@@ -83,10 +83,10 @@
 <link rel="stylesheet" href="${ctx }/static/css/base.min1.css">
 <link rel="stylesheet" href="${ctx }/static/css/spriter-mix.min1.css">
 <link rel="stylesheet" href="${ctx }/static/css/ui-dialog1.css">
-<link rel="stylesheet"
-	href="${ctx }/static/css/artDialog-skin-ot2.min1.css">
+<link rel="stylesheet" href="${ctx }/static/css/artDialog-skin-ot2.min1.css">
 <link rel="stylesheet" href="${ctx }/static/css/main.min1.css">
-<link rel="stylesheet" href="${ctx }/static/css/popup.min1.css">
+<link rel="stylesheet" href="${ctx }/static/css/test-preview.min.css">
+<link rel="stylesheet" href="${ctx }/static/css/u-center.min.css">
 <script src="${ctx }/static/js/jquery.min1.js"></script>
 <script type="text/javascript">
 	$.ajaxSetup({
@@ -100,25 +100,32 @@
 <script src="${ctx }/static/js/util.min1.js"></script>
 </head>
 <body>
-	<link rel="stylesheet" href="${ctx }/static/css/test-preview.min.css">
-	<div class="header">
-		<div class="header-inner g-container f-cb">
-
-			<div class="header-logo">
-				<a href="http://www.zujuan.com/"><img
-					src="./static/images/app_logo_zujuan.png" alt="组卷网"></a>
-			</div>
-
-			<div class="header-nav">
-				<span class="split"></span><a href="http://www.zujuan.com/"
-					class="help"><i class="icona-home"></i>网站首页</a>
-				<div class="loginbox">
-					<a shref="/login" class="login"
-						onclick="OT2.Global.initLogin(); return false;"><span>注册&amp;登录</span></a>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div class="heading">
+    <div class="heading-main">
+        <div class="heading-logo">
+            <img src="${ctx }/static/images/logo1.png" alt="logo">
+            <span>账户中心</span>
+        </div>
+        <div class="r-wrap">
+            <ul class="heading-nav">
+                <li class="item"><a href="" target="_blank">4399世纪教育网</a></li>
+                <li class="sep">|</li>
+                <li class="item"><a href="" target="_blank">4399组卷平台</a></li>
+                <li class="sep">|</li>
+                <li class="item"><a href="" target="_blank">课堂无忧</a></li>
+                <li class="sep">|</li>
+                <li class="item"><a href="" target="_blank">在线题库</a></li>
+                <li class="sep">|</li>
+                <li class="item"><a href="" target="_blank">名师课堂</a></li>
+            </ul>
+            <div class="heading-exit">
+                <!--<img src="/static/images/register/s-user.png" alt="logo">-->
+                <span>${list1.nickName}</span>
+                <a href="${ctx }/login.jsp" target="_blank">【退出】</a>      
+            </div>
+        </div>
+    </div>
+</div>
 	<script>
 		$(function() {
 			var toNote = '';
@@ -140,15 +147,9 @@
 	</script>
 	<!--头部结束-->
 	<div class="breadcrumb g-container">
-		<i class="icona-dingwei"></i>位置： <a href="http://www.zujuan.com/">首页</a>
+		<i class="icona-dingwei"></i>位置： <a href="">首页</a>
 	</div>
-	<script>
-		OT2.xd_chid = {
-			"chid" : 11,
-			"xd" : 2
-		} || null;
-	</script>
-	<div class="preview-con g-container">
+	<div class="preview-con g-container" id="mqwe">
 		<div class=" f-fl f-w">
 			<div class="dj-preview">
 				<div class="preview-title">

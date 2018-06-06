@@ -12,7 +12,9 @@ public class Bigquestion {
 	private Integer ProblemModelId;
 	private String Image;
 	private String Answer;
-	private String content;
+	private String Content;
+	private String difficulty;
+	
 	@Id
 	public Integer getBigQuestionId() {
 		return bigQuestionId;
@@ -39,9 +41,15 @@ public class Bigquestion {
 		Answer = answer;
 	}
 	public String getContent() {
-		return content;
+		return Content;
 	}
 	public void setContent(String content) {
-		this.content = content;
+		this.Content = content;
+	}
+	public String getDifficulty() {
+		return difficulty;
+	}
+	public void setDifficulty(String difficulty) {
+		this.difficulty = difficulty;
 	}
 }

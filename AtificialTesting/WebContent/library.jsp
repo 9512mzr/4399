@@ -704,7 +704,7 @@ width: 100%;}
 					<a class="select-btn" href="javascript:;"
 						onclick="return OT2.Global.initLogin();">选择本页全部试题</a>
 					<div class="total">
-						共计：<b>40183</b>题
+						共计：<b>${c_page.totalRecords}</b>题
 					</div>
 				</div>
 				<div class="search-list">
@@ -736,19 +736,19 @@ width: 100%;}
 
 											<span class="op-item"
 												style="width: 441px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">A . </span><span
+												class="op-item-nut" style="margin-top: 0px;"></span><span
 												class="op-item-meat" style="margin-top: 0px;">${ti.option1}
 											</span></span> <span class="op-item"
 												style="width: 441px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">B . </span><span
+												class="op-item-nut" style="margin-top: 0px;"></span><span
 												class="op-item-meat" style="margin-top: 0px;">${ti.option2}
 											</span></span> <span class="op-item"
 												style="width: 441px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">C . </span><span
+												class="op-item-nut" style="margin-top: 0px;"> </span><span
 												class="op-item-meat" style="margin-top: 0px;">${ti.option3}
 											</span></span> <span class="op-item"
 												style="width: 441px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;">D . </span><span
+												class="op-item-nut" style="margin-top: 0px;"> </span><span
 												class="op-item-meat" style="margin-top: 0px;">${ti.option4}
 											</span></span>
 
@@ -847,8 +847,7 @@ width: 100%;}
 	<div class="basket" id="J_Basket">
 		<div class="basket-tit">
 			<p>
-				<i class="icona-gouwulan"></i><em>生成试卷</em>
-				<a href="${ctx}/show">生成试卷2</a>
+				<i class="icona-gouwulan"></i><a href="${ctx}/show" class="icona-gouwulan"><em>生成试卷</em></a>
 			</p>
 			<span><i class="icona-gouwuleft"></i></span>
 		</div>

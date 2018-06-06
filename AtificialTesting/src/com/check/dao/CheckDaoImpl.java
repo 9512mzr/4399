@@ -12,7 +12,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.SharedSessionContract;
 import org.springframework.stereotype.Repository;
 
-
+import com.entity.Bigquestion;
 import com.entity.Choicequestion;
 import com.entity.Teacher;
 
@@ -30,16 +30,22 @@ public class CheckDaoImpl {
 	
 	
 	@SuppressWarnings("null")
-	public List<Choicequestion> queryForPage(int offset,int length,int a,String degree){
+	public List<Choicequestion> queryForPage(int offset,int length,int a,String degree,String type1){
 		List<Choicequestion> entitylist=null;
+		int type = Integer.parseInt(type1);
 		try {
-			StringBuilder sql =new StringBuilder("select * from  Choicequestion  where 1=1"); 
-//		    if(a!=100)  {
-//		    	sql.append(" and problemModelId= ?");  
-//		    }
-//		    else if(degree != "未知") {
-//		    	sql.append(" and difficulty = ?");
-//		    }
+			StringBuilder sql;
+			if(type==2) {
+				
+				sql =new StringBuilder("select * from  Bigquestion  where 1=1"); 
+				System.out.println("综合体走一波");
+			}
+			else {
+				sql =new StringBuilder("select * from  Choicequestion  where 1=1");
+				System.out.println("选择题走一波");
+			}
+
+			
 			System.out.println(a+degree+6);
 	        if(a!=100 && degree != "未知") {
 	        	System.out.println("1111111111111111111111111");
@@ -52,7 +58,13 @@ public class CheckDaoImpl {
 	        	this.setAllRowCount0(query.list().size());
 				query.setFirstResult(offset);
 				query.setMaxResults(length);
-				((SQLQuery) query).addEntity(Choicequestion.class);
+				if(type==2) {
+					((SQLQuery) query).addEntity(Bigquestion.class);
+				}
+				else {
+					((SQLQuery) query).addEntity(Choicequestion.class);
+				}
+				
 				entitylist=query.list();
 				System.out.println(entitylist.isEmpty());
 	        }
@@ -64,7 +76,13 @@ public class CheckDaoImpl {
 	        	this.setAllRowCount0(query.list().size());
 				query.setFirstResult(offset);
 				query.setMaxResults(length);
-				((SQLQuery) query).addEntity(Choicequestion.class);
+				if(type==2) {
+					((SQLQuery) query).addEntity(Bigquestion.class);
+				}
+				else {
+					((SQLQuery) query).addEntity(Choicequestion.class);
+				}
+				
 				entitylist=query.list();
 				System.out.println(entitylist.isEmpty());
 	        }
@@ -77,24 +95,41 @@ public class CheckDaoImpl {
 	        	this.setAllRowCount0(query.list().size());
 				query.setFirstResult(offset);
 				query.setMaxResults(length);
-				((SQLQuery) query).addEntity(Choicequestion.class);
-				entitylist=query.list();
-                 for(Choicequestion aaa: entitylist) {
-					System.out.println(aaa.getChoiceQuestionId()+"序号");
+				if(type==2) {
+					((SQLQuery) query).addEntity(Bigquestion.class);
 				}
+				else {
+					((SQLQuery) query).addEntity(Choicequestion.class);
+				}
+				
+				entitylist=query.list();
+//                 for(Choicequestion aaa: entitylist) {
+//					System.out.println(aaa.getChoiceQuestionId()+"序号");
+//				}
 				System.out.println(entitylist.size()+"696666666666666666666");
 				System.out.println(entitylist.isEmpty());
 	        }
 	        else {
+	        	
 	        	System.out.println("4444444444444444444444444444444");
-	        	Query query=(Query)sessionFactory.getCurrentSession().createQuery("from Choicequestion");
-				this.setAllRowCount0(query.list().size());
+                Query query = (Query)sessionFactory.getCurrentSession().createSQLQuery(sql.toString());
+	        	this.setAllRowCount0(query.list().size());
 				query.setFirstResult(offset);
 				query.setMaxResults(length);
-				entitylist=query.list();
-              	for(Choicequestion aaa:entitylist) {
-					System.out.println(aaa.getChoiceQuestionId()+"序号1");
+				if(type==2) {
+					((SQLQuery) query).addEntity(Bigquestion.class);
 				}
+				else {
+					((SQLQuery) query).addEntity(Choicequestion.class);
+				}
+				
+				entitylist=query.list();
+//                 for(Choicequestion aaa: entitylist) {
+//					System.out.println(aaa.getChoiceQuestionId()+"序号");
+//				}
+				System.out.println(entitylist.size()+"696666666666666666666");
+				System.out.println(entitylist.isEmpty());
+
 				System.out.println(entitylist.size()+"777777777777777777777777777");
 				System.out.println(entitylist.isEmpty());
 	        	

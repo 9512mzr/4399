@@ -526,17 +526,17 @@ width: 100%;}
 											人类探索细胞的历史</em></a>
 						<div  class="t2hd" id="sssq">
 							<a
-								href="${ctx }/tochapter?number=1&degree=${degree}"><i>走进细胞</i></a>
+								href="${ctx }/tochapter?number=1&degree=${degree}&thetype=${thetype}"><i>走进细胞</i></a>
 							<a
-								href="${ctx }/tochapter?number=2&degree=${degree}"><i>组成细胞的分子</i></a>
+								href="${ctx }/tochapter?number=2&degree=${degree}&thetype=${thetype}"><i>组成细胞的分子</i></a>
 							<a
-								href="${ctx }/tochapter?number=3&degree=${degree}"><i>细胞的基本结构</i></a>
+								href="${ctx }/tochapter?number=3&degree=${degree}&thetype=${thetype}"><i>细胞的基本结构</i></a>
 							<a
-								href="${ctx }/tochapter?number=4&degree=${degree}"><i>细胞物质输入与输出</i></a>
+								href="${ctx }/tochapter?number=4&degree=${degree}&thetype=${thetype}"><i>细胞物质输入与输出</i></a>
 							<a
-								href="${ctx }/tochapter?number=5&degree=${degree}"><i>细胞的能量供应利用</i></a>
+								href="${ctx }/tochapter?number=5&degree=${degree}&thetype=${thetype}"><i>细胞的能量供应利用</i></a>
 							<a
-								href="${ctx }/tochapter?number=6&degree=${degree}"><i>细胞的生命历程</i></a>
+								href="${ctx }/tochapter?number=6&degree=${degree}&thetype=${thetype}"><i>细胞的生命历程</i></a>
 						</div></li>
 							<br>
 							<li class="complex-nav-item"  data-treeid="143542"><a href="javascript:;"
@@ -545,17 +545,17 @@ width: 100%;}
 											遗传基因的发现与发展历程</em></a>
 						<div  class="t2hd" id="sssq">
 							<a
-								href="${ctx }/tochapter?number=7&degree=${degree}"><i>遗传因子的发现</i></a>
+								href="${ctx }/tochapter?number=7&degree=${degree}&thetype=${thetype}"><i>遗传因子的发现</i></a>
 							<a
-								href="${ctx }/tochapter?number=8&degree=${degree}"><i>基因和染色体的关系</i></a>
+								href="${ctx }/tochapter?number=8&degree=${degree}&thetype=${thetype}"><i>基因和染色体的关系</i></a>
 							<a
-								href="${ctx }/tochapter?number=9&degree=${degree}"><i>基因的本质</i></a>
+								href="${ctx }/tochapter?number=9&degree=${degree}&thetype=${thetype}"><i>基因的本质</i></a>
 							<a
-								href="${ctx }/tochapter?number=10&degree=${degree}"><i>基因的表达</i></a>
+								href="${ctx }/tochapter?number=10&degree=${degree}&thetype=${thetype}"><i>基因的表达</i></a>
 							<a
-								href="${ctx }/tochapter?number=11&degree=${degree}"><i>基因突变及其他变异</i></a>
+								href="${ctx }/tochapter?number=11&degree=${degree}&thetype=${thetype}"><i>基因突变及其他变异</i></a>
 							<a
-								href="${ctx }/tochapter?number=12&degree=${degree}"><i>从杂交育种到基因工程</i></a>
+								href="${ctx }/tochapter?number=12&degree=${degree}&thetype=${thetype}"><i>从杂交育种到基因工程</i></a>
 						</div></li>
 														<br>
 														<li class="complex-nav-item"  data-treeid="143542"><a href="javascript:;"
@@ -564,13 +564,13 @@ width: 100%;}
 											现代动物植物的研究</em></a>
 						<div  class="t2hd" id="sssq">
 							<a
-								href="${ctx }/tochapter?number=13&degree=${degree}"><i>现代生物进化</i></a>
+								href="${ctx }/tochapter?number=13&degree=${degree}&thetype=${thetype}"><i>现代生物进化</i></a>
 							<a
-								href="${ctx }/tochapter?number=14&degree=${degree}"><i>人体的内生态环境</i></a>
+								href="${ctx }/tochapter?number=14&degree=${degree}&thetype=${thetype}"><i>人体的内生态环境</i></a>
 							<a
-								href="${ctx }/tochapter?number=15&degree=${degree}"><i>动物和人体生命活动调节</i></a>
+								href="${ctx }/tochapter?number=15&degree=${degree}&thetype=${thetype}"><i>动物和人体生命活动调节</i></a>
 							<a
-								href="${ctx }/tochapter?number=16&degree=${degree}"><i>植物的激素调节</i></a>
+								href="${ctx }/tochapter?number=16&degree=${degree}&thetype=${thetype}"><i>植物的激素调节</i></a>
 												</div></li>	
 							<br>			
 							<li class="complex-nav-item"  data-treeid="143542"><a href="javascript:;"
@@ -579,11 +579,11 @@ width: 100%;}
 											地球生态环境的探索与发现</em></a>
 						<div  class="t2hd" id="sssq">
 							<a
-								href="${ctx }/tochapter?number=17&degree=${degree}"><i>种群和群落</i></a>
+								href="${ctx }/tochapter?number=17&degree=${degree}&thetype=${thetype}"><i>种群和群落</i></a>
 							<a
-								href="${ctx }/tochapter?number=18&degree=${degree}"><i>生态系统及其稳定性</i></a>
+								href="${ctx }/tochapter?number=18&degree=${degree}&thetype=${thetype}"><i>生态系统及其稳定性</i></a>
 							<a
-								href="${ctx }/tochapter?number=19&degree=${degree}"><i>生态环境保护</i></a>
+								href="${ctx }/tochapter?number=19&degree=${degree}&thetype=${thetype}"><i>生态环境保护</i></a>
 							
 						</div></li>
 						
@@ -604,9 +604,9 @@ width: 100%;}
 							<div class="tag-con">
 								<div class="con-items">
 									<input type="hidden" name="question_channel_type" value="">
-									<a data-name="question_channel_type" data-value="" href="#"
-										class="type-active">单选题</a> <a
-										data-name="question_channel_type" data-value="1" href="#">综合题</a>
+									<a data-name="question_channel_type" data-value="" href="${ctx }/tochapter?degree=${degree}&number=${number}&thetype=1"
+										class="${typeclass1}">单选题</a> <a
+										data-name="question_channel_type" data-value="1" href="${ctx }/tochapter?degree=${degree}&number=${number}&thetype=2" class="${typeclass2}">综合题</a>
 
 									
 								</div>
@@ -619,10 +619,10 @@ width: 100%;}
 							<div class="tag-con">
 								<div class="con-items">
 									<input type="hidden" name="difficult_index" value=""> 
-									<a data-name="difficult_index" data-value="" href="${ctx }/tochapter?degree&number=${number}"class="${classall}">全部</a> 
-									<a data-name="difficult_index"data-value="1" href="${ctx }/tochapter?degree=简单&number=${number}" class="${class1}">容易</a> 
-									<a data-name="difficult_index"data-value="3" href="${ctx }/tochapter?number=${number}&degree=一般" class="${class2}">一般</a>
-									<a data-name="difficult_index"data-value="5" href="${ctx }/tochapter?degree=困难&number=${number}"class="${class3}">困难</a>
+									<a data-name="difficult_index"data-value="1" href="${ctx }/tochapter?degree=&number=${number}&thetype=${thetype}" class="${classall}">容易</a> 
+									<a data-name="difficult_index"data-value="1" href="${ctx }/tochapter?degree=简单&number=${number}&thetype=${thetype}" class="${class1}">容易</a> 
+									<a data-name="difficult_index"data-value="3" href="${ctx }/tochapter?number=${number}&degree=一般&thetype=${thetype}" class="${class2}">一般</a>
+									<a data-name="difficult_index"data-value="5" href="${ctx }/tochapter?degree=困难&number=${number}&thetype=${thetype}"class="${class3}">困难</a>
 								</div>
 							</div>
 						</div>
@@ -704,7 +704,7 @@ width: 100%;}
 					<a class="select-btn" href="javascript:;"
 						onclick="return OT2.Global.initLogin();">选择本页全部试题</a>
 					<div class="total">
-						共计：<b>${c_page.totalRecords}</b>题
+						共计：<b>40183</b>题
 					</div>
 				</div>
 				<div class="search-list">
@@ -728,31 +728,10 @@ width: 100%;}
 
 										<div class="exam-q">
 											<c:set var="j" value="${c_page.pageNo}"></c:set>
-											<c:out value="${i+6*(j-1)}"/> .&nbsp;&nbsp;&nbsp; ${ti.content} <img
-												src="${ti.image}">
+											<c:out value="${i+6*(j-1)}"/> .&nbsp;&nbsp;&nbsp; ${ti.content} 
 										</div>
 									<c:set var="i" value="${i+1}"/>
-										<div class="exam-s">
-
-											<span class="op-item"
-												style="width: 441px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;"></span><span
-												class="op-item-meat" style="margin-top: 0px;">${ti.option1}
-											</span></span> <span class="op-item"
-												style="width: 441px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;"></span><span
-												class="op-item-meat" style="margin-top: 0px;">${ti.option2}
-											</span></span> <span class="op-item"
-												style="width: 441px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;"> </span><span
-												class="op-item-meat" style="margin-top: 0px;">${ti.option3}
-											</span></span> <span class="op-item"
-												style="width: 441px; margin-right: 0px; height: 24px; clear: none;"><span
-												class="op-item-nut" style="margin-top: 0px;"> </span><span
-												class="op-item-meat" style="margin-top: 0px;">${ti.option4}
-											</span></span>
-
-										</div>
+										
 
 
 
@@ -771,7 +750,7 @@ width: 100%;}
 										<p class="exam-foot-right">
 
 											 <a class="addbtn J_AddQuestion"
-												href="<%=request.getContextPath()%>/add?id=${ti.choiceQuestionId}&bigId=1"><b>+</b>选题</a>
+												href="${ctx }/notice.jsp"><b>+</b>选题</a>
 
 										</p>
 									</div>
@@ -791,11 +770,11 @@ width: 100%;}
 								<td colspan="6" align="center" bgcolor="">共&nbsp;&nbsp;&nbsp;${c_page.totalRecords}&nbsp;&nbsp;&nbsp;条记录;
 									共&nbsp;&nbsp;&nbsp;${c_page.totalPages}&nbsp;&nbsp;&nbsp;页
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
-									href="${ctx }/${wocaonima}?pageNo=${c_page.topPageNo}&number=${number}&degree=${degree}"
+									href="${ctx }/${wocaonima}?pageNo=${c_page.topPageNo}&number=${number}&degree=${degree}&thetype=${thetype}"
 									class="btn_r">首页</a> <c:choose>
 										<c:when test="${c_page.pageNo!=1}">
 											<a
-												href="${ctx }/${wocaonima}?pageNo=${c_page.previousPageNo }&number=${number}&degree=${degree}"
+												href="${ctx }/${wocaonima}?pageNo=${c_page.previousPageNo }&number=${number}&degree=${degree}&thetype=${thetype}"
 												class="btn_r">上一页</a>
 										</c:when>
 										<c:otherwise>
@@ -804,13 +783,13 @@ width: 100%;}
 									</c:choose> <c:choose>
 										<c:when test="${c_page.pageNo != page.totalPages}">
 											<a
-												href="${ctx }/${wocaonima}?pageNo=${c_page.nextPageNo }&number=${number}&degree=${degree}"
+												href="${ctx }/${wocaonima}?pageNo=${c_page.nextPageNo }&number=${number}&degree=${degree}&thetype=${thetype}"
 												class="btn_r">下一页</a>
 										</c:when>
 										<c:otherwise>
 											<a class="btn_r">下一页</a>
 										</c:otherwise>
-									</c:choose> <a href="${ctx }/${wocaonima}?pageNo=${c_page.bottomPageNo }&number=${number}&degree=${degree}"
+									</c:choose> <a href="${ctx }/${wocaonima}?pageNo=${c_page.bottomPageNo }&number=${number}&degree=${degree}&thetype=${thetype}"
 									class="btn_r">尾页</a>
 
 								</td>
@@ -818,6 +797,7 @@ width: 100%;}
 									<form action="${ctx }/${wocaonima}" method="get">
 									    <input type="hidden" name="number" value="${number}"/>
 									    <input type="hidden" name="degree" value="${degree}"/>
+									    <input type="hidden" name="thetype" value="${thetype}"/>
 									    
 									     
 										<input
@@ -847,7 +827,8 @@ width: 100%;}
 	<div class="basket" id="J_Basket">
 		<div class="basket-tit">
 			<p>
-				<i class="icona-gouwulan"></i><a href="${ctx}/show" class="icona-gouwulan"><em>生成试卷</em></a>
+				<i class="icona-gouwulan"></i><em>生成试卷</em>
+				<a href="${ctx}/show">生成试卷2</a>
 			</p>
 			<span><i class="icona-gouwuleft"></i></span>
 		</div>

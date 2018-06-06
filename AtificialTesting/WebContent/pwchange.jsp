@@ -104,6 +104,22 @@
 			</div>
 		</div>
 	</div>
+
+
+	<style type="text/css">
+.right-btn:hover {
+	background-color: #36b96e;
+}
+
+body .demo-class .layui-layer-title {
+	background: #59ca8a;
+	color: white;
+	height: 44px;
+}
+
+body .demo-class .layui-layer-content {
+	text-align: center;
+}
 </style>
 	<div class="g-cw1 cfx">
 		<div class="g-top">

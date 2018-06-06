@@ -43,6 +43,7 @@ public class LibraryController {
 		request.setAttribute("c_page", page);
 		modelMap.put("wocaonima", "showsome");
 		modelMap.put("classall", "type-active");
+		modelMap.put("typeclass1", "type-active");
 		return "library";
 
 	}

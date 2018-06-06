@@ -22,6 +22,7 @@ public class CheckController {
 	private CheckServiceImpl checkServiceImpl;
 	@RequestMapping("tochapter")
 	public String chapter(HttpServletRequest request,HttpServletResponse response,ModelMap modelMap) {
+		String type=request.getParameter("thetype");
 		String number2=request.getParameter("number");
 		String pageNo=request.getParameter("pageNo");
 		String degree=request.getParameter("degree");
@@ -31,20 +32,30 @@ public class CheckController {
         	System.out.println("这里的sssssssssssssssssss值是null");
 			pageNo = "1";
 		}
-
+        
         if(number2 == "") {
             	System.out.println("这里的str值是null666666"+number2+"798888");
             	number2="100";
             }
-
-
+        
         if(degree == "") {
         	System.out.println("这里的gggggggggggggggggggggggggggg值是null");
         	degree= "未知";
         }
+        System.out.println("这里的typetypetypetpe是"+type);
+        if(!type.equals("2")) {
+        	System.out.println("type77878787878787878887878type");
+        	type= "1";
+        }
+        else {
+        	System.out.println("type5555555555555555555555555type");
+        }
+
+        
         int number1 = Integer.parseInt(number2.trim());
+        
         System.out.println(number2+"wocao");
-		Page page = this.checkServiceImpl.queryForPage(Integer.valueOf(pageNo), 6,number1,degree);
+		Page page = this.checkServiceImpl.queryForPage(Integer.valueOf(pageNo), 6,number1,degree,type);
 		request.setAttribute("c_page", page);
 		modelMap.put("number", number1);
 		if(!degree.equals("未知")) {
@@ -64,6 +75,14 @@ public class CheckController {
         else if(degree.equals("困难")) {
         	modelMap.put("class3", "type-active");
 		}
+		if(!type.equals("2")) {
+			modelMap.put("typeclass1", "type-active");
+			
+		}
+		else {
+			modelMap.put("typeclass2", "type-active");
+		}
+		modelMap.put("thetype",type);
 
 		
 		modelMap.put("wocaonima", "tochapter");

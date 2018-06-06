@@ -1,5 +1,7 @@
 package com.entity;
 
+
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -12,9 +14,9 @@ public class Bigquestion {
 	private Integer ProblemModelId;
 	private String Image;
 	private String Answer;
-	private String Content;
+	private String content;
 	private String difficulty;
-	
+
 	@Id
 	public Integer getBigQuestionId() {
 		return bigQuestionId;
@@ -41,11 +43,12 @@ public class Bigquestion {
 		Answer = answer;
 	}
 	public String getContent() {
-		return Content;
+		return content;
 	}
 	public void setContent(String content) {
-		this.Content = content;
+		this.content = content;
 	}
+	
 	public String getDifficulty() {
 		return difficulty;
 	}

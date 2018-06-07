@@ -15,7 +15,7 @@
 <body>
 	<div class="head">
 		<div class="headL">
-			<img class="headLogo" src="${ctx }/backstage/images/logLOGO.png"/>
+			<img class="headLogo" src="${ctx }/backstage/images/logLOGO2.png"/>
 		</div>
 		<div class="headR">
 			<span style="color:#FFF">欢迎：admin</span> <a href="head2.jsp" rel="external">【退出】</a>

@@ -16,146 +16,56 @@
 <link href="${ctx }/backstage/css/print.css" rel="stylesheet" type="text/css"  media="print" />
 <script src="${ctx }/backstage/js/jquery-1.10.1.min.js"></script>
 <script src="${ctx }/backstage/js/side.js" type="text/javascript"></script>
-
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-<![endif]-->
 </head>
 
 <body>
 
 
 <!-- MainForm -->
-<div id="MainForm">
-<div class="form_boxA">
-<h2>年度预算列表</h2>
-<table cellpadding="0" cellspacing="0">
-<tr>
-<th>序号</th>
-<th>部门</th>
-<th>年度</th>
-<th>提交人</th>
-<th>预算收入（元）</th>
-<th>预算成本（元）</th>
-<th>预算费用（元）</th>
-<th>状态</th>
-<th>操作</th>
-</tr>
-<tr>
-<td>1</td>
-<td>销售部</td>
-<td>2017</td>
-<td>张三</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>审核通过</td>
-<td><a href="#">查看</a> | <a href="#">操作</a></td>
-</tr>
-<tr>
-<td>2</td>
-<td>销售部</td>
-<td>2017</td>
-<td>张三</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>审核通过</td>
-<td><a href="#">查看</a> | <a href="#">操作</a></td>
-</tr>
-<tr>
-<td>3</td>
-<td>销售部</td>
-<td>2017</td>
-<td>张三</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>审核通过</td>
-<td><a href="#">查看</a> | <a href="#">操作</a></td>
-</tr>
-<tr>
-<td>4</td>
-<td>销售部</td>
-<td>2017</td>
-<td>张三</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>审核通过</td>
-<td><a href="#">查看</a> | <a href="#">操作</a></td>
-</tr>
-<tr class="bgcA">
-<td>5</td>
-<td>销售部</td>
-<td>2017</td>
-<td>张三</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>审核通过</td>
-<td><a href="#">查看</a> | <a href="#">操作</a></td>
-</tr>
-<tr class="bgcB">
-<td>6</td>
-<td>销售部</td>
-<td>2017</td>
-<td>张三</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>审核通过</td>
-<td><a href="#">查看</a> | <a href="#">操作</a></td>
-</tr>
-<tr class="bgcC">
-<td>7</td>
-<td>销售部</td>
-<td>2017</td>
-<td>张三</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>审核通过</td>
-<td><a href="#">查看</a> | <a href="#">操作</a></td>
-</tr>
-<tr class="bgcD">
-<td>8</td>
-<td>销售部</td>
-<td>2017</td>
-<td>张三</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>审核通过</td>
-<td><a href="#">查看</a> | <a href="#">操作</a></td>
-</tr>
-<tr>
-<td>9</td>
-<td>销售部</td>
-<td>2017</td>
-<td>张三</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>审核通过</td>
-<td><a href="#">查看</a> | <a href="#">操作</a></td>
-</tr>
-<tr>
-<td>10</td>
-<td>销售部</td>
-<td>2017</td>
-<td>张三</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>12500.00</td>
-<td>审核通过</td>
-<td><a href="#">查看</a> | <a href="#">操作</a></td>
-</tr>
-</table>
-<p class="msg">共找到47条年度预算记录，当前显示从第1条至第10条</p>
-</div>
-</div>
+	<div id="MainForm">
+		<div class="form_boxA">
+			<h2>用户列表</h2>
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					<th>老师ID</th>
+					<th>帐号</th>
+					<th>昵称</th>
+					<th></th>
+				</tr>
+					<c:forEach items="${page.getTeacherList() }" var="teacher">
+						<tr>
+							<td>${teacher.teacherid }</td>
+							<td>${teacher.accountNumber }</td>
+							<td>${teacher.nickName }</td>
+						</tr>
+					</c:forEach>	
+			</table>
+			<table style="margin-left: 0px;">
+				       <tr>
+				            <td colspan="6" align="center" bgcolor="">共${page.totalRecords}条记录 共${page.totalPages}页 当前第${page.pageNo}页 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				                <a href="<%=request.getContextPath()%>/teachers/list?pageNo=${page.topPageNo}" class="btn_r">首页</a>
+				                <c:choose>
+				                  <c:when test="${page.pageNo!=1}">             
+				                      <a href="<%=request.getContextPath()%>/teachers/list?pageNo=${page.previousPageNo }" class="btn_r">上一页</a>                
+				                  </c:when>
+				                  <c:otherwise>   
+				                      <a class="btn_r">上一页</a>       
+				                  </c:otherwise>
+				                </c:choose>
+				                <c:choose>
+				                  <c:when test="${page.pageNo != page.totalPages}">
+				                    <a href="<%=request.getContextPath()%>/teachers/list?pageNo=${page.nextPageNo }" class="btn_r">下一页</a>
+				                  </c:when>
+				                  <c:otherwise>    
+				                      <a class="btn_r">下一页</a>
+				                  </c:otherwise>
+				                </c:choose>
+				                <a href="<%=request.getContextPath()%>/teachers/list?pageNo=${page.bottomPageNo}&id=${id}" class="btn_r">尾页</a>
+				            </td>
+				        </tr>
+			</table>
+		</div>
+	</div>
 <!-- /MainForm -->
 
 </body>

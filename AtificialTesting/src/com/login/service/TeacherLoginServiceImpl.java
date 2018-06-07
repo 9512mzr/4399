@@ -20,7 +20,10 @@ public class TeacherLoginServiceImpl {
 	public List<Object[]>  listAll(){
 		return this.teacherLoginDaoImpl.findAll();
 	}
-	public List getname(int id) {
+	public List<String> getname(int id) {
 		return this.teacherLoginDaoImpl.findUser(id);	
+	}
+	public void insert(int id,String name,String time) {
+		this.teacherLoginDaoImpl.insertJournal(id, name, time);
 	}
 }

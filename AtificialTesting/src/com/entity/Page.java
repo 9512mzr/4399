@@ -7,28 +7,30 @@ public class Page {
 	private List<Choicequestion> c_list;
 	private List<Judge_question_show> j_list;
 	private List<Judge_question> Judge_questionlist;
+	private List<Teacher> teacherList;
+	private List<Journal> journalList;
 
-	// 查询记录总数
+	// 鏌ヨ璁板綍鎬绘暟
     private int totalRecords;
 
-    // 每页多少条记录
+    // 姣忛〉澶氬皯鏉¤褰�
     private int pageSize;
 
-    // 第几页
+    // 绗嚑椤�
     private int pageNo;
 
     /**
-     * @return 总页数
+     * @return 鎬婚〉鏁�
      * */
     public int getTotalPages(){
         return (totalRecords+pageSize-1)/pageSize;
     }
 
     /**
-     * 计算当前页开始记录
-     * @param pageSize 每页记录数
-     * @param currentPage 当前第几页
-     * @return 当前页开始记录号
+     * 璁＄畻褰撳墠椤靛紑濮嬭褰�
+     * @param pageSize 姣忛〉璁板綍鏁�
+     * @param currentPage 褰撳墠绗嚑椤�
+     * @return 褰撳墠椤靛紑濮嬭褰曞彿
      */
     public int countOffset(int currentPage,int pageSize){
         int offset = pageSize*(currentPage-1);
@@ -36,14 +38,14 @@ public class Page {
     }
 
     /**
-     * @return 首页
+     * @return 棣栭〉
      * */
     public int getTopPageNo(){
         return 1;
     }
 
     /**
-     * @return 上一页
+     * @return 涓婁竴椤�
      * */
     public int getPreviousPageNo(){
         if(pageNo<=1){
@@ -53,7 +55,7 @@ public class Page {
     }
 
     /**
-     * @return 下一页
+     * @return 涓嬩竴椤�
      * */
     public int getNextPageNo(){
         if(pageNo>=getBottomPageNo()){
@@ -63,7 +65,7 @@ public class Page {
     }
 
     /**
-     * @return 尾页
+     * @return 灏鹃〉
      * */
     public int getBottomPageNo(){
         return getTotalPages();
@@ -124,6 +126,22 @@ public class Page {
 
 	public void setJudge_questionlist(List<Judge_question> judge_questionlist) {
 		Judge_questionlist = judge_questionlist;
+	}
+
+	public List<Teacher> getTeacherList() {
+		return teacherList;
+	}
+
+	public void setTeacherList(List<Teacher> teacherList) {
+		this.teacherList = teacherList;
+	}
+
+	public List<Journal> getJournalList() {
+		return journalList;
+	}
+
+	public void setJournalList(List<Journal> journalList) {
+		this.journalList = journalList;
 	}
 	
 	

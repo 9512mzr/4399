@@ -1,5 +1,7 @@
 package com.login.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -27,16 +29,16 @@ public class TeacherLoginController {
 		String pwd = request.getParameter("pwd");
 		List<Object[]> list = this.teacherLoginServiceImpl.listAll();
 		System.out.println(id);
-//		Date time = new Date();
-//		SimpleDateFormat ft = new SimpleDateFormat("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
-//		String time1 = ft.format(time);
+		Date time=new Date();
+		SimpleDateFormat ft = new SimpleDateFormat("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
+		String time1 = ft.format(time);
 		for (Object[] objs : list) {
 			if (objs[0].equals(id) || objs[1].equals(pwd)) {
 				HttpSession session = request.getSession();
-//				String name = journalServiceImpl.userName(user_id).get(0);
-//				journalServiceImpl.insert(user_id, name, time1);
-				session.setAttribute("userid", id);
 				int name1 = Integer.valueOf(id);
+				String name = teacherLoginServiceImpl.getname(name1).get(0);
+				teacherLoginServiceImpl.insert(name1, name, time1);
+				session.setAttribute("userid", id);
 				List list1 = teacherLoginServiceImpl.getname(name1);
 				System.out.println(list1);
 				modelMap.put("list", list1);

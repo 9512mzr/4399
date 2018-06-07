@@ -23,11 +23,11 @@ public class TestBasket_showDaoImpl {
 		AllRowCount0 = allRowCount0;
 	}
 	public List<TestBasket> findChoice(){
-		Query q=this.sessionFactory.getCurrentSession().createQuery("from TestBasket where bigQuestionId=1");
+		Query q=this.sessionFactory.getCurrentSession().createQuery(" from TestBasket where bigQuestionId = -1");
 		return q.list();
 	}
 	public List<TestBasket> findBigQuestion(){
-		Query q=this.sessionFactory.getCurrentSession().createQuery("from TestBasket where ChoiceQuestionId=1");
+		Query q=this.sessionFactory.getCurrentSession().createQuery(" from TestBasket where ChoiceQuestionId = -1");
 		return q.list();
 	}
 //	public List<TestBasket> queryForPage(int offset,int length){

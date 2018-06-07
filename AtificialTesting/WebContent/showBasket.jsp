@@ -98,27 +98,36 @@
 <script src="${ctx }/static/js/json3.min1.js"></script>
 <script src="${ctx }/static/js/dialog-plus1.js"></script>
 <script src="${ctx }/static/js/util.min1.js"></script>
+<link rel="stylesheet" href="${ctx }/static/css/test-preview.min.css">
+<link rel="stylesheet" href="${ctx }/static/css/u-center.min.css">
 </head>
 <body>
-	<link rel="stylesheet" href="${ctx }/static/css/test-preview.min.css">
-	<div class="header">
-		<div class="header-inner g-container f-cb">
-
-			<div class="header-logo">
-				<a href="http://www.zujuan.com/"><img
-					src="./static/images/app_logo_zujuan.png" alt="组卷网"></a>
-			</div>
-
-			<div class="header-nav">
-				<span class="split"></span><a href="http://www.zujuan.com/"
-					class="help"><i class="icona-home"></i>网站首页</a>
-				<div class="loginbox">
-					<a shref="/login" class="login"
-						onclick="OT2.Global.initLogin(); return false;"><span>注册&amp;登录</span></a>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div class="heading">
+    <div class="heading-main">
+        <div class="heading-logo">
+            <img src="${ctx }/static/images/logo1.png" alt="logo">
+            <span>账户中心</span>
+        </div>
+        <div class="r-wrap">
+            <ul class="heading-nav">
+                <li class="item"><a href="" target="_blank">4399世纪教育网</a></li>
+                <li class="sep">|</li>
+                <li class="item"><a href="" target="_blank">4399组卷平台</a></li>
+                <li class="sep">|</li>
+                <li class="item"><a href="" target="_blank">课堂无忧</a></li>
+                <li class="sep">|</li>
+                <li class="item"><a href="" target="_blank">在线题库</a></li>
+                <li class="sep">|</li>
+                <li class="item"><a href="" target="_blank">名师课堂</a></li>
+            </ul>
+            <div class="heading-exit">
+                <!--<img src="/static/images/register/s-user.png" alt="logo">-->
+                <span>${list1.nickName}</span>
+                <a href="${ctx }/login.jsp" target="_blank">【退出】</a>      
+            </div>
+        </div>
+    </div>
+</div>
 	<script>
 		$(function() {
 			var toNote = '';
@@ -160,39 +169,24 @@
 				</div>
 				<div class="preview-body" id="J_PaperBody">
 					<h3>一、单选题</h3>
-					<!-- 以下为分页内容 -->
+					<c:set var="i" value="1"/>
 					<c:forEach items="${Basket}" var="basket">
 						<div class="search-list">
 							<ul>
 								<li data-qid="3755280">
 									<div class="search-exam">
 										<div class="exam-con">
-											<div class="exam-q">${basket.choicequestion.content }（&nbsp;&nbsp;&nbsp;
-												）</div>
-
-											<div class="exam-s">
-												<span class="op-item"
-													style="width: 219px; margin-right: 0px; clear: none;"><span
-													class="op-item-meat" style="margin-top: 0px;">${basket.choicequestion.option1 }</span></span>
-												<span class="op-item"
-													style="width: 219px; margin-right: 0px; clear: none;"><span
-													class="op-item-meat" style="margin-top: 0px;">${basket.choicequestion.option2 }</span></span>
-												<span class="op-item"
-													style="width: 219px; margin-right: 0px; clear: none;"><span
-													class="op-item-meat" style="margin-top: 0px;">${basket.choicequestion.option3 }</span></span>
-												<span class="op-item"
-													style="width: 219px; margin-right: 0px; clear: none;"><span
-													class="op-item-meat" style="margin-top: 0px;">${basket.choicequestion.option4 }</span></span>
-											</div>
-
+											<div class="exam-q"><c:out value="${i}"/>.${basket.choicequestion.content }</div>
 										</div>
+										<c:set var="i" value="${i+1}"/>
 									</div>
 								</li>
 							</ul>
 						</div>
 					</c:forEach>
 					<h3>二、综合题</h3>
-					<c:forEach items="${sessionScope.Bcourses}" var="Bigquestion">
+					<c:set var="j" value="1"/>
+					<c:forEach items="${Basket1}" var="basket1">
 						<div class="search-list">
 							<ul>
 								<li data-qid="6662749">
@@ -202,9 +196,10 @@
 												<div class="exam-con">
 													<div class="exam-q">
 														<p>
-															${Bigquestion.content }
+															<c:out value="${j}"/>.${basket1.bigQuestion.content }
 														</p>
 													</div>
+													<c:set var="j" value="${j+1}"/>
 												</div>
 											</div>
 										</div>

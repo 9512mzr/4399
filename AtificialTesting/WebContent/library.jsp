@@ -619,7 +619,7 @@ width: 100%;}
 							<div class="tag-con">
 								<div class="con-items">
 									<input type="hidden" name="difficult_index" value=""> 
-									<a data-name="difficult_index"data-value="1" href="${ctx }/tochapter?degree=&number=${number}&thetype=${thetype}" class="${classall}">容易</a> 
+									<a data-name="difficult_index"data-value="1" href="${ctx }/tochapter?degree=&number=${number}&thetype=${thetype}" class="${classall}">全部</a> 
 									<a data-name="difficult_index"data-value="1" href="${ctx }/tochapter?degree=简单&number=${number}&thetype=${thetype}" class="${class1}">容易</a> 
 									<a data-name="difficult_index"data-value="3" href="${ctx }/tochapter?number=${number}&degree=一般&thetype=${thetype}" class="${class2}">一般</a>
 									<a data-name="difficult_index"data-value="5" href="${ctx }/tochapter?degree=困难&number=${number}&thetype=${thetype}"class="${class3}">困难</a>
@@ -704,7 +704,7 @@ width: 100%;}
 					<a class="select-btn" href="javascript:;"
 						onclick="return OT2.Global.initLogin();">选择本页全部试题</a>
 					<div class="total">
-						共计：<b>40183</b>题
+						共计：<b>${c_page.totalRecords}</b>题
 					</div>
 				</div>
 				<div class="search-list">
@@ -748,9 +748,15 @@ width: 100%;}
 												class="icona-jiucuo"></i>纠错</a>
 										</p>
 										<p class="exam-foot-right">
-
-											 <a class="addbtn J_AddQuestion"
-												href="${ctx }/notice.jsp"><b>+</b>选题</a>
+											<c:choose>
+												<c:when test="${typeclass2 != null }">
+													<a class="addbtn J_AddQuestion" href="${ctx }/add?id=-1&bigId=${ti.getBigQuestionId()}"><b>+</b>选题</a>
+												</c:when>
+												<c:otherwise>
+													<a class="addbtn J_AddQuestion" href="${ctx }/add?id=${ti.getChoiceQuestionId() }&bigId=-1"><b>+</b>选题</a>
+												</c:otherwise>
+											</c:choose>
+											 
 
 										</p>
 									</div>
@@ -827,8 +833,7 @@ width: 100%;}
 	<div class="basket" id="J_Basket">
 		<div class="basket-tit">
 			<p>
-				<i class="icona-gouwulan"></i><em>生成试卷</em>
-				<a href="${ctx}/show">生成试卷2</a>
+				<a href="${ctx}/show"><i class="icona-gouwulan"></i><em>生成试卷</em></a>
 			</p>
 			<span><i class="icona-gouwuleft"></i></span>
 		</div>

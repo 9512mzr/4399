@@ -26,23 +26,23 @@ public class CheckController {
 		String number2=request.getParameter("number");
 		String pageNo=request.getParameter("pageNo");
 		String degree=request.getParameter("degree");
-		System.out.println(degree+"ÅÐ¶Ï");
+		System.out.println(degree+"ï¿½Ð¶ï¿½");
 		System.out.println(number2+"lll");
         if(pageNo==null) {
-        	System.out.println("ÕâÀïµÄsssssssssssssssssssÖµÊÇnull");
+        	System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½sssssssssssssssssssÖµï¿½ï¿½null");
 			pageNo = "1";
 		}
         
         if(number2 == "") {
-            	System.out.println("ÕâÀïµÄstrÖµÊÇnull666666"+number2+"798888");
+            	System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½strÖµï¿½ï¿½null666666"+number2+"798888");
             	number2="100";
             }
         
         if(degree == "") {
-        	System.out.println("ÕâÀïµÄggggggggggggggggggggggggggggÖµÊÇnull");
+        	System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ggggggggggggggggggggggggggggÖµï¿½ï¿½null");
         	degree= "Î´Öª";
         }
-        System.out.println("ÕâÀïµÄtypetypetypetpeÊÇ"+type);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½typetypetypetpeï¿½ï¿½"+type);
         if(!type.equals("2")) {
         	System.out.println("type77878787878787878887878type");
         	type= "1";
@@ -65,14 +65,14 @@ public class CheckController {
 		if(degree.equals("Î´Öª")) {
 			modelMap.put("classall", "type-active");
 		}
-		else if(degree.equals("¼òµ¥")) {
-			System.out.println("ÊÇ¼òµ¥");
+		else if(degree.equals("ï¿½ï¿½")) {
+			System.out.println("ï¿½Ç¼ï¿½");
 			modelMap.put("class1", "type-active");
 		}
-		else if(degree.equals("Ò»°ã")) {
+		else if(degree.equals("Ò»ï¿½ï¿½")) {
 			modelMap.put("class2", "type-active");
 		}
-        else if(degree.equals("À§ÄÑ")) {
+        else if(degree.equals("ï¿½ï¿½ï¿½ï¿½")) {
         	modelMap.put("class3", "type-active");
 		}
 		if(!type.equals("2")) {

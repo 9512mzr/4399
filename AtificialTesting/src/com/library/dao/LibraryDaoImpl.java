@@ -28,7 +28,7 @@ public class LibraryDaoImpl {
 	public List<Choicequestion> queryForPage(int offset,int length){
 		List<Choicequestion> entitylist=null;
 		try {
-			Query query=(Query)sessionFactory.getCurrentSession().createQuery("from Choicequestion");
+			Query query=(Query)sessionFactory.getCurrentSession().createQuery("from Choicequestion where choiceQuestionId != -1");
 			this.setAllRowCount0(query.list().size());
 			query.setFirstResult(offset);
 			query.setMaxResults(length);
@@ -54,7 +54,7 @@ public class LibraryDaoImpl {
 		return q;
 	}
 	public List<Choicequestion> findAll(){
-		Query q=this.sessionFactory.getCurrentSession().createQuery("from Choicequestion");
+		Query q=this.sessionFactory.getCurrentSession().createQuery("from Choicequestion where  choiceQuestionId != -1");
 		List<Choicequestion> list = q.list();
 		return list;
 	}

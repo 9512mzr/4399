@@ -4,6 +4,7 @@ package com.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,7 +17,7 @@ public class Bigquestion {
 	private String Answer;
 	private String content;
 	private String difficulty;
-
+//	private TestBasket basket;
 	@Id
 	public Integer getBigQuestionId() {
 		return bigQuestionId;
@@ -55,4 +56,11 @@ public class Bigquestion {
 	public void setDifficulty(String difficulty) {
 		this.difficulty = difficulty;
 	}
+//	@OneToOne(mappedBy="bigQuestion")
+//	public TestBasket getBasket() {
+//		return basket;
+//	}
+//	public void setBasket(TestBasket basket) {
+//		this.basket = basket;
+//	}
 }

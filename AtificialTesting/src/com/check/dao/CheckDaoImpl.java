@@ -37,12 +37,12 @@ public class CheckDaoImpl {
 			StringBuilder sql;
 			if(type==2) {
 				
-				sql =new StringBuilder("select * from  Bigquestion  where 1=1"); 
-				System.out.println("×ÛºÏÌå×ßÒ»²¨");
+				sql =new StringBuilder("select * from  Bigquestion  where 1= 1 and bigQuestionId != -1"); 
+				System.out.println("ï¿½Ûºï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½");
 			}
 			else {
-				sql =new StringBuilder("select * from  Choicequestion  where 1=1");
-				System.out.println("Ñ¡ÔñÌâ×ßÒ»²¨");
+				sql =new StringBuilder("select * from  Choicequestion  where 1= 1 and choiceQuestionId != -1");
+				System.out.println("Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½");
 			}
 
 			
@@ -104,7 +104,7 @@ public class CheckDaoImpl {
 				
 				entitylist=query.list();
 //                 for(Choicequestion aaa: entitylist) {
-//					System.out.println(aaa.getChoiceQuestionId()+"ÐòºÅ");
+//					System.out.println(aaa.getChoiceQuestionId()+"ï¿½ï¿½ï¿½");
 //				}
 				System.out.println(entitylist.size()+"696666666666666666666");
 				System.out.println(entitylist.isEmpty());
@@ -125,7 +125,7 @@ public class CheckDaoImpl {
 				
 				entitylist=query.list();
 //                 for(Choicequestion aaa: entitylist) {
-//					System.out.println(aaa.getChoiceQuestionId()+"ÐòºÅ");
+//					System.out.println(aaa.getChoiceQuestionId()+"ï¿½ï¿½ï¿½");
 //				}
 				System.out.println(entitylist.size()+"696666666666666666666");
 				System.out.println(entitylist.isEmpty());

@@ -21,6 +21,10 @@
 	type="text/css">
 <link href="${ctx }/static/css/indexLogin.css" rel="stylesheet">
 <script src="${ctx }/static/js/jquery-1.7.1.js"></script>
+
+<link rel="stylesheet" type="text/css" href="${ctx }/static/css/styleee.css" />
+<script type="text/javascript" src="${ctx }/static/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="${ctx }/static/js/slider.js"></script>
 <title>智能题库</title>
 <style type="text/css">
 .guideSwitch a {
@@ -424,44 +428,37 @@ function sgfagfds(){
 
 
 </script>
-	<div id="banner" class="banner">
-		<ul>
-			<li style="z-index: 1; opacity: 0.00108773;"><div class="bg"
-					style="background: url(&amp;#39;/uploads/advertisement/lunbo/57e36dd535c80.jpg&amp;#39;) no-repeat scroll center top;">
-					<a
-						href=""
-						target="_blank" title="教师联盟"></a>
-				</div></li>
-			<li style="z-index: 0; opacity: 0;"><div class="bg"
-					style="background: url(&amp;#39;/uploads/advertisement/lunbo/5767c00cc2c58.jpg&amp;#39;) no-repeat scroll center top;">
-					<a href=""
-						target="_blank" title="2016中考"></a>
-				</div></li>
-			<li style="z-index: 0; opacity: 0;"><div class="bg"
-					style="background: url(&amp;#39;/uploads/advertisement/lunbo/5763d79686cdc.jpg&amp;#39;) no-repeat scroll center top;">
-					<a href=""
-						target="_blank" title="2016高考"></a>
-				</div></li>
-			<li style="z-index: 0; opacity: 0;"><div class="bg"
-					style="background: url(&amp;#39;/uploads/advertisement/lunbo/559ba7ac797e5.jpg&amp;#39;) no-repeat scroll center top;">
-					<a href=""
-						target="_blank" title="易题库公益助学情"></a>
-				</div></li>
-			<li style="z-index: 0; opacity: 0.998912;"><div class="bg"
-					style="background: url(&amp;#39;/uploads/advertisement/lunbo/559ba7d4977e6.jpg&amp;#39;) no-repeat scroll center top;">
-					<a href=""
-						target="_blank" title="易题库招商代理"></a>
-				</div></li>
-		</ul>
-		<div class="number">
-			<a class="this"></a><a class=""></a><a class=""></a><a class=""></a><a
-				class=""></a>
+		
+
+		<div id="demo01" class="flexslider" style="display: block;">
+			<ul class="slides">
+				<li><div class="img"><img src="${ctx }/static/images/ad_home.jpg" height="450" width="760" alt="" /></div></li>
+				<li><div class="img"><img src="${ctx }/static/images/ad_yuetu.jpg" height="450" width="760" alt="" /></div></li>
+				<li><div class="img"><img src="${ctx }/static/images/ad_nba.jpg" height="450" width="760" alt="" /></div></li>
+				<li><div class="img"><img src="${ctx }/static/images/ad_stock.jpg" height="450" width="760" alt="" /></div></li>
+				<li><div class="img"><img src="${ctx }/static/images/ad_auto.jpg" height="450" width="760" alt="" /></div></li>
+			</ul>
 		</div>
-		<div class="clear"></div>
 		<script type="text/javascript">
-    //导航主题背景
-</script>
-		<div class="userLoginBox loginTxt" style="display: block;">
+			$(function(){
+			
+				$('#demo01').flexslider({
+					animation: "slide",
+					direction:"horizontal",
+					easing:"swing"
+				});
+				
+				$('#demo02').flexslider({
+					animation: "slide",
+					direction:"vertical",
+					easing:"swing"
+				});
+				
+			});
+			</script>
+		
+		
+		<div class="userLoginBox loginTxt" style="display: left;margin-top: 100px;margin-left: 220px;">
 			<h4>
 				欢迎您，<a href="">${list[0]}</a>&nbsp;老师
 				<c:set var="nickName" scope="session" value="${list[0]}" />

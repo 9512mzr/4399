@@ -114,7 +114,7 @@
 	</div>
 	<div class="judge">
 		<div class="judge-1">
-			<img alt="" src="${ctx }/static/images/${Judge.img }">
+			<img alt="" src="${ctx }/img/${Judge.img }">
 		</div>
 	</div>
 	<div class="judge2">

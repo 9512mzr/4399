@@ -103,31 +103,30 @@
 </head>
 <body>
 	<div class="heading">
-    <div class="heading-main">
-        <div class="heading-logo">
-            <img src="${ctx }/static/images/logo1.png" alt="logo">
-            <span>账户中心</span>
-        </div>
-        <div class="r-wrap">
-            <ul class="heading-nav">
-                <li class="item"><a href="" target="_blank">4399世纪教育网</a></li>
-                <li class="sep">|</li>
-                <li class="item"><a href="" target="_blank">4399组卷平台</a></li>
-                <li class="sep">|</li>
-                <li class="item"><a href="" target="_blank">课堂无忧</a></li>
-                <li class="sep">|</li>
-                <li class="item"><a href="" target="_blank">在线题库</a></li>
-                <li class="sep">|</li>
-                <li class="item"><a href="" target="_blank">名师课堂</a></li>
-            </ul>
-            <div class="heading-exit">
-                <!--<img src="/static/images/register/s-user.png" alt="logo">-->
-                <span>${list1.nickName}</span>
-                <a href="${ctx }/login.jsp" target="_blank">【退出】</a>      
-            </div>
-        </div>
-    </div>
-</div>
+		<div class="heading-main">
+			<div class="heading-logo">
+				<img src="${ctx }/static/images/logo1.png" alt="logo"> <span>账户中心</span>
+			</div>
+			<div class="r-wrap">
+				<ul class="heading-nav">
+					<li class="item"><a href="" target="_blank">4399世纪教育网</a></li>
+					<li class="sep">|</li>
+					<li class="item"><a href="" target="_blank">4399组卷平台</a></li>
+					<li class="sep">|</li>
+					<li class="item"><a href="" target="_blank">课堂无忧</a></li>
+					<li class="sep">|</li>
+					<li class="item"><a href="" target="_blank">在线题库</a></li>
+					<li class="sep">|</li>
+					<li class="item"><a href="" target="_blank">名师课堂</a></li>
+				</ul>
+				<div class="heading-exit">
+					<!--<img src="/static/images/register/s-user.png" alt="logo">-->
+					<span>${list1.nickName}</span> <a href="${ctx }/login.jsp"
+						target="_blank">【退出】</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script>
 		$(function() {
 			var toNote = '';
@@ -163,29 +162,32 @@
 				<div class="preview-title">
 					<h1></h1>
 					<p>
-						<span><i class="icona-time2"></i>更新日期：2018-03-20</span>
-						<span><i class="icona-leixing"></i>类型：专题试卷</span>
+						<span><i class="icona-time2"></i>更新日期：2018-03-20</span> <span><i
+							class="icona-leixing"></i>类型：专题试卷</span>
 					</p>
 				</div>
 				<div class="preview-body" id="J_PaperBody">
 					<h3>一、单选题</h3>
-					<c:set var="i" value="1"/>
+					<c:set var="i" value="1" />
 					<c:forEach items="${Basket}" var="basket">
 						<div class="search-list">
 							<ul>
 								<li data-qid="3755280">
 									<div class="search-exam">
 										<div class="exam-con">
-											<div class="exam-q"><c:out value="${i}"/>.${basket.choicequestion.content }</div>
+											<div class="exam-q">
+												<c:out value="${i}" />
+												.${basket.choicequestion.content }
+											</div>
 										</div>
-										<c:set var="i" value="${i+1}"/>
+										<c:set var="i" value="${i+1}" />
 									</div>
 								</li>
 							</ul>
 						</div>
 					</c:forEach>
 					<h3>二、综合题</h3>
-					<c:set var="j" value="1"/>
+					<c:set var="j" value="1" />
 					<c:forEach items="${Basket1}" var="basket1">
 						<div class="search-list">
 							<ul>
@@ -196,10 +198,11 @@
 												<div class="exam-con">
 													<div class="exam-q">
 														<p>
-															<c:out value="${j}"/>.${basket1.bigQuestion.content }
+															<c:out value="${j}" />
+															.${basket1.bigQuestion.content }
 														</p>
 													</div>
-													<c:set var="j" value="${j+1}"/>
+													<c:set var="j" value="${j+1}" />
 												</div>
 											</div>
 										</div>
@@ -209,6 +212,15 @@
 						</div>
 					</c:forEach>
 				</div>
+				<form action="paper/getpaper" method="post">
+					<p>
+						<label for="username" class="uname" data-icon="u">输入试卷名称</label> 
+						<input id="name" name="name" required="name" type="text" />
+					</p>
+					<p class="login button">
+						<input type="submit" value="一键生成试卷，答案，答题卡" />
+					</p>
+				</form>
 			</div>
 		</div>
 	</div>

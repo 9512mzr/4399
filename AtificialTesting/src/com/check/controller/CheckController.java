@@ -65,14 +65,14 @@ public class CheckController {
 		if(degree.equals("Î´Öª")) {
 			modelMap.put("classall", "type-active");
 		}
-		else if(degree.equals("ï¿½ï¿½")) {
-			System.out.println("ï¿½Ç¼ï¿½");
+		else if(degree.equals("ÈÝÒ×")) {
+			System.out.println("ÈÝÒ×");
 			modelMap.put("class1", "type-active");
 		}
-		else if(degree.equals("Ò»ï¿½ï¿½")) {
+		else if(degree.equals("Ò»°ã")) {
 			modelMap.put("class2", "type-active");
 		}
-        else if(degree.equals("ï¿½ï¿½ï¿½ï¿½")) {
+        else if(degree.equals("À§ÄÑ")) {
         	modelMap.put("class3", "type-active");
 		}
 		if(!type.equals("2")) {

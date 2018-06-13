@@ -40,7 +40,7 @@ public class CheckController {
         
         if(degree == "") {
         	System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ggggggggggggggggggggggggggggÖµï¿½ï¿½null");
-        	degree= "Î´Öª";
+        	degree= "æœªçŸ¥";
         }
         System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½typetypetypetpeï¿½ï¿½"+type);
         if(!type.equals("2")) {
@@ -58,21 +58,21 @@ public class CheckController {
 		Page page = this.checkServiceImpl.queryForPage(Integer.valueOf(pageNo), 6,number1,degree,type);
 		request.setAttribute("c_page", page);
 		modelMap.put("number", number1);
-		if(!degree.equals("Î´Öª")) {
+		if(!degree.equals("æœªçŸ¥")) {
 			modelMap.put("degree",degree);
 			
         }
-		if(degree.equals("Î´Öª")) {
+		if(degree.equals("æœªçŸ¥")) {
 			modelMap.put("classall", "type-active");
 		}
-		else if(degree.equals("ÈİÒ×")) {
-			System.out.println("ÈİÒ×");
+		else if(degree.equals("ç®€å•")) {
+			System.out.println("ç®€å•");
 			modelMap.put("class1", "type-active");
 		}
-		else if(degree.equals("Ò»°ã")) {
+		else if(degree.equals("ä¸€èˆ¬")) {
 			modelMap.put("class2", "type-active");
 		}
-        else if(degree.equals("À§ÄÑ")) {
+        else if(degree.equals("å›°éš¾")) {
         	modelMap.put("class3", "type-active");
 		}
 		if(!type.equals("2")) {

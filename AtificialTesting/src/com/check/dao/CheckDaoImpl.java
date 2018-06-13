@@ -47,7 +47,7 @@ public class CheckDaoImpl {
 
 			
 			System.out.println(a+degree+6);
-	        if(a!=100 && degree != "δ֪") {
+	        if(a!=100 && degree != "未知") {
 	        	System.out.println("1111111111111111111111111");
 	        	sql.append(" and problemModelId= ? and difficulty = ?");
 	        	Query query = (Query)sessionFactory.getCurrentSession().createSQLQuery(sql.toString());
@@ -68,7 +68,7 @@ public class CheckDaoImpl {
 				entitylist=query.list();
 				System.out.println(entitylist.isEmpty());
 	        }
-	        else if(a!=100 && degree ==  "δ֪") {
+	        else if(a!=100 && degree ==  "未知") {
 	        	System.out.println("2222222222222222222222222");
 	        	sql.append(" and problemModelId= ?");
 	        	Query query = (Query)sessionFactory.getCurrentSession().createSQLQuery(sql.toString());
@@ -86,7 +86,7 @@ public class CheckDaoImpl {
 				entitylist=query.list();
 				System.out.println(entitylist.isEmpty());
 	        }
-	        else if(a==100 && degree!= "δ֪") {
+	        else if(a==100 && degree!= "未知") {
 	        	System.out.println("333333333333333333333333333");
 	        	sql.append(" and difficulty = ?");
 	        	Query query = (Query)sessionFactory.getCurrentSession().createSQLQuery(sql.toString());

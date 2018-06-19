@@ -47,8 +47,8 @@
 						<li><a href="${ctx }/addQuestion.jsp" target="main"><i
 								class="icona-set"></i>个人信息</a></li>
 
-						<li><a href="${ctx }/addQuestion.jsp" target="main"><i
-								class="dj-menu"></i>订单管理</a></li>
+						<li><a href="${ctx }/upload.jsp" target="main"><i
+								class="dj-menu"></i>上传答题卡</a></li>
 						<li><a href="${ctx }/addQuestion.jsp" target="main"><i
 								class="icona-msg"></i>我的信息</a></li>
 					</ul>

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.choice_question.service.Choice_questionServiceImpl;
 import com.entity.Page;
+import com.entity.url0;
 
 @Controller
 @RequestMapping("Choice")
@@ -52,4 +53,21 @@ public class Choice_questionCotroller {
 	    str = str + " " + txt;
 		System.out.println(str);
 	}
+	
+	@RequestMapping(value="/getquestion")
+	public void qwe2(HttpServletRequest request,
+            HttpServletResponse response, ModelMap modelMap) {
+		String url="http://localhost:8080/AtificialTesting/Choice/getquestion0";
+		url0 u=new url0();
+		u.setPageUrl(url);
+		u.getPageSourceWithoutHtml();
+		System.out.println(u.getCode());
+	}
+	
+	@RequestMapping(value="/getquestion0")
+	public String qwe22(HttpServletRequest request,
+            HttpServletResponse response, ModelMap modelMap) {
+		return "zizhi";
+	}
+	
 }

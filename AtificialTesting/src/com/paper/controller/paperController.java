@@ -44,7 +44,7 @@ public class paperController {
 			content=content+basket1.get(i).getBigQuestion().getContent();
 		}
 		demo d=new demo();
-		String address="d:\\"+name+"_text.doc";
+		String address="d:\\试题答题卡答案\\"+name+"_text.doc";
 		try {
 			d.htmltoWord3(content,address);
 		} catch (IOException e1) {
@@ -54,7 +54,7 @@ public class paperController {
 		//获得试卷地址未知
 		
 		datika da=new datika();
-		address="d:\\"+name+"_datika.doc";
+		address="d:\\试题答题卡答案\\"+name+"_datika.doc";
 		String address2=request.getSession().getServletContext().getRealPath("/");
 		da.main1(basket.size(), basket1.size(),address,address2);
 		//获得答题卡
@@ -66,7 +66,7 @@ public class paperController {
 		for(int i=0;i<basket1.size();i++) {
 			content=content+basket1.get(i).getBigQuestion().getAnswer();
 		}
-		address="d:\\"+name+"_answer.doc";
+		address="d:\\试题答题卡答案\\"+name+"_answer.doc";
 		d.htmltoWord3(content,address);
 		//获得答案
 		System.out.println("成功生成三样");

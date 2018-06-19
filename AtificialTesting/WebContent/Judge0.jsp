@@ -49,6 +49,8 @@
 						<c:if test="${sessionScope.dates==null||sessionScope.dates=='[]'}">
 							<p>没有题</p>
 						</c:if>
+						<a href="${ctx }/up1.jsp">上传答题卡</a><br>
+						<a href="${ctx }/paper/fengeshijuan">获得新的待判题</a>
 					</table>
 				</div>
 			</div>

@@ -244,7 +244,7 @@
 			<div class="fr">
 				<!--div class="sinaCout"><wb:follow-button uid="3621865884" type="red_2" width="136" height="24" ></wb:follow-button></div-->
 				<div class="loginAfter">
-					<span>欢迎您，</span><a href="">${list[0]}</a><b
+					<span>欢迎您，</span><a href="">${sessionScope.teacherName }</a><b
 						id="loginAfterbtn"></b>
 					<div id="loginAfterContent">
 						<ul>

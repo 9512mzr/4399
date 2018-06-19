@@ -39,7 +39,9 @@ public class TeacherLoginController {
 				String name = teacherLoginServiceImpl.getname(name1).get(0);
 				teacherLoginServiceImpl.insert(name1, name, time1);
 				session.setAttribute("userid", id);
-				List list1 = teacherLoginServiceImpl.getname(name1);
+				
+				List<String> list1 = teacherLoginServiceImpl.getname(name1);
+				session.setAttribute("teacherName", list1.get(0));
 				System.out.println(list1);
 				modelMap.put("list", list1);
 				return "hello";

@@ -619,10 +619,35 @@ width: 100%;}
 							<div class="tag-con">
 								<div class="con-items">
 									<input type="hidden" name="difficult_index" value=""> 
-									<a data-name="difficult_index"data-value="1" href="${ctx }/tochapter?degree=&number=${number}&thetype=${thetype}" class="${classall}">全部</a> 
+									<form name='form0' action='${ctx }/tochapter' method='post' style="float:left">     
+    									<input type='hidden' name='degree' value='' >    
+        								<input type='hidden' name='number' value='${number}'>
+        								<input type='hidden' name='thetype' value='${thetype}'>
+    									<a data-name="difficult_index" data-value="1" href='javascript:document.form0.submit();' class="${classall}">全部</a>    
+   									</form>
+									<form name='form1' action='${ctx }/tochapter' method='post' style="float:left">     
+    									<input type='hidden' name='degree' value='简单' >    
+        								<input type='hidden' name='number' value='${number}'>
+        								<input type='hidden' name='thetype' value='${thetype}'>      
+    									<a data-name="difficult_index" data-value="1" class="${class1}" href='javascript:document.form1.submit();'>简单</a>    
+   									</form>
+   									<form name='form2' action='${ctx }/tochapter' method='post' style="float:left">     
+    									<input type='hidden' name='degree' value='一般'>    
+        								<input type='hidden' name='number' value='${number}'>
+        								<input type='hidden' name='thetype' value='${thetype}'>      
+    									<a data-name="difficult_index" data-value="1" class="${class2}" href='javascript:document.form2.submit();'>一般</a>    
+   									</form>
+   									<form name='form3' action='${ctx }/tochapter' method='post' style="float:left">     
+    									<input type='hidden' name='degree' value='困难'>    
+        								<input type='hidden' name='number' value='${number}'>
+        								<input type='hidden' name='thetype' value='${thetype}'>      
+    									<a data-name="difficult_index" data-value="1" class="${class3}" href='javascript:document.form3.submit();'>困难</a>    
+   									</form>      
+									<!--  
 									<a data-name="difficult_index"data-value="1" href="${ctx }/tochapter?degree=简单&number=${number}&thetype=${thetype}" class="${class1}">容易</a> 
 									<a data-name="difficult_index"data-value="3" href="${ctx }/tochapter?number=${number}&degree=一般&thetype=${thetype}" class="${class2}">一般</a>
 									<a data-name="difficult_index"data-value="5" href="${ctx }/tochapter?degree=困难&number=${number}&thetype=${thetype}"class="${class3}">困难</a>
+									-->
 								</div>
 							</div>
 						</div>

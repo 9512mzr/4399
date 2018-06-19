@@ -26,7 +26,7 @@ public class testController {
 	private testServiceImpl service;
 
 
-	@RequestMapping(value="up1")
+	@RequestMapping(value="up1") 
 	public void getPaper3(@RequestParam(value = "fileList", required = true) MultipartFile[] multipartFiles,HttpServletRequest request, HttpServletResponse response) throws IOException{
 	    
 		MultipartFile file =null;

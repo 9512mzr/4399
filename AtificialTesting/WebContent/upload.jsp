@@ -14,7 +14,7 @@
 		<script src="${ctx }/static/js/zyUpload.js"></script>
 		<script src="${ctx }/static/js/demo.js"></script>
 	</head>
-<body>
+<body> 
 	<div id="demo" class="demo"></div> 
 </body>
 </html>

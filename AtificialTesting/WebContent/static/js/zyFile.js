@@ -1,4 +1,4 @@
-/*
+ /*
  * zyFile.js 基于HTML5 文件上传的核心脚本 http://www.czlqibu.com
  * by zhangyan 2014-06-21   QQ : 623585268
 */

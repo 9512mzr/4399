@@ -1,4 +1,4 @@
-
+ 
 (function($,undefined){
 	$.fn.zyUpload = function(options,param){
 		var otherArgs = Array.prototype.slice.call(arguments, 1);

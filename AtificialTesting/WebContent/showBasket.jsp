@@ -181,6 +181,14 @@
 											</div>
 										</div>
 										<c:set var="i" value="${i+1}" />
+										<div class="exam-foot">
+											<p class="exam-foot-left">
+											</p>
+											<p class="exam-foot-right">
+												<a class="J_AddQuestion addbtn"
+													href="${ctx }/choiceDelete?id=${basket.choicequestion.choiceQuestionId}">刪除</a>
+											</p>
+										</div>
 									</div>
 								</li>
 							</ul>
@@ -205,6 +213,14 @@
 													<c:set var="j" value="${j+1}" />
 												</div>
 											</div>
+										</div>
+										<div class="exam-foot">
+											<p class="exam-foot-left">
+											</p>
+											<p class="exam-foot-right">
+												<a class="J_AddQuestion addbtn"
+													href="${ctx }/bigDelete?id=${basket.bigQuestion.bigQuestionId}"><b>-</b>刪除</a>
+											</p>
 										</div>
 									</div>
 								</li>

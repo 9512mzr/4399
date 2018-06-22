@@ -39,7 +39,8 @@ public class TeacherLoginController {
 				String name = teacherLoginServiceImpl.getname(name1).get(0);
 				teacherLoginServiceImpl.insert(name1, name, time1);
 				session.setAttribute("userid", id);
-				
+				System.out.println("teacherId:  "+objs[2]);
+				session.setAttribute("teacherId", objs[2].toString());
 				List<String> list1 = teacherLoginServiceImpl.getname(name1);
 				session.setAttribute("teacherName", list1.get(0));
 				System.out.println(list1);

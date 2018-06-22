@@ -13,6 +13,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.entity.Judge_question_show;
+import com.entity.Student;
+import com.entity.WrongQuestion_show;
 import com.judge_question.service.judge_questionServiceImpl;
 
 @Controller
@@ -31,7 +33,6 @@ public class judge_questionController {
 		
 		return "Judge0";
 	}
-	
 	@RequestMapping(value = "/getJudges")
 	public String getJudges(HttpServletRequest request,
             HttpServletResponse response) {
@@ -157,5 +158,33 @@ public class judge_questionController {
 		}
 	}
 	
+	@RequestMapping(value = "/getWorng")
+	public String getWorng(HttpServletRequest request,
+            HttpServletResponse response) {
+		String Id=(String) request.getSession().getAttribute("teacherId");
+		request.getSession().setAttribute("worng_studnet", this.service.getIds(Id));
+		return "WrongQSN";
+	}
 	
+	@RequestMapping(value = "/getStudnetWrongDate")
+	public String getWorng2(HttpServletRequest request,
+            HttpServletResponse response) {
+		String TeacherId=(String) request.getSession().getAttribute("teacherId");
+		String StudentId=request.getParameter("id");
+		ArrayList<String> dates=this.service.getDateByStudnetWrong(StudentId, TeacherId);
+		request.setAttribute("worng_studnet_dates", dates);
+		request.setAttribute("StudentId", StudentId);
+		return "WrongQSD";
+	}
+	
+	@RequestMapping(value = "/getStudnetWrongDateQuestion")
+	public String getWorng3(HttpServletRequest request,
+            HttpServletResponse response) {
+		String TeacherId=(String) request.getSession().getAttribute("teacherId");
+		String StudentId=request.getParameter("StudentId");
+		String date=request.getParameter("date");
+		ArrayList<WrongQuestion_show> show=this.service.getStudnetWrongDateQuestion(StudentId, TeacherId, date);
+		request.setAttribute("wrongQuestion", show);
+		return "WrongQSNY";
+	}
 }

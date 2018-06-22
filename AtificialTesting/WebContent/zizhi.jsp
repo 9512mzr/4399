@@ -59,13 +59,42 @@
 		document.getElementById("id2").value=s+1
 		alert(document.getElementById("id2").value)
 	}
+	function addTable() {
+	
+	}
+	function changeTable(){
+		//添加一个td需要table_n_n
+		a=1;
+		yuan='table_1_1_'
+		while(true){
+			
+			var yuan2=yuan+a;
+			var s=alert(document.getElementById(yuan2).innerHTML);
+			if(s==null){
+				break;
+			}
+			a=a+1
+		}
+		var html1=document.getElementById('table_1_1').innerHTML;
+		var html2='<td id="table_1_1_'+a+'">546</td>'
+		document.getElementById('table_1_1').innerHTML=html1+html2;
+	}
 </script>
 </head>
 <body>
 	<input type="hidden" value="" id="id2" />
 	<div id="div_1"></div>
+	<br>
 	<button type="button" onclick="myFunction2()">添加段落</button>
 	<br>
 	<textarea rows="3" cols="20" id="id1"></textarea>
+	<br>
+	<button type="button" onclick="addTable()">添加表格</button>
+	<button type="button" onclick="changeTable()">添加一个数表格</button>
+	<table border="1" cellspacing="0" id="table_1">
+		<tr id="table_1_1">
+			<td id="table_1_1_1">123</td>
+		</tr>
+	</table>
 </body>
 </html>

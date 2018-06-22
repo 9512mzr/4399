@@ -11,6 +11,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.entity.Judge_question;
 import com.entity.Judge_question_show;
 import com.entity.Page;
+import com.entity.Student;
+import com.entity.WrongQuestion_show;
 import com.judge_question.dao.judge_questionDaoImpl;
 
 @Service
@@ -23,6 +25,9 @@ public class judge_questionServiceImpl {
 		return this.judge_questionDaoImpl.getDates();
 	}
 	
+	public ArrayList<Student> getIds(String teacherId) {
+		return this.judge_questionDaoImpl.getStudnetFromTeacherId(teacherId);
+	}
 //	public  Page queryForPage(int currentPage, int pageSize) {
 //		Page page = new Page();
 //		// 总记录数
@@ -57,4 +62,12 @@ public class judge_questionServiceImpl {
 			this.judge_questionDaoImpl.submit(m.get(i).getId()+"", m.get(i).getScore());
 		}
 	}
+	
+	public ArrayList<String> getDateByStudnetWrong(String StudnetId,String TeacherId){
+		return this.judge_questionDaoImpl.getStudentWrongDate(StudnetId, TeacherId);
+	}
+	public ArrayList<WrongQuestion_show> getStudnetWrongDateQuestion(String StudnetId, String TeacherId, String date) {
+		return this.judge_questionDaoImpl.getStudnetWrongDateQuestion(StudnetId, TeacherId, date);
+	}
+
 }

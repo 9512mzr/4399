@@ -19,7 +19,7 @@ public class TeacherLoginDaoImpl{
 	private SessionFactory sessionFactory;
 	
 	public List<Object[]> findAll(){
-		Query q=this.sessionFactory.getCurrentSession().createSQLQuery("select accountNumber,passWord from teacher");
+		Query q=this.sessionFactory.getCurrentSession().createSQLQuery("select accountNumber,passWord,teacherid from teacher");
 		List<Object[]> list = q.list();
 		return list;
 	}

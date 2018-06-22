@@ -40,13 +40,14 @@
 						<li>
 							<a href="${ctx }/addQuestion.jsp" target="main"><i
 								class="icona-csjl"></i>测试记录</a></li>
-						<li><a href="${ctx }/addQuestion.jsp" target="main"><i
-								class="icona-ctb"></i>错题本</a></li>
+						<li><a href="${ctx }/artificial/showAllDate" target="main"><i
+								class="icona-ctb"></i>教学评估</a></li>
 						<li><a href="${ctx }/addQuestion.jsp" target="main"><i
 								class="dj-error"></i>纠错记录</a></li>
 						<li><a href="${ctx }/addQuestion.jsp" target="main"><i
 								class="icona-set"></i>个人信息</a></li>
-
+						<li><a href="${ctx }/Judge/getWorng" target="main"><i
+								class="dj-menu"></i>学生错题</a></li>
 						<li><a href="${ctx }/upload.jsp" target="main"><i
 								class="dj-menu"></i>上传答题卡</a></li>
 						<li><a href="${ctx }/addQuestion.jsp" target="main"><i

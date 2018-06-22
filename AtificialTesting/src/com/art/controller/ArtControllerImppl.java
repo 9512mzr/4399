@@ -72,7 +72,7 @@ public class ArtControllerImppl {
         while (iter.hasNext()) {
             long uid = iter.nextLong();
             List<RecommendedItem> list = r.recommend(uid, RECOMMENDER_NUM);
-//            System.out.println(list);
+//            System.out.println(list); 
             System.out.printf("uid:%s", uid);
             for (RecommendedItem ritem : list) {
 //              System.out.printf("(%s,%f)", ritem.getItemID(), ritem.getValue());

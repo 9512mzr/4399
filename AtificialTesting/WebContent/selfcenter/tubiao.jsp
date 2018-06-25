@@ -147,7 +147,7 @@
 	</script>
 	<div class="layui-carousel video_mask">
 			<div id="qwe" style="align:center">
-				<a href="${ctx }/artificial/toExcal?date=${date }" class="login_btn layui-btn layui-btn-radius layui-btn-normal">智能推荐</a>
+				<a href="${ctx }/artificial/toExcal?date=${date }" class="login_btn layui-btn layui-btn-radius layui-btn-normal"  target="_blank" >智能推荐</a>
 			</div>
 		</div>
 	

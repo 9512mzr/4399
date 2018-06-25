@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.art.dao.ArtDaoImpl;
+import com.entity.Bigquestion;
 import com.entity.Choicequestion;
 
 @Service
@@ -16,5 +17,8 @@ public class ArtServiceImpl {
 	
 	public Choicequestion artselect(int id){
 		return this.artDaoImpl.artselect(id);
+	}
+	public Bigquestion artselectt(int id){
+		return this.artDaoImpl.artselectBigquestion(id);
 	}
 }

@@ -169,7 +169,7 @@
 					</c:forEach>
 					<h3>二、综合题</h3>
 					<c:set var="j" value="1" />
-					<c:forEach items="${Basket1}" var="basket1">
+					<c:forEach items="${big}" var="big">
 						<div class="search-list">
 							<ul>
 								<li data-qid="6662749">
@@ -180,7 +180,7 @@
 													<div class="exam-q">
 														<p>
 															<c:out value="${j}" />
-															.${basket1.bigQuestion.content }
+															.${big.content }
 														</p>
 													</div>
 													<c:set var="j" value="${j+1}" />

@@ -26,6 +26,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.art.service.ArtServiceImpl;
+import com.entity.Bigquestion;
 import com.entity.Choicequestion;
 
 @Controller
@@ -36,8 +37,11 @@ public class ArtControllerImppl {
 	@RequestMapping("showwlist")
 	public String artselect(HttpServletRequest request,Model model) {
 		String address2=request.getSession().getServletContext().getRealPath("/");
+		System.out.println(address2);
 		List<Choicequestion> choice2=new ArrayList<Choicequestion>();
+		List<Bigquestion> big=new ArrayList<Bigquestion>();
 		Set choice;
+		Set bigquestion;
 		try {
 			choice = artificiall(address2);
 			for(Iterator  iterator = choice.iterator(); iterator.hasNext();) {
@@ -45,6 +49,13 @@ public class ArtControllerImppl {
 				int x = Integer.parseInt(x0);
 				Choicequestion c = this.artServiceImpl.artselect(x);
 				choice2.add(c);
+			}
+			bigquestion = artificiallbig(address2);
+			for(Iterator  iterator = bigquestion.iterator(); iterator.hasNext();) {
+				String x0=iterator.next()+"";
+				int x = Integer.parseInt(x0);
+				Bigquestion b = this.artServiceImpl.artselectt(x);
+				big.add(b);
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -54,6 +65,7 @@ public class ArtControllerImppl {
 			e.printStackTrace();
 		}
 		request.setAttribute("choice", choice2);
+		request.setAttribute("big", big);
 		return "art";
 	}
 	
@@ -62,6 +74,31 @@ public class ArtControllerImppl {
     final static int RECOMMENDER_NUM = 3;
 	public Set artificiall(String address) throws IOException, TasteException{
 	    String file = address+"/ChoiceQuestion.csv";
+        DataModel model = new FileDataModel(new File(file));
+        UserSimilarity user = new EuclideanDistanceSimilarity(model);
+        NearestNUserNeighborhood neighbor = new NearestNUserNeighborhood(NEIGHBORHOOD_NUM, user, model);
+        Recommender r = new GenericUserBasedRecommender(model, neighbor, user);
+        LongPrimitiveIterator iter = model.getUserIDs();
+        
+        Set at =new HashSet();//有序，从小到大，无重复
+        while (iter.hasNext()) {
+            long uid = iter.nextLong();
+            List<RecommendedItem> list = r.recommend(uid, RECOMMENDER_NUM);
+//            System.out.println(list); 
+            System.out.printf("uid:%s", uid);
+            for (RecommendedItem ritem : list) {
+//              System.out.printf("(%s,%f)", ritem.getItemID(), ritem.getValue());
+                System.out.printf("(%s)", ritem.getItemID());
+                at.add(ritem.getItemID());
+            }
+            System.out.println();
+        }
+        System.out.println(at);
+        return at;
+	}
+	
+	public Set artificiallbig(String address) throws IOException, TasteException{
+	    String file = address+"/BigQuestion.csv";
         DataModel model = new FileDataModel(new File(file));
         UserSimilarity user = new EuclideanDistanceSimilarity(model);
         NearestNUserNeighborhood neighbor = new NearestNUserNeighborhood(NEIGHBORHOOD_NUM, user, model);

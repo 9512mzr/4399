@@ -21,7 +21,7 @@
 * 孟喆（项目经理）
   * 邮箱：[296875574@qq.com](296875574@qq.com)
   * GitHub：[https://github.com/9512mzr](https://github.com/9512mzr)
-* 肖舒翔：
+* 肖舒翔（后端开发）：
   * 邮箱：[1037426886@qq.com](1037426886@qq.com)
   * GitHub：[https://github.com/xiao970205](https://github.com/xiao970205)
 * 宋泽坤（前端设计师）:
@@ -39,34 +39,3 @@
 * 田赛（数据库设计）：
     * 邮箱：[425503141@qq.com](425503141@qq.com)
     * GitHub：[https://github.com/425503141](https://github.com/425503141 )
-
-运行效果
----------------------------
-
-## 登录界面
-
-![](./images/q.png)
-
-## 主界面
-
-![](./images/w.png)
-
-## 个人中心界面
-
-![](./images/e.png)
-
-## 待判题界面
-
-![](./images/r.png)
-
-## 数据展示界面
-
-![](./images/y.png)
-
-## 题库界面
-
-![](./images/u.png)
-
-## 生成试卷界面
-
-![](./images/i.png)
